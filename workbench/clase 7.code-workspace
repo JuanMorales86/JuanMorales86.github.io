@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../clase 7"
+		},
+		{
+			"path": "../proyecto"
+		},
+		{
+			"path": "../test grid+ flex-box"
+		},
+		{
+			"path": "../clase 8"
+		},
+		{
+			"path": "../clase 6"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "prueba 4"
+	}
+}
