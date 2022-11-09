@@ -27,7 +27,7 @@ body{
     "img-pr img-pr"
     "img-bnr img-bnr"
     "slide-txt slide-txt"
-    "card card"/*tengo un problema importante aqui que cuando quiero colocar "titulo" q es un div que se encuentra dentro de card en la seccion productos se me rompe todo*/
+    "card-m card-m"/*tengo un problema importante aqui que cuando quiero colocar "titulo" q es un div que se encuentra dentro de card en la seccion productos se me rompe todo*/
     "footer footer"
     ;
     
@@ -328,8 +328,8 @@ header a{
 }
 
 /*SECCION PRODUCTOS*/
-.card{
-    grid-area:card;
+.card-m{
+    grid-area:card-m;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;/*el valor que queria era flex-start pero no se veia bien*/
@@ -365,7 +365,7 @@ header a{
 } 
 
 
-.card:hover .titulo {
+.card-m:hover .titulo {
     clip-path: circle(10% at top right);
     transform: rotate(-90deg);
     max-height: 0;
@@ -556,7 +556,7 @@ footer a{
     "img-pr img-pr"
     "img-bnr img-bnr"
     "slide-txt slide-txt"
-    "titulo card card"
+    "titulo card-m card-m"
     "footer footer"
     ;
     *font-size: 100%;
@@ -722,8 +722,8 @@ header{/*Este header contiene el logotienda y el menu de navegacion*/
 }
 
 /*SECCION PRODUCTOS*/
-.card{
-    grid-area:card;
+.card-m{
+    grid-area:card-m;
     display: flex;
     flex-flow: row wrap;/*lo cambie a wrap esta nowwrap*/
     justify-content: center;/*el valor que queria era flex-start pero no se veia bien y predeterminado es centrado*/
@@ -742,7 +742,7 @@ header{/*Este header contiene el logotienda y el menu de navegacion*/
     grid-area: titulo;
 }
 
-.card:hover .titulo{
+.card-m:hover .titulo{
     display: none;/**CUANDO coloco el display none no se me activa despues la animacion no se porque ya e probado varias maneras pero sigo sin resolverlo**/
 }
 
@@ -931,7 +931,7 @@ footer a{
         "img-pr img-pr"
         "img-bnr img-bnr"
         "slide-txt slide-txt"
-        "titulo card card"
+        "titulo card-m card-m"
         "footer footer"
         ;
         
@@ -1022,8 +1022,8 @@ footer a{
         color: rgb(10, 10, 10);
     }
 
-    .card{
-        grid-area:card;
+    .card-m{
+        grid-area:card-m;
         display: flex;
         flex-direction: column;
         align-content: center;
