@@ -352,6 +352,8 @@ header a{
     box-shadow: 0px 15px 45px rgba(0,0,0,0.25);/* offset-x | offset-y | blur-radius | color */
     overflow: hidden;/*el overflow esconde el div details para que funcione el efecto hover*/
     transition: 0.5s ease-in-out; 
+    margin-left:10px;
+    *margin-right: 10px;
 }
 
 /**HOVER**/
@@ -493,7 +495,7 @@ footer a{
 
 /**RESPONSIVE**/
 
-@media screen and (max-width: 899px) {/**TABLET**/
+@media screen and (max-width: 768px) {/**TABLET**/
     .grid-container{
     background-color: #e2e5ec;/*color de fondo del body*/
     grid-template-columns: 50% 50%;
@@ -673,9 +675,9 @@ header{/*Este header contiene el logotienda y el menu de navegacion*/
     grid-area:card;
     display: flex;
     flex-flow: row wrap;/*lo cambie a wrap esta nowwrap*/
-    justify-content: flex-start;/*el valor que queria era flex-start pero no se veia bien y predeterminado es centrado*/
-    align-items:center;
-    align-content: center;
+    justify-content: center;/*el valor que queria era flex-start pero no se veia bien y predeterminado es centrado*/
+    *align-items:center;
+    *align-content: center;
     padding: 5px 5px 5px 5px;
     *min-width: 100vh; /*el original*/
     row-gap: 5px;
@@ -694,8 +696,6 @@ header{/*Este header contiene el logotienda y el menu de navegacion*/
 }
 
 
-
-
 .cards{/*Aqui arreglo lo que esta adentro del contenedor cards*/
     display: flex;/*Para que se haga flexible con las descripciones*/
     *justify-content:center;/*Aqui le quito el justify para que no tome ninguna posicion y funcione el .cards:hover*/
@@ -707,6 +707,7 @@ header{/*Este header contiene el logotienda y el menu de navegacion*/
     box-shadow: 0px 15px 45px rgba(0,0,0,0.25);/* offset-x | offset-y | blur-radius | color */
     overflow: hidden;/*el overflow esconde el div details para que funcione el efecto hover*/
     transition: 0.5s ease-in-out;  
+    margin-left: 10px;
 }
 
 /**HOVER**/
@@ -843,7 +844,7 @@ footer a{
 
 }
 
-/**CELPHONE**/
+/**CELLPHONE**/
 @media screen and (max-width: 600px) {
 
     .grid-container{
