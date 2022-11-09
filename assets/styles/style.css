@@ -496,6 +496,19 @@ footer a{
 /**RESPONSIVE**/
 
 @media screen and (max-width: 768px) {/**TABLET**/
+    .son__containerC{
+        display: grid;
+        row-gap: 2px;
+        background-color: #e2e5ec;/*color de fondo del body*/
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto 600px auto;
+        grid-template-areas:    
+        "header header"
+        "form__contacto form__contacto"
+        "footer footer"
+    }
+
+
     .grid-container{
     background-color: #e2e5ec;/*color de fondo del body*/
     grid-template-columns: 50% 50%;
@@ -846,6 +859,26 @@ footer a{
 
 /**CELLPHONE**/
 @media screen and (max-width: 600px) {
+
+    .son__containerC{
+        display: grid;
+        row-gap: 2px;
+        background-color: #e2e5ec;/*color de fondo del body*/
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto 550px auto;
+        grid-template-areas:    
+        "header header"
+        "form__contacto form__contacto"
+        "footer footer"
+    }
+
+    .form__contacto{
+        grid-area: form__contacto;
+        width: 100%;
+        height: 100%;
+        background-color: #244e73;
+
+    }
 
     .grid-container{
         display: grid;
