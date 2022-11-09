@@ -1,0 +1,368 @@
+01:44:33	Nicolas Justet:	buenas
+01:44:37	Angel Borrego:	buenas noches a todos
+01:44:41	Thiago Gamboa:	buenas profe
+01:44:44	Kevin Dominguez Ansorena:	buenas noches
+01:44:47	Rocio Gonzalez:	buenas noches a todos
+01:44:50	Botheina Rachid Ferreira:	buenas noches
+01:44:53	Leonela Dell Arciprete:	buenas tardes!
+01:44:56	Angel Borrego:	se encuentra mejor profesor??
+01:44:57	Agustín Lombardi:	buenass
+01:44:59	JosÉ Miguel Mendoza:	buenas noches..
+01:45:02	Claudio Gaston Alday:	buenas noches
+01:45:53	[Coordinador] Gianluca Fava:	Buenas nochess
+01:45:56	Josias Flier:	buenas a todos
+01:45:58	[Tutora] Gabriela Rodriguez:	buenas
+01:46:05	[Coordinador] Gianluca Fava:	Todo bien por aca :d
+01:46:06	[Coordinador] Gianluca Fava:	:D
+01:46:48	Micaela Cabrera:	Buenas, profe estoy teniendo algunos problemas de vision y se me dificulta ver mucho la pantalla , asi que hoy hago hasta donde me de la vista 💪🏻
+01:47:00	Juan Morales:	buenas noches
+01:47:20	[Coordinador] Gianluca Fava:	Mica tranqui, lo primero es la salud 💪
+01:48:08	Shelo Setton:	profe yo no puedo ponerle el container a todo el body
+01:48:27	Shelo Setton:	yase profe
+01:48:35	Shelo Setton:	se pone el div
+01:48:36	Micaela Cabrera:	Bueno profe muchisimas gracias
+01:48:41	Micaela Cabrera:	Y disculpas
+01:48:43	Shelo Setton:	pero ocupa todo el body
+01:48:47	Shelo Setton:	el container
+01:49:25	Santiago Sanrame:	buenas noches
+01:49:26	Shelo Setton:	el tema es que tengo un background-img que con el container se ve muy feo
+01:49:37	Victor Pacheco:	Buenas noches Gente!
+01:49:42	Shelo Setton:	ocupa toda la pantalla 90vh
+01:49:50	Shelo Setton:	y se veria feo
+01:50:27	Shelo Setton:	una ultima consulta
+01:50:30	Shelo Setton:	412 x 915
+01:50:35	Shelo Setton:	esto es mi telefono
+01:50:40	Shelo Setton:	en el @media
+01:50:45	Shelo Setton:	cual px meto
+01:51:17	[Tutora] Gabriela Rodriguez:	hola shelo
+01:51:31	[Tutora] Gabriela Rodriguez:	412
+01:51:37	Shelo Setton:	grax
+01:52:30	Shelo Setton:	sale ese Kahoot?
+01:52:56	Victor Pacheco:	Gente , yo hice toda la 2da preentrega con Bootstrp...esta mal  ?
+01:54:25	[Coordinador] Gianluca Fava:	Si si
+01:55:08	Angel Borrego:	profesor yo hice el responsive como usted nos enseño con @media he hice algunos retoques con boostrap estará correcto??
+01:55:10	Josias Flier:	pregunta, siempre es el mismo tutor el q corrige? osea a cada uno?
+01:55:15	Thiago Gamboa:	la entrega es hasta mañana 23hs?
+01:55:17	Josias Flier:	o ahora puede que sea otro¡?
+01:55:18	[Tutora] Gabriela Rodriguez:	si Angel
+01:55:28	Karen Taylor:	Es obligatorio que incluyamos Bootstrap a nuestra segunda entrega? mi grid lo hice manual y así esta bien, tengo que usarlo?
+01:55:29	[Tutora] Gabriela Rodriguez:	si Josias
+01:55:32	[Tutora] Gabriela Rodriguez:	es el mismo
+01:55:52	Gianfranco Ferreyra:	Si o si hay que incluir bootstrap?
+01:55:58	Thiago Gamboa:	Josias ahí en la información del curso te dice abajo el tutor corrector
+01:56:05	Shelo Setton:	no tiago
+01:56:08	Shelo Setton:	el jueves
+01:56:12	Victor Pacheco:	Gente  , usen Boostrap es lo mas fácil y de 10
+01:56:15	[Coordinador] Gianluca Fava:	Si Josias
+01:56:21	[Coordinador] Gianluca Fava:	Siempre corrige el mismo a cad uno
+01:56:21	Victor Pacheco:	te facilita la vida esa pagina
+01:56:31	Josias Flier:	joya gracias
+01:56:39	[Coordinador] Gianluca Fava:	Asi es saul
+01:56:47	Santiago Sanrame:	el jueves a las 23:59
+01:56:47	Thiago Gamboa:	seria 23:59 del jueves?
+01:56:52	Thiago Gamboa:	ah bien
+01:56:54	Thiago Gamboa:	graciassss
+01:56:57	[Coordinador] Gianluca Fava:	no del meircoles
+01:57:02	[Coordinador] Gianluca Fava:	perdonn
+01:57:03	[Coordinador] Gianluca Fava:	jueves
+01:57:09	[Coordinador] Gianluca Fava:	tenias razón Thiago perdón no dije nada
+01:57:10	[Coordinador] Gianluca Fava:	jaj
+01:57:29	matias rueda:	10/11 23:59 me figura a mi
+01:57:41	JosÉ Miguel Mendoza:	Si, eso es jueves.
+01:57:41	[Coordinador] Gianluca Fava:	Sisi perdón
+01:57:47	[Coordinador] Gianluca Fava:	23:59 del jueves
+01:57:52	[Coordinador] Gianluca Fava:	7 días desde que se habilitó
+01:58:00	[Tutora] Gabriela Rodriguez:	si pero siempre hay algiuen que lo deja para ultima hora
+01:58:28	[Coordinador] Gianluca Fava:	Diseño Responsive:- 2 PAGINAS RESPONSIVE (INDEX Y 1 MAS que avisen que paginas son).- Media queries solo si son necesarios. - Full responsiveGitHub:- Github (OBLIGACION) + Github pages- Avisar si es que hay mas de una rama, cual es la que hay que revisar.Bootstrap:- Si no usan, deben ser responsive igualmente hechos a mano.- Si usan estilos de Bs que los modifiquen en relacion a su proyecto.- Componentes de Bs y clases.Etiquetas y contenido:- No dejar código comentado.- Navegación hacia TODAS las páginas.- Permitimos lorem ipsum las 3 entregas.- Contenido en todas las páginas si  o si.- Nada de br, hr, center o etiquetas de modificación de estilos. (si permitimos strong)
+01:58:45	[Coordinador] Gianluca Fava:	Aca están todas las consignas de la segunda entrega
+01:58:50	[Coordinador] Gianluca Fava:	Las que hablamos la clase pasada
+01:58:54	matias rueda:	pasamos perfil de GitHub o link de repositorio?
+01:59:15	[Tutor] Jonathan Romero:	Link del repositorio en donde tenes el proyecto Matias
+02:00:03	Nicolas Justet:	y que sea publico
+02:00:46	[Tutor] Jonathan Romero:	☝
+02:01:09	[Tutor] Jonathan Romero:	Recuerden que pueden modificarlo desde settings si lo tienen en privado
+02:01:49	[Tutora] Gabriela Rodriguez:	chicos, tengo problemas de conexion, por si no me ven
+02:01:51	[Coordinador] Gianluca Fava:	abajo de todo no?
+02:01:54	[Coordinador] Gianluca Fava:	Dice como zona de peligro
+02:02:01	[Coordinador] Gianluca Fava:	ahji
+02:02:07	[Tutor] Jonathan Romero:	ahi
+02:02:08	[Coordinador] Gianluca Fava:	change repository visibniltiy
+02:02:18	[Tutor] Jonathan Romero:	la 1ra opcion
+02:02:39	Santiago Sanrame:	perfecto
+02:02:40	Botheina Rachid Ferreira:	tengo una duda, es obligatorio poner una animación?
+02:03:02	Josias Flier:	profe, desde el repositorio, puedo obtener un link para ver la pagina web?
+02:03:13	Victor Pacheco:	no se veía desde la page ?
+02:03:17	Josias Flier:	o solo se ve el repositorio?
+02:03:17	[Coordinador] Gianluca Fava:	Si Josias desde GitHub pages
+02:03:20	[Tutor] Jonathan Romero:	Si se puede Josias, con el github page
+02:03:25	Botheina Rachid Ferreira:	gracias
+02:03:52	Josias Flier:	joya
+02:04:03	Shelo Setton:	si
+02:04:21	Shelo Setton:	no no es eso
+02:04:25	Shelo Setton:	el tema es que si lo hago
+02:04:31	Shelo Setton:	la backgroun-img
+02:04:33	Shelo Setton:	se ve mal
+02:04:34	Yerlin rojas:	yo realice un merge al master. y luego hice el push para compartir el link 
+02:04:52	[Coordinador] Gianluca Fava:	Proba con object-fit cover Shelo
+02:04:58	Victor Pacheco:	no dice nada de animaciones  ,en los requisitos  que paso Gian luca
+02:05:01	[Coordinador] Gianluca Fava:	o con background-size:cover
+02:05:12	Angel Borrego:	yo edite las imágenes con boostrap
+02:05:18	Trinidad González:	profe es obligatorio q tenga muchas ramas el GiT o podemos hacer solo una cuando terminamos y listo?
+02:05:36	[Tutora] Gabriela Rodriguez:	no es necesario trinidad
+02:05:39	Karen Taylor:	Tengo una duda pero no se si es muy específica, si ya incorpore GIT a mi proyecto pero es como si solo estuviera arriba mi índex, me marca un error y mis otras páginas en rojo, hay una manera de incorporar las otras páginas?
+02:05:45	Angel Borrego:	en la librería da todas las propiedades para las imagenes
+02:05:57	Trinidad González:	gracias grabriela!!!
+02:06:11	[Tutora] Gabriela Rodriguez:	Karen, verifica con un git sttatus
+02:06:12	Tobias Vega:	hay que tenerlo en versión mobile ?
+02:06:22	[Tutora] Gabriela Rodriguez:	asi ves que pasa con los archivos que faltan
+02:06:23	[Coordinador] Gianluca Fava:	SI Tobias, mobile, Tablet y desktop
+02:06:31	[Tutora] Gabriela Rodriguez:	si Tobias, debe ser responsive
+02:07:14	Tobias Vega:	genial gracias
+02:07:15	Juan Morales:	yo no se si lo subi bien
+02:07:31	Juan Morales:	me aparece en el GitHub es suficiente?
+02:07:54	Leonel Stanton:	cual seria el tamaño minimo de mobile que deberiamos usar?
+02:08:16	Juan Morales:	yo lo hice con 600px
+02:08:18	Juan Morales:	sirve?
+02:08:40	[Tutora] Gabriela Rodriguez:	te puedes fijar en los breakpoints de bootstrap Leonel
+02:08:42	Tobias Vega:	disculpen me surgio un problema y tengo que irme en un unos minutor
+02:08:57	Nicolas Justet:	Profe, cuando genero el link en git h para pasarle a la gente para que entre a ver (como una pagina de internet común) hay algunas imágenes que no se cargan correctamente, sabe por que puede ser ??
+02:09:14	Juan Morales:	si aprece en code
+02:09:32	Juan Morales:	en issues no aparece nada ☹️
+02:09:34	Nicolas Justet:	si
+02:09:58	Nicolas Justet:	aaa oka, reviso eso.... Gracias !!!
+02:10:02	Karen Taylor:	Profe, Gabriela! Si ya pude con el add, jeje era eso 😄
+02:10:08	matias rueda:	yo saque el ./../ porque me lo pidió el tutor
+02:11:07	[Coordinador] Gianluca Fava:	Y que pusiste?
+02:11:10	matias rueda:	../
+02:11:32	matias rueda:	funciona igual
+02:11:40	matias rueda:	es prácticamente lo mismo
+02:12:46	[Coordinador] Gianluca Fava:	Eso tendría q funcionar igual
+02:12:46	[Coordinador] Gianluca Fava:	claro
+02:12:56	matias rueda:	me puede explicar lo de pages en GitHub?
+02:14:53	matias rueda:	si si es que quería armar algo con unos compañeros
+02:15:24	Juan Morales:	pregunta si esta publico e repositorio alguien externo le puede hacer cambios?
+02:15:33	Juan Morales:	sinq ue uno este pendiente?
+02:15:38	Juan Morales:	a bueno
+02:15:46	[Tutora] Gabriela Rodriguez:	Deben autorizarlo
+02:15:49	[Tutora] Gabriela Rodriguez:	lo agregas
+02:15:57	Juan Morales:	listo
+02:16:23	Juan Morales:	entiendo
+02:16:29	Agustin Barrera:	se tomó lista? recien llego a mi casa del trabajo.  pido disculpas
+02:16:39	Shelo Setton:	profe
+02:16:45	Shelo Setton:	hice lio creo
+02:16:47	[Tutor] Jonathan Romero:	Hola Agus! Dale no hay drama... y todavia no
+02:17:01	Leonel Stanton:	jajajajja
+02:17:01	[Tutora] Gabriela Rodriguez:	la ansiedad por favor
+02:17:03	[Tutora] Gabriela Rodriguez:	bajenle
+02:17:06	Santiago Sanrame:	jajajajajja
+02:17:07	Juan Morales:	uno se preocupa profe jajaja
+02:17:08	Agustin Barrera:	jaja genio Profe, gracias
+02:17:18	Josias Flier:	profe, si yo me meto al GitHub de alguien, y a su repositorio, puedo ver el link de pages?
+02:17:35	Gianfranco Ferreyra:	Yo voy a tener que volver la clase porque se me fue el wifi y me perdí jajajaja
+02:17:43	Gianfranco Ferreyra:	volver a ver*
+02:17:56	[Coordinador] Gianluca Fava:	sisi se puede
+02:18:00	matias rueda:	fíjate en mi perfil josias
+02:18:01	Victor Pacheco:	si se puede
+02:18:03	[Coordinador] Gianluca Fava:	Lo tenes a un costadiro
+02:18:05	[Coordinador] Gianluca Fava:	a la aderecha
+02:18:05	Victor Pacheco:	si es publico si
+02:18:29	matias rueda:	elkema89
+02:18:37	Nicolas Justet:	Nicoweeko
+02:18:37	[Coordinador] Gianluca Fava:	Gianluca1796 (= jaja
+02:18:48	matias rueda:	el trabajo javascript
+02:18:49	[Tutora] Gabriela Rodriguez:	ya pase asistencia a los mios para que se calmen, me avisan si les falta
+02:19:01	Shelo Setton:	PROFE
+02:19:03	Juan Morales:	juanmorales86
+02:19:04	Shelo Setton:	HICE LIO
+02:19:09	matias rueda:	el de JavaScript
+02:19:11	Shelo Setton:	NOSE QUE ME MANDE
+02:19:18	Victor Pacheco:	Napster135
+02:19:20	Shelo Setton:	PERDO LA PAGINA DE PRODUCTOS
+02:19:22	Victor Pacheco:	fíjate el mio !
+02:19:30	matias rueda:	ese lo tengo
+02:19:43	Nicolas Justet:	Nicoweeko (yo lo tengo )
+02:19:44	matias rueda:	ese es mio
+02:19:50	matias rueda:	pero no le aparece
+02:20:11	[Coordinador] Gianluca Fava:	gianluca1796 es el mio profe tengo varios deploy podes entrar al proyecto de JS
+02:20:13	matias rueda:	elkema89
+02:20:18	matias rueda:	pero no figura
+02:20:19	[Coordinador] Gianluca Fava:	No se rian (?
+02:20:29	[Tutora] Gabriela Rodriguez:	hahahaha
+02:20:30	Nicolas Justet:	profe klo esta buscando mal
+02:20:36	Agustín Lombardi:	no lo expongas
+02:20:47	Jose Mendoza Molina:	Estas buscándolo desde el repositorio de alguien mas..
+02:20:55	Nicolas Justet:	Nicoweeko
+02:21:00	Nicolas Justet:	si si desde el repo
+02:21:04	[Coordinador] Gianluca Fava:	https://github.com/Gianluca1796/Proyecto-JS
+02:21:45	Victor Pacheco:	ese es
+02:21:51	Victor Pacheco:	view deplo
+02:22:13	[Coordinador] Gianluca Fava:	ay
+02:22:15	[Coordinador] Gianluca Fava:	jajajaja
+02:22:16	Leonel Stanton:	esa es paulina cocina?
+02:22:17	[Tutor] Jonathan Romero:	jajaja
+02:22:17	Santiago Sanrame:	ufff
+02:22:19	Josias Flier:	jajajaj en el horno gian
+02:22:34	Nicolas Justet:	mas chico
+02:22:35	Nicolas Justet:	jajaa
+02:22:37	[Coordinador] Gianluca Fava:	Dale hasta mobile profe
+02:22:38	[Coordinador] Gianluca Fava:	sin miedo
+02:22:52	[Coordinador] Gianluca Fava:	No veo creo
+02:22:52	[Coordinador] Gianluca Fava:	jaja
+02:22:53	Nicolas Justet:	Dudoso jajajaja
+02:23:03	Santiago Sanrame:	mmm
+02:23:04	[Coordinador] Gianluca Fava:	En el celu se ve 10 puntos jaja
+02:23:06	[Tutora] Gabriela Rodriguez:	jajajaj
+02:23:07	Josias Flier:	profe, rebotele la entrega
+02:23:10	[Coordinador] Gianluca Fava:	Confirmo
+02:23:10	Nicolas Justet:	ajajjaajajajja
+02:23:11	Leonel Stanton:	reentrega obligatoria
+02:23:13	[Tutor] Jonathan Romero:	jajaja
+02:23:14	[Tutora] Gabriela Rodriguez:	bueno si quieren critican el mio jajaja
+02:23:22	[Coordinador] Gianluca Fava:	Aprobe con 10 asi que a ver a ver
+02:23:25	Agustín Lombardi:	hizo el curso ?
+02:23:31	[Tutora] Gabriela Rodriguez:	gabrielajrr
+02:23:48	[Coordinador] Gianluca Fava:	https://github.com/Gianluca1796/Proyecto-JS Y este es mi proyecto del curso de JavaScript
+02:24:25	[Tutor] Jonathan Romero:	a verr
+02:24:31	Botheina Rachid Ferreira:	esta buena
+02:24:35	Josias Flier:	que genia, aguante la F1
+02:24:35	Botheina Rachid Ferreira:	me gusta
+02:24:36	[Tutor] Jonathan Romero:	responsive??
+02:24:40	[Tutor] Jonathan Romero:	jajajaja
+02:24:53	[Coordinador] Gianluca Fava:	Crack Gabii
+02:24:55	[Tutor] Jonathan Romero:	Bien bien
+02:24:56	Santiago Sanrame:	see
+02:24:58	Josias Flier:	bandera a cuadros para gabriela
+02:25:04	Trinidad González:	hermosa esa pag
+02:25:05	[Tutora] Gabriela Rodriguez:	jajajajaja
+02:25:15	[Coordinador] Gianluca Fava:	Eran otro s tiempos (?
+02:25:21	[Coordinador] Gianluca Fava:	Pequeño saltamontes
+02:25:22	[Tutora] Gabriela Rodriguez:	jajajaja
+02:25:29	[Tutora] Gabriela Rodriguez:	ahi estabamos aprndiendo
+02:25:37	[Tutora] Gabriela Rodriguez:	y todavia estamos aprendiendo
+02:25:37	[Coordinador] Gianluca Fava:	Todo colorcitros desp conoces JavaScript y te quedas pelado
+02:25:39	[Coordinador] Gianluca Fava:	na mentira jaj
+02:25:55	Santiago Sanrame:	ya me dio miedo
+02:26:06	Juan Morales:	y si jajaaja
+02:26:11	Josias Flier:	nuevo miedo desbloqueado
+02:26:11	[Tutora] Gabriela Rodriguez:	No santi, tranquilo
+02:26:21	[Tutora] Gabriela Rodriguez:	ya veras que te sale algo bueno
+02:29:16	matias rueda:	el nav lo limite en 992. esta bien?
+02:29:54	matias rueda:	desaparecen los links y hay menú desplegable
+02:30:17	[Tutora] Gabriela Rodriguez:	el ancho mati?
+02:30:29	matias rueda:	width
+02:30:33	[Tutora] Gabriela Rodriguez:	no es conveniente limitar el ancho del nav
+02:30:38	[Tutora] Gabriela Rodriguez:	no no Mati
+02:30:41	[Tutora] Gabriela Rodriguez:	no hagas eso
+02:30:50	matias rueda:	no lo limite
+02:30:56	matias rueda:	use un max-wisth
+02:31:07	matias rueda:	max-width
+02:31:11	[Coordinador] Gianluca Fava:	😅
+02:31:24	Jazmin romero:	perdoonn no tenia señal en la calle y recien pude llegar a mi casa
+02:31:24	Victor Pacheco:	😲
+02:31:36	[Profesor] Saúl:	Bienvenida Jazmin
+02:32:36	matias rueda:	ahí esta lo que decía justo
+02:33:15	Matias Luchini:	no
+02:33:15	Victor Pacheco:	No
+02:33:21	Santiago Sanrame:	si puede
+02:33:21	Nicolas Justet:	como poder puede
+02:33:22	Agustín Lombardi:	si
+02:33:23	Victor Pacheco:	poder puede
+02:33:24	Nicolas Justet:	como deber no
+02:33:26	Victor Pacheco:	que la lea es diferente
+02:33:31	Angel Borrego:	como poder se puede pero no se debe
+02:41:20	Josias Flier:	puso aling items
+02:41:26	Joaquín Pérez:	text align
+02:44:46	Josias Flier:	no se pone el screen ahí?
+02:45:05	Evelyn Alcantara:	Para que era el operador Screen?
+02:45:39	Josias Flier:	osea es screen and (biri biri) and (biri biri)?
+02:45:45	Josias Flier:	usa dos and??
+02:46:05	Josias Flier:	jajjaja no me daba el tiempo escribir todo jaja
+02:46:06	Santiago Sanrame:	jajajajajaja
+02:48:33	Shelo Setton:	PROFE
+02:48:34	Shelo Setton:	warning: in the working copy of 'assets/js/bootstrap.bundle.min.js', LF will be replaced by CRLF the next time Git touches itwarning: in the working copy of 'assets/styles/bootstrap.min.css', LF will be replaced by CRLF the next time Git touches it
+02:48:41	Shelo Setton:	ME TIRO ESTO CUANDO LE MANDE GIT ADD .
+02:50:08	[Coordinador] Gianluca Fava:	Creo que es un warning nomas igual no le va a prohibir subir nada
+02:50:16	[Coordinador] Gianluca Fava:	eso :D
+02:50:51	Jose Mendoza Molina:	bueno.
+02:50:52	Shelo Setton:	profe listo
+02:50:54	Shelo Setton:	gracias
+02:50:56	Santiago Sanrame:	si señor
+02:50:57	Shelo Setton:	el tema es ahora
+02:51:04	Josias Flier:	el café dice hasta las y 17
+02:51:05	Shelo Setton:	el tema de productos
+02:51:14	Shelo Setton:	mi pagina de productos
+02:51:14	Federico Davies:	no llego con el café siono
+02:51:19	Juan Morales:	profe le puedo hacer una pregunta con mi proyecto.
+02:51:19	Shelo Setton:	no tiene container
+02:51:23	Shelo Setton:	osea no funca
+03:04:06	Lucas Lermet:	estoy confundido con lo q pregunte, si puedo hacer un archivo nuevo y no presentar todooo lo de la primera entrega, porque sino se me mezcla todo incorporando lo nuevo
+03:04:47	[Coordinador] Gianluca Fava:	La idea es que tu archivo sea escalable y se vaya agregando lo nuevo Lucas
+03:04:55	[Coordinador] Gianluca Fava:	Vayas formando tu proyecto a medida avanzamos
+03:05:30	Tobias Vega:	profes tengo que irme
+03:05:40	[Coordinador] Gianluca Fava:	Va a ser mas trabajo para vos seguramente Lucas :/
+03:05:43	Trinidad González:	profe yo pregunte a los ask si podía cambiar el proyecto y me dijeron que si
+03:05:55	Trinidad González:	porque cambie el tema
+03:06:03	[Coordinador] Gianluca Fava:	Si si, no estamos diciendo que no pueden
+03:06:20	Lucas Lermet:	Gracias, el tema q se me mezclan muchos las clases en css jaja
+03:06:29	Lucas Lermet:	pero bueno lo vamos armando
+03:10:23	Shelo Setton:	hoy no iba a ver kahoot?
+03:10:39	Shelo Setton:	A
+03:10:41	Shelo Setton:	ok
+03:14:42	Santiago Sanrame:	hay un a que falta cerrar
+03:15:01	Jose Mendoza Molina:	En enlace 3, falta cerrar a.
+03:16:19	Matias Luchini:	no
+03:16:22	Matias Luchini:	a>
+03:16:24	matias rueda:	le falta>
+03:16:25	Agustín Lombardi:	la a
+03:18:53	matias rueda:	tiene que poner un id 1 al div de arriba
+03:20:45	Josias Flier:	profe yo tengo lo siguiente en mi barra de navegación, me queda pintado en gris en la pagina que estoy
+03:20:47	Josias Flier:	.navBarItem:hover{    background-color: rgba(80, 78, 78, 0.582);}.active{    background-color: rgba(80, 78, 78, 0.582);    }
+03:21:56	Josias Flier:	pero a penas entro en el index, ya esta el home sombreado, no me gusta del todo, lo puedo hacer de otra forma? osea le asigno en cada pagina una clase (Active) entonces en la q este se pinta
+03:22:29	Shelo Setton:	epa
+03:22:33	Shelo Setton:	node.js
+03:23:45	Josias Flier:	claro, lo tengo asi, pero no quiero q apenas se entre a la pagina ya salga sombreado el home.
+03:24:27	Josias Flier:	claro pero si navego, cuando vuelvo al home ahí si seria apropiado
+03:24:36	Josias Flier:	no se si se entiende?
+03:24:52	Matias Luchini:	mmm
+03:24:54	Josias Flier:	claro, seria como mas armonioso
+03:25:05	matias rueda:	pero del index no tendría porque tener un link al index
+03:25:15	Josias Flier:	dale
+03:25:17	Josias Flier:	lo voy a ver
+03:25:40	matias rueda:	ah claro como un señalador
+03:25:51	Josias Flier:	claro claro
+03:26:16	Leonel Stanton:	la animación de que la barra de navegación se achique cuando scroleas se puede hacer sin Javascript?
+03:26:27	Karen Taylor:	Profe el ling que manda al tutoría de Node no manda a ningún sitio para ver el tutoría
+03:26:30	Karen Taylor:	link*
+03:26:35	Karen Taylor:	Que esta en la presentación
+03:26:56	Juan Morales:	me supongo q si con las pseudo clases
+03:27:46	[Profesor] Saúl:	https://www.w3schools.com/css/css_pseudo_classes.asp
+03:29:50	Josias Flier:	ultima pregunta de la barra de navegación, para ir a contacto por ejemplo, apoyo el mouse y el hover me pinta la cajita de gris, pero solo me deja ingresar a contacto, tocando la palabra "CONTACTO", como puedo hacer para que toda la caja me redireccione?
+03:31:06	Josias Flier:	joya lo pruebo
+03:31:13	Brian Marchese:	profe para la clase que viene tenemos que tener instalado node y npm?
+03:31:14	Shelo Setton:	https://github.com/SheloSett/Trabajo-final-coder-Desarrollo-web.git
+03:31:25	[Coordinador] Gianluca Fava:	Si Brian seria lo ideal
+03:31:37	[Coordinador] Gianluca Fava:	Asi ya empezamos desde ahí sin tardar mucho tiempo en instalarlo
+03:31:54	Brian Marchese:	okeyy, y como el link no anda buscamos un tuto en YouTube de ultima no?
+03:32:59	Brian Marchese:	Dale dale no hay drama profe
+03:33:36	[Profesor] Saúl:	https://drive.google.com/file/d/17iCo1nOV96cRKXTOWKoRZKnZxnBhLw8t/view?usp=share_link
+03:33:46	[Profesor] Saúl:	https://drive.google.com/file/d/1u7wA9--avu1Q5LD0M3Suz2ZPrU6J9t4F/view?usp=share_link
+03:34:15	[Coordinador] Gianluca Fava:	Estaba revisando y se ven perfecto los videos
+03:34:18	[Coordinador] Gianluca Fava:	Por las dudas
+03:34:22	[Coordinador] Gianluca Fava:	No por mi nada
+03:34:57	[Coordinador] Gianluca Fava:	Si necesitan consultar cualquier cosa para su entrega chicos, escriban por privado en el chat que estoy para ayudarlos  💪
+03:42:51	Matias Ferrero:	Buenas noches a todos, disculpen, tengo que salir. Nos vemos en la proxima
+03:43:01	Matias Luchini:	esa tuto la puede compartir con todos?
+03:44:40	[Tutor] Jonathan Romero:	Chicos me tengo que retirar, nos vemos la clase que viene!! Saludoss
+03:45:12	[Coordinador] Gianluca Fava:	Gente, me tengo que retirar urrrgente, que tengan buenas noches!
+03:46:18	matias rueda:	se hereda eso profe?
+03:47:38	matias rueda:	ahí contesto justo jajajajaja
+03:48:50	Botheina Rachid Ferreira:	buenas noches, muchas gracias
+03:48:58	Angel Borrego:	gracias buenas noches
+03:49:13	Santiago Sanrame:	gracias profe hasta el jueves
+03:49:13	Rocio Gonzalez:	gracias y buenas noches a todos
+03:49:14	Leonela Dell Arciprete:	buenas noches
+03:49:16	Jose Mendoza Molina:	bueno, chau.
+03:49:21	Santiago Sanrame:	buenas noches
+03:49:25	Juan Morales:	gracias profe nos vemos
+03:49:41	Rocio Gonzalez:	chauu
+03:49:45	Josias Flier:	ns vemos profee
