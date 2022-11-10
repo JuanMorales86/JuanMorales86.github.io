@@ -12,7 +12,7 @@
 }   
 
 body{ 
-    font-size: 100%;
+    *font-size: 100%;
 }
 
 
@@ -78,68 +78,97 @@ body{
     row-gap: 2px;
     background-color: #e2e5ec;/*color de fondo del body*/
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto 690px auto;/*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
+    grid-template-rows: auto auto auto;/*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
     grid-template-areas:    
     "header header"
-    "main main"
+    "h1 main main"
     "footer footer"
 }
 
 /**FORMULARIO DE CONTACTO**/
 .form__contacto{
     grid-area: form__contacto;
+    *display: inline-block;
+    *flex-direction: column;
+    *justify-content: center;
+    *align-items: center;
+}
+
+.direction{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
+.direction{
+    flex-direction:column;
+    padding-top: 5rem
+   
 
+}
 .form__contacto h1{
-    display: flex;
-    justify-content: center;
-    margin-top: 10%; 
+   
 }
 
 form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    padding: 16px;
+    width: 30rem;/*300px*/
+    padding: 16px;/*16px*/
     border-radius: 10px;
-    margin: 10% 0% 10% 0%;/*el margen automatico da el mismo margen de todos los lados*/
-    background-color: white;
+    *margin: 10% 10% 10% 10%;/*el margen automatico da el mismo margen de todos los lados*/
+    *margin:auto;
+    background-color: white;/*color de fondo*/
     
     
 }
 
 form label{
-    width: 72px;
+    display:inline-block;
+    width: 6rem;
+    height: 1rem;
     font-weight: bold;
+    text-align:center;   
+}
+
+form .consult{
+    width: 27rem;
+    text-align:center;
+    margin-top: 0.5rem;
+}
+
+form input[type="text"],/*codigo para darle el estilo a los txt email etc dentro de un form*/
+form input[type="email"],
+form input[type="number"]
+/*form textarea[name="query"]*/
+{
+    width: 20rem;/*180px*/
+    padding:0.5rem;
+    border: 3px solid black; 
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 0.5rem;/*arriba y abajo y cero los costados*/
     display: inline-block;
 }
 
-form input[type="text"]/*codigo para darle el estilo a los txt email etc dentro de un form*/
-form input[type="email"]{
-    width: 180px;
-    padding: 3px;
-    border: 1 px solid #f6f6f6; 
-    border-radius:  3px;
+form textarea[name="query"]{
+    width: 26rem;
+    border: 3px solid black; 
     background-color: #f6f6f6;
-    margin: 8px 0;/*arriba y abajo y cero los costados*/
-    display: inline-block;
+    border-radius: 3px;
+    margin: 0.7rem;
+    display: flex;
+
 }
 
 form button{/*estilo del botton dentro del form del footer*/
-    width: 100%;
-    padding: 8px 16px;
-    margin-top: 1rem;
+    width: 15rem;
+    padding: 0.8rem;
+    margin: 1rem 7.7rem;
     background-color: #3da9d4;
     border-radius: 5px;
-    display: block;
+    *display: block;
     color: white;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 form button:hover{
