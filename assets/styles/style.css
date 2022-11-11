@@ -39,9 +39,10 @@ body{
     row-gap: 2px;
     background-color: #e2e5ec;/*color de fondo del body*/
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto 690px auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:    
     "header header"
+    "h1 h1"
     "form__contacto form__contacto"
     "footer footer"
 }
@@ -78,7 +79,7 @@ body{
     row-gap: 2px;
     background-color: #e2e5ec;/*color de fondo del body*/
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto auto;/*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
+    grid-template-rows: auto 690px auto;/*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
     grid-template-areas:    
     "header header"
     "h1 main main"
@@ -88,26 +89,19 @@ body{
 /**FORMULARIO DE CONTACTO**/
 .form__contacto{
     grid-area: form__contacto;
-    *display: inline-block;
-    *flex-direction: column;
-    *justify-content: center;
-    *align-items: center;
+  
 }
 
 .direction{
     display: flex;
     flex-direction: column;
+    align-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
-.direction{
-    flex-direction:column;
-    padding-top: 5rem
-   
-
-}
-.form__contacto h1{
-   
+.direction h1{
+    font-size: 2rem;
 }
 
 form{
@@ -159,10 +153,10 @@ form textarea[name="query"]{
 
 }
 
-form button{/*estilo del botton dentro del form del footer*/
+form button{/*estilo del botton dentro del form*/
     width: 15rem;
     padding: 0.8rem;
-    margin: 1rem 7.7rem;
+    margin: 1rem 6rem;
     background-color: #3da9d4;
     border-radius: 5px;
     *display: block;
