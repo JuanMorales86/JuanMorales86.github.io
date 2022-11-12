@@ -161,7 +161,7 @@ form button:hover {
   grid-template-rows: auto 690px auto; /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
   grid-template-areas:
     "header header"
-    "h1 main main"
+    "main main"
     "footer footer";
 }
 
