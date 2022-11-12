@@ -1,7 +1,13 @@
 test/
 node_modules/
-*.json
+package.json
+css.css
+
+
+
+
+
 #ignora los archivos json excepto
-!package.json
+
 #excepto este archivo que se incluye para revision
-.css
+
