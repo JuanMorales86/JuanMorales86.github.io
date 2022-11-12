@@ -1,4 +1,7 @@
 test/
-package-lock.json/
 node_modules/
-css.css/
+*.json 
+#ignora los archivos json excepto
+!package.json
+#excepto este archivo que se incluye para revision
+.css
