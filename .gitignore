@@ -1,5 +1,6 @@
 test/
 node_modules/
+/pages/technicalServices.html
 package-lock.json
 css
 
