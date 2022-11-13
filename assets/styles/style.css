@@ -30,10 +30,7 @@ body {
   /*color de fondo del body*/
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header header"
- "h1 h1"
- "form__contacto form__contacto"
- "footer footer"; }
+  grid-template-areas: "header header" "h1 h1" "form__contacto form__contacto" "footer footer"; }
 
 /**FORMULARIO DE CONTACTO**/
 .form__contacto {
@@ -121,9 +118,7 @@ form button:hover {
   grid-template-columns: 50% 50%;
   grid-template-rows: auto 690px auto;
   /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
-  grid-template-areas: "header header"
- "main main"
- "footer footer"; }
+  grid-template-areas: "header header" "main main" "footer footer"; }
 
 /**PAGINA DE PRODUCTOS**/
 .son__containerP {
@@ -134,9 +129,7 @@ form button:hover {
   grid-template-columns: 50% 50%;
   grid-template-rows: auto 690px auto;
   /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
-  grid-template-areas: "header header"
- "main main"
- "footer footer"; }
+  grid-template-areas: "header header" "main main" "footer footer"; }
 
 /**PAGINA DE TIENDA**/
 .son__containerT {
@@ -147,9 +140,7 @@ form button:hover {
   grid-template-columns: 50% 50%;
   grid-template-rows: auto 690px auto;
   /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
-  grid-template-areas: "header header"
- "main main"
- "footer footer"; }
+  grid-template-areas: "header header" "main main" "footer footer"; }
 
 /*COMIENZA MI MENU CON EL LOGO*/
 header {
@@ -338,14 +329,11 @@ header a {
 .titulo {
   /*contiene un h1*/
   grid-area: titulo;
-  display: flex;
-  *border: #244e73 solid 2px;
+  visibility: visible;
   box-sizing: border-box;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
-  *padding-right: 20px;
-  margin: auto;
-  *width: auto;
+  padding: 0 30px 0 25px;
   overflow: hidden;
   transition-property: clip-path, transform, max-height, overflow, display;
   clip-path: circle(150% at top right);
@@ -356,14 +344,20 @@ header a {
   /*defect: ease | ease-in | ease-in-out | ease-out*/
   transition-delay: linear;
   *transition: width 0.5s 0.1s ease-in;
+  /*este codigo seria una transition completa con todas las propiedades*/
   /*propiedad  duracion  duracion de retraso  timing-function*/
   font-size: 18px; }
 
 .card-m:hover .titulo {
   clip-path: circle(10% at top right);
   transform: rotate(-90deg);
-  max-height: 0;
+  visibility: collapse;
+  /*or collapse*/
   overflow: hidden;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  *max-height: 0;
   *display: none;
   /*importante*/
   *width: 0.2px;
@@ -388,7 +382,8 @@ header a {
   overflow: hidden;
   /*el overflow esconde el div details para que funcione el efecto hover*/
   transition: 0.5s ease-in-out;
-  margin-left: 40px;
+  margin-left: 0.5px;
+  /*este margin le da espacio a las box con el fin de que no penguen entre si*/
   *margin-right: 10px; }
 
 /**HOVER**/
@@ -412,7 +407,7 @@ header a {
 
 .cards .imgBox img {
   width: 100%;
-  height: 100%;
+  height: 92%;
   object-fit: cover; }
 
 .cards .details {
@@ -517,20 +512,13 @@ footer a {
     /*color de fondo del body*/
     grid-template-columns: 50% 50%;
     grid-template-rows: auto 600px auto;
-    grid-template-areas: "header header"
- "form__contacto form__contacto"
- "footer footer"; }
+    grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
   .grid-container {
     background-color: #e2e5ec;
     /*color de fondo del body*/
     grid-template-columns: 50% 50%;
     grid-template-rows: auto auto auto 200px auto auto;
-    grid-template-areas: "header header"
- "img-pr img-pr"
- "img-bnr img-bnr"
- "slide-txt slide-txt"
- "titulo card-m card-m"
- "footer footer";
+    grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "titulo card-m card-m" "footer footer";
     *font-size: 100%;
     *width: 100%; }
   /*header, footer{
@@ -818,9 +806,7 @@ footer a {
     /*color de fondo del body*/
     grid-template-columns: 50% 50%;
     grid-template-rows: auto 550px auto;
-    grid-template-areas: "header header"
- "form__contacto form__contacto"
- "footer footer"; }
+    grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
   .form__contacto {
     grid-area: form__contacto;
     width: 100%;
@@ -833,12 +819,7 @@ footer a {
     /*color de fondo del body*/
     grid-template-columns: 50% 50%;
     grid-template-rows: auto auto auto 200px auto auto;
-    grid-template-areas: "header header"
- "img-pr img-pr"
- "img-bnr img-bnr"
- "slide-txt slide-txt"
- "titulo card-m card-m"
- "footer footer"; }
+    grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "titulo card-m card-m" "footer footer"; }
   .navbar__list {
     justify-content: flex-end;
     font-size: 14px; }
@@ -929,7 +910,7 @@ footer a {
     40%{transform: rotate(-10deg);}
     100%{color: rgb(18, 20, 20);}
 } */
-.direction h1 {
+.direction h1, .titulo {
   animation: fadeIn;
   animation-duration: 2s;
   *animation-delay: 0.5s;
