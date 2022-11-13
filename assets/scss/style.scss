@@ -1052,6 +1052,7 @@ footer a {
 }
 
 /**ANIMACIONES**/
+
 /* @keyframes heartBeat{
     0%{transform: scale(5);}
     10%{color: #4ba9e9;}
@@ -1072,4 +1073,85 @@ footer a {
 .query:focus{
     background-color: #bbdaef;
 }
+
+@keyframes AnimateScale{
+  from {transform: scale(4);}
+  // 50%{transform: scale(3);}
+  to {transform: scale(1);}
+}
+
+@keyframes AnimateColorsBackgrounds {
+  0%{background-color: #91a3eb;filter: alpha(opacity=50);zoom: 1;}
+  5%{background-color: #91a3eb;}
+  10%{background-color: #91a3eb;}
+  12%{background-color:  #ea1919;}
+  26%{background-color: #d4e6f2;}
+  41%{background-color:#f4e4e0;}
+  55%{background-color: #624d92;}
+  68%{background-color:#b2b3b0;}
+  82%{background-color: #ea98ed;}
+  90%{background-color:black;}
+  98%{background-color:black;}
+  100%{background-color:black;filter: alpha(opacity=100);zoom:1;}
+}
+
+@keyframes AnimateColors{
+  0%{color: #91a3eb;}
+  5%{color: #91a3eb;}
+  10%{color: #91a3eb;}
+  14%{color:  #ea1919;}
+  28%{color: #d4e6f2;}
+  42%{color:#f4e4e0;}
+  56%{color: #624d92;}
+  70%{color:#b2b3b0;}
+  84%{color: #ea98ed;}
+  98%{color:white;}
+  100%{color:black;}
+}
+
+@keyframes AnimateColorText{
+  0%{color:#d4e6f2;}
+  5%{color: #0a0a0a;}
+  10%{color:#d4e6f2;}
+  14%{color:  #0a0a0a;}
+  28%{color: #d4e6f2;}
+  42%{color:#0a0a0a;}
+  56%{color: #d4e6f2}
+  70%{color:#0a0a0a;}
+  84%{color: #d4e6f2}
+  98%{color:#0a0a0a;}
+  100%{color:black;}
+}
+
+.item-txt{
+  animation: AnimateScale;
+  animation-duration: 6s;
+  animation-iteration-count: inline;
+  animation-delay: 2s;
+  
+}
+
+.item-txt a{
+  animation: AnimateColors;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  *box-shadow: 0px 1px 60px rgba(0, 0, 0, 0.45);
+  text-shadow: 7px 5px 13px #1d2224;
+  font-size: 1.5rem;
+}
+
+.slide-txt{
+  animation: AnimateColorsBackgrounds;
+  animation-duration: 19s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+.card-m{
+  animation: AnimateColorText;
+  animation-duration: 19s;
+  animation-iteration-count: infinite;
+}
+
 /**FIN ANIMACIONES**/
