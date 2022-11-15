@@ -9,13 +9,14 @@
   box-sizing: border-box;
   text-decoration: none;
   *list-style-type: none;
-  max-width: 1499px; /*probando se me desacomodan los contenedores cada vez q le pongo contenido*/
+  *max-width: 1499px; /*probando se me desacomodan los contenedores cada vez q le pongo contenido*/
 }
 
 body {
   *font-size: 100%;
 }
 
+/*INDEX*/
 .grid-container {
   display: grid;
   row-gap: 2px;
@@ -127,23 +128,6 @@ form button:hover {
 }
 /**CIERRA CSS PAGINA CONTACTO**/
 
-/*Probando servicio tecnico con Bootstrap*/
-.son__containerSV .imagen{
-    border: #0a0a0a solid 2px;
-}
-
-.colores{
-  background-color: #3da9d4;
-}
-
-.son__containerSV .navbar__item a{
-  list-style-type: none;
-  text-decoration: none;
-  border: #0a0a0a 2px solid;
-}
-
-
-
 
 /**PAGINA DE SERVICIO TECNICO**/
 .son__containerS {
@@ -151,12 +135,49 @@ form button:hover {
   row-gap: 2px;
   background-color: #e2e5ec; /*color de fondo del body*/
   grid-template-columns: 50% 50%;
-  grid-template-rows: auto 690px auto; /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
+  grid-template-rows: auto auto auto; /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
   grid-template-areas:
     "header header"
-    "main main"
+    "img-sp img-sp"
+    "titulo titulo"
     "footer footer";
 }
+.img-sp{
+  grid-area:img-sp;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.img-sp picture {
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-sp picture img{
+  width: 100%;
+  height: 100%;
+}
+
+.titulo{
+  display: flex;
+  text-align: center;
+}
+
+.titulo h1{
+  color: #687273;
+}
+
+
+
+
+
+
+
+
+
+
 
 /**PAGINA DE PRODUCTOS**/
 .son__containerP {
@@ -240,6 +261,7 @@ header a {
   width: 100%;
   height: 100%; /*acomdo el alto a los anchors de lalista raiz*/
   padding: 35px 15px 35px 15px; /*acomodo del borde a dentro*/ /*acomodo los anchors entre ellos le da espacios */
+  text-decoration: none;
 }
 
 .submenus {
@@ -254,6 +276,7 @@ header a {
   /* padding: 1px 1px; */
   /* margin-top: 2%; */
   z-index: 1;
+  
 }
 
 .submenus__item {
@@ -266,9 +289,10 @@ header a {
   /*ul>li>ul>li.a*/
   color: black;
   text-decoration: none;
-  padding: 5px 0px;
+  padding: 5px 0;
   display: block;
 }
+
 
 .navbar__item:hover > ul {
   /*ul:hover*/
@@ -279,7 +303,7 @@ header a {
   background-color: #687273;
 }
 
-.navLink:hover {
+.navbar__item:hover {
   /*ul>li>a*/ /*este hover en el navlink le agrega un fondo de  color al pasar el mouse sobre el menu raiz*/
   background-color: #687273; /*color al anchor*/
   /* width: 100%; */
@@ -295,14 +319,23 @@ header a {
 .img-pr {
   grid-area: img-pr;
   display: flex;
-  box-sizing: border-box;
-  justify-content: center;
-  height: 98%;
+  *box-sizing: border-box;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.img-pr picture{
+  width: 100%;
+  object-fit: cover;
 }
 
 .img-pr picture img {
   width: 100%;
   height: 100%;
+  
+  
 }
 
 .img-bnr {
@@ -1177,4 +1210,23 @@ footer a {
   animation-iteration-count: infinite;
 }
 
+.shadow-color:hover{
+  background-color: #687273;
+}
+
+
+
 /**FIN ANIMACIONES**/
+
+.containerwe{
+  margin: 0 !important;
+  padding: 0 !important; 
+}
+
+#c-background{
+  background-color: #3da9d4;
+}
+
+#c-text{
+  color: white;
+}

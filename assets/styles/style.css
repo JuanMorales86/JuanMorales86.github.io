@@ -8,12 +8,13 @@
   box-sizing: border-box;
   text-decoration: none;
   *list-style-type: none;
-  max-width: 1499px;
+  *max-width: 1499px;
   /*probando se me desacomodan los contenedores cada vez q le pongo contenido*/ }
 
 body {
   *font-size: 100%; }
 
+/*INDEX*/
 .grid-container {
   display: grid;
   row-gap: 2px;
@@ -31,10 +32,7 @@ body {
   /*color de fondo del body*/
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header header"
- "h1 h1"
- "form__contacto form__contacto"
- "footer footer"; }
+  grid-template-areas: "header header" "h1 h1" "form__contacto form__contacto" "footer footer"; }
 
 /**FORMULARIO DE CONTACTO**/
 .form__contacto {
@@ -113,18 +111,6 @@ form button:hover {
   cursor: pointer; }
 
 /**CIERRA CSS PAGINA CONTACTO**/
-/*Probando servicio tecnico con Bootstrap*/
-.son__containerSV .imagen {
-  border: #0a0a0a solid 2px; }
-
-.colores {
-  background-color: #3da9d4; }
-
-.son__containerSV .navbar__item a {
-  list-style-type: none;
-  text-decoration: none;
-  border: #0a0a0a 2px solid; }
-
 /**PAGINA DE SERVICIO TECNICO**/
 .son__containerS {
   display: grid;
@@ -132,11 +118,31 @@ form button:hover {
   background-color: #e2e5ec;
   /*color de fondo del body*/
   grid-template-columns: 50% 50%;
-  grid-template-rows: auto 690px auto;
+  grid-template-rows: auto auto auto;
   /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
-  grid-template-areas: "header header"
- "main main"
- "footer footer"; }
+  grid-template-areas: "header header" "img-sp img-sp" "titulo titulo" "footer footer"; }
+
+.img-sp {
+  grid-area: img-sp;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%; }
+
+.img-sp picture {
+  width: 100%;
+  object-fit: cover; }
+
+.img-sp picture img {
+  width: 100%;
+  height: 100%; }
+
+.titulo {
+  display: flex;
+  text-align: center; }
+
+.titulo h1 {
+  color: #687273; }
 
 /**PAGINA DE PRODUCTOS**/
 .son__containerP {
@@ -147,9 +153,7 @@ form button:hover {
   grid-template-columns: 50% 50%;
   grid-template-rows: auto 690px auto;
   /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
-  grid-template-areas: "header header"
- "main main"
- "footer footer"; }
+  grid-template-areas: "header header" "main main" "footer footer"; }
 
 /**PAGINA DE TIENDA**/
 .son__containerT {
@@ -160,9 +164,7 @@ form button:hover {
   grid-template-columns: 50% 50%;
   grid-template-rows: auto 690px auto;
   /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
-  grid-template-areas: "header header"
- "main main"
- "footer footer"; }
+  grid-template-areas: "header header" "main main" "footer footer"; }
 
 /*COMIENZA MI MENU CON EL LOGO*/
 header {
@@ -221,7 +223,8 @@ header a {
   /*acomdo el alto a los anchors de lalista raiz*/
   padding: 35px 15px 35px 15px;
   /*acomodo del borde a dentro*/
-  /*acomodo los anchors entre ellos le da espacios */ }
+  /*acomodo los anchors entre ellos le da espacios */
+  text-decoration: none; }
 
 .submenus {
   /*ul>li>ul*/
@@ -248,7 +251,7 @@ header a {
   /*ul>li>ul>li.a*/
   color: black;
   text-decoration: none;
-  padding: 5px 0px;
+  padding: 5px 0;
   display: block; }
 
 .navbar__item:hover > ul {
@@ -259,7 +262,7 @@ header a {
 .submenus__item:hover {
   background-color: #687273; }
 
-.navLink:hover {
+.navbar__item:hover {
   /*ul>li>a*/
   /*este hover en el navlink le agrega un fondo de  color al pasar el mouse sobre el menu raiz*/
   background-color: #687273;
@@ -275,9 +278,14 @@ header a {
 .img-pr {
   grid-area: img-pr;
   display: flex;
-  box-sizing: border-box;
-  justify-content: center;
-  height: 98%; }
+  *box-sizing: border-box;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%; }
+
+.img-pr picture {
+  width: 100%;
+  object-fit: cover; }
 
 .img-pr picture img {
   width: 100%;
@@ -534,20 +542,13 @@ footer a {
     /*color de fondo del body*/
     grid-template-columns: 50% 50%;
     grid-template-rows: auto 600px auto;
-    grid-template-areas: "header header"
- "form__contacto form__contacto"
- "footer footer"; }
+    grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
   .grid-container {
     background-color: #e2e5ec;
     /*color de fondo del body*/
     grid-template-columns: 50% 50%;
     grid-template-rows: auto auto auto 200px auto auto;
-    grid-template-areas: "header header"
- "img-pr img-pr"
- "img-bnr img-bnr"
- "slide-txt slide-txt"
- "titulo card-m card-m"
- "footer footer";
+    grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "titulo card-m card-m" "footer footer";
     *font-size: 100%;
     *width: 100%; }
   /*header, footer{
@@ -835,9 +836,7 @@ footer a {
     /*color de fondo del body*/
     grid-template-columns: 50% 50%;
     grid-template-rows: auto 550px auto;
-    grid-template-areas: "header header"
- "form__contacto form__contacto"
- "footer footer"; }
+    grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
   .form__contacto {
     grid-area: form__contacto;
     width: 100%;
@@ -850,12 +849,7 @@ footer a {
     /*color de fondo del body*/
     grid-template-columns: 50% 50%;
     grid-template-rows: auto auto auto auto auto auto;
-    grid-template-areas: "header header"
- "img-pr img-pr"
- "img-bnr img-bnr"
- "slide-txt slide-txt"
- "titulo card-m card-m"
- "footer footer"; }
+    grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "titulo card-m card-m" "footer footer"; }
   .navbar__list {
     justify-content: flex-end;
     font-size: 14px; }
@@ -1071,4 +1065,16 @@ footer a {
   animation-duration: 19s;
   animation-iteration-count: infinite; }
 
+.shadow-color:hover {
+  background-color: #687273; }
+
 /**FIN ANIMACIONES**/
+.containerwe {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+#c-background {
+  background-color: #3da9d4; }
+
+#c-text {
+  color: white; }
