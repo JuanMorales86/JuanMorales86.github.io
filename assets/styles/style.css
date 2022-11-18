@@ -15,23 +15,14 @@
 body {
   *font-size: 100%; }
 
-/*PAGINA INDEX*/
-.grid-container {
-  display: grid;
-  row-gap: 2px;
-  background-color: #e2e5ec;
-  /*color de fondo del body*/
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto auto auto 200px 2fr auto;
-  grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "card-m card-m" "footer footer"; }
-
-/**CSS PAGINA CONTACTO**/
+/**PAGINA CONTACTO**/
 .son__containerC {
   display: grid;
   row-gap: 2px;
   background-color: #e2e5ec;
   /*color de fondo del body*/
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
+  /*originalmente era 50% 50%*/
   grid-template-rows: auto auto auto;
   grid-template-areas: "header header" "h1 h1" "form__contacto form__contacto" "footer footer"; }
 
@@ -118,7 +109,8 @@ form button:hover {
   row-gap: 2px;
   background-color: #e2e5ec;
   /*color de fondo del body*/
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
+  /*originalmente era 50% 50%*/
   grid-template-rows: auto auto auto auto auto;
   /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
   grid-template-areas: "header header" "img-sp img-sp" "titulo-2 titulo-2" "content-se content-se" "footer footer"; }
@@ -144,11 +136,16 @@ form button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  *border: #0a0a0a solid 2px; }
+  flex-wrap: wrap;
+  border: #0a0a0a solid 2px;
+  width: 100%;
+  height: 100%;
+  *margin-left: 24%;
+  overflow: hidden;
+  padding: 100px 0; }
 
 .titulo-2 h1 {
-  color: #687273;
-  padding: 5% 0; }
+  color: #687273; }
 
 .content-se {
   grid-area: content-se;
@@ -272,7 +269,8 @@ form button:hover {
   row-gap: 2px;
   background-color: #e2e5ec;
   /*color de fondo del body*/
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
+  /*originalmente era 50% 50%*/
   grid-template-rows: auto auto auto auto auto auto;
   /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
   grid-template-areas: "header header" "img-ps img-ps" "titulo-ps titulo-ps" "button-ps button-ps" "content-ps content-ps" "footer footer"; }
@@ -298,20 +296,25 @@ form button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  *border: #0a0a0a solid 2px; }
+  *border: #0a0a0a solid 2px;
+  width: 100%;
+  height: 100%;
+  *margin-left: 26.6%;
+  padding: 100px 0; }
 
 .titulo-ps h1 {
-  color: #687273;
-  padding: 5% 0; }
+  color: #687273; }
 
 /*INICIO CARDS PRODUCTOS*/
 .content-ps {
   grid-area: content-ps;
   border: #0a0a0a 4px solid;
   display: flex;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
   align-items: center;
-  padding: 2rem; }
+  *align-content: space-between;
+  padding: 2.5rem 0; }
 
 .card-ps {
   width: 300px;
@@ -321,7 +324,8 @@ form button:hover {
   transition: all .4s;
   display: flex;
   border-radius: 20px;
-  justify-content: center;
+  justify-content: space-between;
+  *align-items: center;
   position: relative; }
 
 .text-cardps {
@@ -336,9 +340,9 @@ form button:hover {
 .btn-cardps {
   width: 5em;
   height: 2.5em;
-  background: #3da9d4;
-  color: black;
-  border: 2px solid black;
+  background: #020202;
+  color: white;
+  border: 2px solid #4ba9e9;
   border-radius: 0.8em;
   font-size: 20px;
   font-weight: bold;
@@ -353,8 +357,8 @@ form button:hover {
 .card-ps .card-itemps {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.212);
   cursor: pointer;
   z-index: 10;
   transition: all .4s;
@@ -377,7 +381,10 @@ form button:hover {
   grid-area: button-ps;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-flow: wrap;
+  /*para que se achique cuando baje a resolucion*/
+  padding: 5rem 0; }
 
 .button-direction {
   display: flex;
@@ -415,6 +422,17 @@ form button:hover {
   grid-template-areas: "header header" "main main" "footer footer"; }
 
 /**FIN DE PAGINA TIENDA**/
+/*PAGINA INDEX*/
+.grid-container {
+  display: grid;
+  row-gap: 2px;
+  background-color: #e2e5ec;
+  /*color de fondo del body*/
+  grid-template-columns: 100%;
+  /*originalmente lo dividi 50% 50%*/
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "card-m card-m" "footer footer"; }
+
 /*COMIENZA MI MENU INDEX CON EL LOGO*/
 header {
   /*logotienda + navegacion*/
@@ -530,25 +548,25 @@ header a {
   width: 100%;
   height: 100%; }
 
+/*IMAGENES BANNERS*/
 .img-bnr {
   grid-area: img-bnr;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding: 10px 0 10px 0;
+  display: flex;
+  text-align: center; }
 
 .p-bnr {
   width: 100%;
   height: 100%;
   /*HICE CAMBIO CONFIG EL DESKTOP OJO*/
-  padding: 5px 0 5px 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
   column-gap: 5px; }
 
-.img-bnr picture img {
-  border: 3px solid #3da9d4;
-  width: 350px;
-  height: 300px; }
+.p-bnr img {
+  border: 5px solid #3da9d4;
+  width: 490px;
+  height: 350px; }
 
 /*SECCION TEXTOS SLIDES*/
 .slide-txt {
@@ -556,20 +574,20 @@ header a {
   background-color: #cad1d1;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   align-content: center; }
 
 .slide-txt div {
   font-size: 15px;
   text-align: justify;
-  padding: 10px; }
+  padding: 30px 30px; }
 
 .item-txt a {
   color: black;
   font-weight: bold;
   /**negrita**/
-  padding: 4px;
+  padding: 15px;
   /*separa dentro en los anchors*/ }
 
 .item-txt:hover {
@@ -590,7 +608,7 @@ header a {
   justify-content: flex-start;
   /*el valor que queria era flex-start pero no se veia bien*/
   align-items: center;
-  padding: 5px 4px 5px 5px;
+  padding: 10px 0;
   column-gap: 2px;
   row-gap: 5px;
   font-size: 70%; }
@@ -651,9 +669,9 @@ header a {
   overflow: hidden;
   /*el overflow esconde el div details para que funcione el efecto hover*/
   transition: 0.5s ease-in-out;
-  margin-left: 0.5px;
+  margin-left: 1px;
   /*este margin le da espacio a las box con el fin de que no penguen entre si*/
-  *margin-right: 10px; }
+  margin-right: 1px; }
 
 /**HOVER**/
 .cards:hover {
@@ -804,21 +822,22 @@ footer a {
   .content-se .description-s p {
     font-size: medium;
     padding-top: 5px; }
+  /*PAGINA INDEX*/
   .grid-container {
     background-color: #e2e5ec;
     /*color de fondo del body*/
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto auto 200px auto auto;
+    grid-template-columns: 100%;
+    /*50% 50%*/
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "titulo card-m card-m" "footer footer";
     *font-size: 100%;
     *width: 100%; }
-  /*header, footer{
-*grid-column: 1 / span 2;}/*otra forma de decirle en que columna y hasta donde se va a expandir*/
   /*MENU + LOGOTIENDA*/
   header {
     /*Este header contiene el logotienda y el menu de navegacion*/
     grid-area: header;
-    background-color: #3da9d4;
+    background-color: #142125;
+    /*#3da9d4*/
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -925,14 +944,14 @@ footer a {
     /* border: 1.5px solid; */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     /* margin: 5px; */
     /* height: max-content; */ }
   .slide-txt div {
     font-size: 15px;
     text-align: justify;
-    padding: 10px;
+    padding: 20px 20px;
     /*distancia entre anchors*/ }
   .item-txt a {
     color: black;
@@ -952,22 +971,30 @@ footer a {
   .card-m {
     grid-area: card-m;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     /*lo cambie a wrap esta nowwrap*/
-    justify-content: center;
+    *justify-content: center;
     /*el valor que queria era flex-start pero no se veia bien y predeterminado es centrado*/
-    align-items: center;
-    *align-content: center;
-    padding: 5px 5px 5px 5px;
+    *align-items: center;
+    align-content: center;
+    *padding: 5px 5px 5px 5px;
     *min-width: 100vh;
     /*el original*/
-    row-gap: 5px;
-    column-gap: 3px;
+    *row-gap: 5px;
+    *column-gap: 3px;
     height: 100%;
     width: 100%;
-    font-size: 70%; }
+    font-size: 70%;
+    *text-align: center; }
   .titulo {
-    grid-area: titulo; }
+    grid-area: titulo;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 12px 0 12px 0;
+    *padding-right: 10px;
+    border: #020202 solid 2px; }
   .card-m:hover .titulo {
     display: none;
     /**CUANDO coloco el display none no se me activa despues la animacion no se porque ya e probado varias maneras pero sigo sin resolverlo**/ }
@@ -1096,7 +1123,8 @@ footer a {
     row-gap: 2px;
     background-color: #e2e5ec;
     /*color de fondo del body*/
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
+    /*originalmente era 50% 50%*/
     grid-template-rows: auto auto auto;
     grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
   .form__contacto {
@@ -1201,7 +1229,8 @@ footer a {
     *row-gap: 2px;
     background-color: #e2e5ec;
     /*color de fondo del body*/
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
+    /*originalmente era 50% 50%*/
     grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "titulo card-m card-m" "footer footer"; }
   .navbar__list {
@@ -1285,18 +1314,10 @@ footer a {
     justify-content: flex-start;
     flex-wrap: wrap;
     *padding-right: 20px;
-    margin: 12px 0 12px 0; } }
+    margin: 12px 0 12px 0; }
+  /**FIN PAGINA INDEX**/ }
 
-/**FIN PAGINA INDEX**/
 /**ANIMACIONES**/
-/* @keyframes heartBeat{
-    0%{transform: scale(5);}
-    10%{color: #4ba9e9;}
-    20%{color: #bbdaef;}
-    30%{color: #cad1d1;}
-    40%{transform: rotate(-10deg);}
-    100%{color: rgb(18, 20, 20);}
-} */
 .direction h1,
 .titulo {
   animation: fadeIn;
@@ -1308,12 +1329,6 @@ footer a {
 
 .query:focus {
   background-color: #bbdaef; }
-
-@keyframes AnimateScale {
-  from {
-    transform: scale(4); }
-  to {
-    transform: scale(1); } }
 
 @keyframes AnimateColorsBackgrounds {
   0% {
@@ -1395,13 +1410,21 @@ footer a {
   100% {
     color: black; } }
 
+@keyframes AnimateScale {
+  from {
+    transform: scaleY(2) scaleX(2);
+    /*si cambias en el eje x funciona en 1 pero no se ve correctamente*/ }
+  to {
+    transform: scaleY(1) scaleX(1); } }
+
 .item-txt,
 .titulo-2,
 .titulo-ps {
   animation: AnimateScale;
-  animation-duration: 6s;
+  animation-duration: 2s;
   animation-iteration-count: inline;
-  animation-delay: 2s; }
+  animation-delay: 1s;
+  transform-origin: bottom; }
 
 .item-txt a {
   animation: AnimateColors;
