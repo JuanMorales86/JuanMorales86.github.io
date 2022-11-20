@@ -9,7 +9,7 @@
   box-sizing: border-box;
   text-decoration: none;
   *list-style-type: none;
-  max-width: 1499px;
+  max-width: 1498px;
   /*probando se me desacomodan los contenedores cada vez q le pongo contenido*/ }
 
 body {
@@ -416,10 +416,127 @@ form button:hover {
   row-gap: 2px;
   background-color: #e2e5ec;
   /*color de fondo del body*/
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto 690px auto;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
   /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
-  grid-template-areas: "header header" "main main" "footer footer"; }
+  grid-template-areas: "header header" "img-pt imagen-pt" "title-pt title-pt" "content-pt content-pt" "footer footer"; }
+
+header {
+  grid-area: header; }
+
+.img-pt {
+  grid-area: img-pt;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%; }
+
+.img-pt picture {
+  width: 100%;
+  *height: 90%;
+  object-fit: cover; }
+
+.img-pt picture img {
+  width: 100%;
+  height: 100%; }
+
+.title-pt {
+  grid-area: title-pt; }
+
+.content-pt {
+  grid-area: content-pt;
+  width: 80%;
+  height: 400px;
+  background-color: red;
+  margin: auto;
+  margin: 10%;
+  border: 5px solid white;
+  border-radius: 15px;
+  overflow: hidden; }
+
+.contenedor {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100% 100% 100% 100% 100%;
+  animation-name: animateSlider;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; }
+
+.imagen1 {
+  position: relative;
+  background-image: url(../images/Galeria/imagen1.jpg);
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center; }
+
+.imagen2 {
+  position: relative;
+  background-image: url(../images/Galeria/imagen2.jpg);
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center; }
+
+.imagen3 {
+  position: relative;
+  background-image: url(../images/Galeria/imagen3.jpg);
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center; }
+
+.imagen4 {
+  position: relative;
+  background-image: url(../images/Galeria/imagen3.jpg);
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center; }
+
+.imagen5 {
+  position: relative;
+  background-image: url(../images/Galeria/imagen3.jpg);
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center; }
+
+.fondo-slider {
+  position: absolute;
+  background: linear-gradient(white, black);
+  width: 100%;
+  height: 400px;
+  opacity: 0.5; }
+
+.content-pt .contenedor h2 {
+  position: relative;
+  width: 45%;
+  margin: auto;
+  margin-top: 14%;
+  font-family: poppins;
+  color: #fff1f1;
+  font-size: 2em;
+  text-align: center; }
+
+@keyframes animateSlider {
+  25% {
+    margin-left: 0%; }
+  30% {
+    margin-left: -100%; }
+  40% {
+    margin-left: -200%; }
+  50% {
+    margin-left: -300%; }
+  60% {
+    margin-left: -400%; }
+  70% {
+    margin-left: -450%; }
+  100% {
+    margin-left: 0%; } }
+
+footer {
+  grid-area: footer; }
 
 /**FIN DE PAGINA TIENDA**/
 /*PAGINA INDEX*/
@@ -433,7 +550,7 @@ form button:hover {
   grid-template-rows: auto auto auto auto auto auto;
   grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "card-m card-m" "footer footer"; }
 
-/*COMIENZA MI MENU INDEX CON EL LOGO*/
+/*MENU INDEX CON EL LOGO*/
 header {
   /*logotienda + navegacion*/
   grid-area: header;
@@ -450,7 +567,7 @@ header a {
 
 .logoNav {
   /*logo de la empresa en la navegacion*/
-  width: 50%;
+  width: 60%;
   border-radius: 8px; }
 
 /*NAV MENU*/
@@ -565,8 +682,8 @@ header a {
 
 .p-bnr img {
   border: 5px solid #3da9d4;
-  width: 490px;
-  height: 350px; }
+  width: 400px;
+  height: 300px; }
 
 /*SECCION TEXTOS SLIDES*/
 .slide-txt {
@@ -590,12 +707,12 @@ header a {
   padding: 15px;
   /*separa dentro en los anchors*/ }
 
-.item-txt:hover {
+.item-txt:hover a {
   /*hover para los textos*/
   background-color: #3da9d4;
-  border-radius: 4px;
+  border-radius: 8px;
   font-weight: bold;
-  font-size: 20px; }
+  font-size: 30px; }
 
 .item-txt:hover a {
   color: white; }
@@ -608,10 +725,11 @@ header a {
   justify-content: flex-start;
   /*el valor que queria era flex-start pero no se veia bien*/
   align-items: center;
-  padding: 10px 0;
   column-gap: 2px;
   row-gap: 5px;
-  font-size: 70%; }
+  font-size: 70%;
+  padding: 90px 0;
+  overflow: hidden; }
 
 .titulo {
   /*contiene un h1*/
@@ -671,12 +789,17 @@ header a {
   transition: 0.5s ease-in-out;
   margin-left: 1px;
   /*este margin le da espacio a las box con el fin de que no penguen entre si*/
-  margin-right: 1px; }
+  margin-right: 1px;
+  text-align: justify; }
 
 /**HOVER**/
 .cards:hover {
-  width: 400px;
-  /*Aqui coloco el valor: 400 para que cuando se expanda tome todo el ancho total y funcione*/ }
+  width: 500px;
+  /*Aqui coloco el valor: 400 para que cuando se expanda tome todo el ancho total y funcione*/
+  margin-left: 20px;
+  /*(intetno)que corra a la izquierda para que no se vuelva loco*/
+  *margin-right: 20px;
+  /*(intetno)que corra a la derecha para que no se vuelva loco*/ }
 
 .cards .imgBox {
   /*Estilo para el contenido izquierdo*/
@@ -722,17 +845,24 @@ header a {
   border-top: 10px solid transparent;
   border-left: 10px solid #e2e5ec; }
 
-.cards .details .title small {
-  font-weight: 200;
+.details {
+  display: flex; }
+
+.title small {
+  display: block;
+  font-weight: 300;
   font-size: 0.9em; }
 
 .cards .details h4 {
-  font-size: 1.4em; }
+  font-size: 1.8em; }
 
-.cards .details .description p {
+.description {
+  font-size: 1.5em; }
+
+.description p {
   padding: 2px 0 0 0;
   font-size: 0.8em;
-  font-weight: 200; }
+  font-weight: 400; }
 
 .cards .details .model ul {
   display: flex;
@@ -859,7 +989,7 @@ footer a {
     flex-wrap: nowrap;
     font-weight: bold;
     align-items: center;
-    font-size: 15px; }
+    font-size: 14px; }
   .navbar__item {
     /*ul>li*/
     /*El estilo de la lista de navegacion en este caso raiz(serviciot,produc,tienda,etc)*/
@@ -931,12 +1061,13 @@ footer a {
     height: 100%;
     /*para que no se salga del grid contaner que es el q lo mantiene adentro de la pagina*/
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around; }
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center; }
   .img-bnr picture img {
     border: 3px solid #3da9d4;
-    width: 200px;
-    height: 200px; }
+    width: 400px;
+    height: 250px; }
   /*SECCION TEXTOS SLIDES*/
   .slide-txt {
     grid-area: slide-txt;
@@ -962,9 +1093,9 @@ footer a {
   .item-txt:hover {
     /*hover para los textos*/
     background-color: #3da9d4;
-    border-radius: 4px;
+    border-radius: 14px;
     font-weight: bold;
-    font-size: 16px; }
+    font-size: 14px; }
   .item-txt:hover a {
     color: white; }
   /*SECCION PRODUCTOS*/
@@ -1105,12 +1236,13 @@ footer a {
   /*FOOTER*/
   footer {
     grid-area: footer;
-    background-color: #3da9d4;
+    background-color: #142125;
+    /*#3da9d4*/
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px 0 30px 0; }
-  footer a {
+  footer a, footer h5 {
     color: #fbfbfb;
     font-weight: bold;
     font-size: 100%; } }
@@ -1131,12 +1263,50 @@ footer a {
     grid-area: form__contacto;
     padding: 1rem;
     margin: 1rem; }
-  .form__contacto .direction {
+  .direction {
     font-size: 1rem;
-    padding: 1rem; }
-  .form__contacto .direction h1 {
+    padding: 1rem;
+    display: flex;
+    *flex-flow: column;
+    *align-items: center; }
+  .direction h1 {
     font-size: 1.5rem;
     padding: 2rem; }
+  form {
+    width: 20rem;
+    background-color: #244e73; }
+  .form__contacto label {
+    display: flex;
+    color: white;
+    justify-content: center;
+    *width: 10rem;
+    *height: 1rem; }
+  .form__contacto .consult-direction {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .form__contacto .consult {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white; }
+  .form__contacto button {
+    width: 10rem; }
+  form textarea[name="query"] {
+    width: 16.6rem;
+    border: 3px solid black;
+    background-color: #f6f6f6;
+    border-radius: 3px; }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="number"] {
+    width: 17rem;
+    padding: 0.5rem;
+    border: 3px solid black;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 0.5rem;
+    display: inline-block; }
   /**FIN PAGINA CONTACTO**/
   /**PAGINA DE SERVICIO TECNICO**/
   .son__containerS {
@@ -1233,6 +1403,12 @@ footer a {
     /*originalmente era 50% 50%*/
     grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "titulo card-m card-m" "footer footer"; }
+  .logoNav {
+    /*logo de la empresa en la navegacion*/
+    width: 80%;
+    border-radius: 8px;
+    min-width: 20px;
+    overflow: hidden; }
   .navbar__list {
     justify-content: flex-end;
     font-size: 14px; }
@@ -1266,7 +1442,7 @@ footer a {
     row-gap: 5px; }
   .img-bnr picture img {
     border: 3px solid #3da9d4;
-    width: 70%;
+    width: 90%;
     height: 300px;
     /* width: 50%;
         height: 300px; */
@@ -1291,9 +1467,9 @@ footer a {
   .item-txt:hover {
     /*hover para los textos*/
     background-color: #3da9d4;
-    border-radius: 4px;
+    border-radius: 8px;
     font-weight: bold;
-    font-size: 15px; }
+    font-size: 12px; }
   .item-txt:hover a {
     color: #0a0a0a; }
   .card-m {
@@ -1317,6 +1493,10 @@ footer a {
     margin: 12px 0 12px 0; }
   /**FIN PAGINA INDEX**/ }
 
+@media screen and (max-width: 480px) {
+  .logoNav {
+    display: none; } }
+
 /**ANIMACIONES**/
 .direction h1,
 .titulo {
@@ -1329,6 +1509,23 @@ footer a {
 
 .query:focus {
   background-color: #bbdaef; }
+
+@keyframes animatetienda {
+  20% {
+    background-image: url(../images/Galeria/img2.jpg);
+    background-size: cover; }
+  40% {
+    background-image: url(../images/Galeria/img2.jpg);
+    background-size: cover; }
+  60% {
+    background-image: url(../images/Galeria/img3.jpg);
+    background-size: cover; }
+  80% {
+    background-image: url(../images/Galeria/img4.jpg);
+    background-size: cover; }
+  100% {
+    background-image: url(../images/Galeria/img5.jpg);
+    background-size: cover; } }
 
 @keyframes AnimateColorsBackgrounds {
   0% {
