@@ -1177,7 +1177,7 @@ footer a {
   }
 
   .content-se .description-s p {
-    font-size: medium;
+    font-size: 12px;
     padding-top: 5px;
   }
 
@@ -1674,10 +1674,11 @@ footer a {
   }
   /**ojo**/
 
-  .content-se .description-s p {
+  .content-card .description-s p{
     font-size: 1em;
     text-align: center;
     padding-top: 2px;
+
   }
 
   .content-card:hover .img-box {
