@@ -1748,6 +1748,7 @@ footer a {
   /**ojo**/
 
   /**FIN PAGINA SERVICIO TECNICO**/
+  /**COMIENZO PAGINA TIENDA**/
   .son__containerT{
   display: grid;
   row-gap: 2px;
@@ -1771,6 +1772,8 @@ footer a {
   color: #020202;
 }
 
+/**FIN PAGINA TIENDA**/
+
   /**PAGINA INDEX**/
   .grid-container {
     display: grid;
@@ -1787,6 +1790,11 @@ footer a {
       "category category"
       "footer footer";
       
+  }
+
+  header{
+    grid-area: header;
+    width: 99%;
   }
 
 
@@ -1816,7 +1824,7 @@ footer a {
     display: flex;
     box-sizing: border-box;
     justify-content: flex-start;
-    width: 100%;
+    width: 99%;
     *height: 100%;
   }
 
@@ -1853,7 +1861,7 @@ footer a {
   .slide-txt {
     grid-area: slide-txt;
     background-color: rgb(96, 96, 96);
-    width: 100%;
+    width: 99%;
     height: 100%;
     display: flex;
     flex-direction: column-reverse;
@@ -1910,6 +1918,7 @@ footer a {
 
   .category{
     grid-area: category;
+    width: 99%;
     
   }
 
@@ -1919,6 +1928,7 @@ footer a {
 
   footer{
     grid-area: footer;
+    width: 99%;
     
   }
 

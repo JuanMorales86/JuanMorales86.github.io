@@ -1466,6 +1466,7 @@ footer a {
     background-color: #687273; }
   /**ojo**/
   /**FIN PAGINA SERVICIO TECNICO**/
+  /**COMIENZO PAGINA TIENDA**/
   .son__containerT {
     display: grid;
     row-gap: 2px;
@@ -1479,6 +1480,7 @@ footer a {
     border-color: #020202; }
   .details-s {
     color: #020202; }
+  /**FIN PAGINA TIENDA**/
   /**PAGINA INDEX**/
   .grid-container {
     display: grid;
@@ -1489,6 +1491,9 @@ footer a {
     /*originalmente era 50% 50%*/
     grid-template-rows: auto auto auto auto auto auto auto;
     grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "titulo card-m card-m" "category category" "footer footer"; }
+  header {
+    grid-area: header;
+    width: 99%; }
   .logoNav {
     /*logo de la empresa en la navegacion*/
     width: 80%;
@@ -1507,7 +1512,7 @@ footer a {
     display: flex;
     box-sizing: border-box;
     justify-content: flex-start;
-    width: 100%;
+    width: 99%;
     *height: 100%; }
   .img-pr picture img {
     width: 100%;
@@ -1536,7 +1541,7 @@ footer a {
   .slide-txt {
     grid-area: slide-txt;
     background-color: #606060;
-    width: 100%;
+    width: 99%;
     height: 100%;
     display: flex;
     flex-direction: column-reverse;
@@ -1578,11 +1583,13 @@ footer a {
     *padding-right: 20px;
     margin: 12px 0 12px 0; }
   .category {
-    grid-area: category; }
+    grid-area: category;
+    width: 99%; }
   .categorias {
     width: 100%; }
   footer {
-    grid-area: footer; }
+    grid-area: footer;
+    width: 99%; }
   /**FIN PAGINA INDEX**/ }
 
 @media screen and (max-width: 480px) {
