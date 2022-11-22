@@ -11,3 +11,11 @@ $vista:max-width 768px;
 $img-size:200px;
 $gap-size: 1rem;
 $breakpoints:("small": 320px, "medium": 768px, "large": 1024px) !default;
+
+
+//REDES
+$redes:(
+    facebook:rgb(0, 0, 0),
+    instagram:rgb(0, 0, 0),
+    twitter:lightblue
+);
