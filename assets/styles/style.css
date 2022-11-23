@@ -10,7 +10,7 @@
   box-sizing: border-box;
   text-decoration: none;
   *list-style-type: none;
-  max-width: 1498px;
+  max-width: 100%;
   /*probando se me desacomodan los contenedores cada vez q le pongo contenido*/ }
 
 body {
