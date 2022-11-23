@@ -665,6 +665,7 @@ header {
   flex-direction: row;
   justify-content: space-around; /*o space-between como originalmente lo tenia*/
   align-items: center;
+  
 }
 
 header a {
@@ -1777,6 +1778,7 @@ footer a {
   /**PAGINA INDEX**/
   .grid-container {
     display: grid;
+    max-width: 100%;
     *row-gap: 2px;
     background-color: #e2e5ec; /*color de fondo del body*/
     grid-template-columns: 100%; /*originalmente era 50% 50%*/
@@ -1789,6 +1791,7 @@ footer a {
       "titulo card-m card-m"
       "category category"
       "footer footer";
+      
       
   }
 
@@ -1931,15 +1934,138 @@ footer a {
     width: 99%;
     
   }
-
-
   /**FIN PAGINA INDEX**/
 }
 
-@media screen and (max-width: 480px) {
+@media all and  (max-width: 460px) {
+  /*PAGINA INDEX*/
+  .grid-container{
+    grid-area: grid-container;
+    width: 100%;
+    height: auto;
+    *margin-left: 10px;
+    background-color: #244e73;
+  }
+
+header{
+  width: 100%;
+  *padding-right: 50px ;
+}
+.navBar ul{
+  
+  font-size: 10px;
+}
+
   .logoNav {
     display: none;
   }
+  .img-pr{
+    grid-area: img-pr;
+    width: 100%;
+  }
+
+  .img-bnr{
+    grid-area: img-bnr;
+    width:100%;
+  }
+
+  .slide-txt{
+    grid-area: slide-txt;
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .card-m{
+    grid-area:card-m;
+  }
+
+  .category{
+    grid-area: category;
+  }
+
+  footer{
+    grid-area: footer;
+  }
+
+  /*PAGINA SERVICIO TECNCO*/
+  .son__containerS {
+    display: grid;
+    row-gap: 2px;
+    background-color: #e2e5ec; /*color de fondo del body*/
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto; /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
+    grid-template-areas:
+      "header header"
+      "img-sp img-sp"
+      "titulo-2 titulo-2"
+      "content-se content-se"
+      "category category"
+      "footer footer";
+  }
+
+  .content-se{
+    grid-area: content-se;
+    width: 100%;
+    row-gap: 5px;
+  }
+
+  .content-card{
+    padding: 25px;
+  }
+
+  .content-card:hover .img-box {
+    transform: scale(1.2);
+    width: 300px;
+  }
+
+  .details-s{
+    width: 70%;
+  }
+
+  .category{
+    width: 100%;
+  }
+
+  footer{
+    width: 100%;
+    font-size: 12px;
+  }
+
+  /*PAGINA CONTACTO*/
+    /**PAGINA CONTACTO**/
+    .son__containerC {
+      display: grid;
+      row-gap: 2px;
+      height: 100%;
+      max-width: 100%;
+      background-color: #e2e5ec; /*color de fondo del body*/
+      grid-template-columns: 100%; /*originalmente era 50% 50%*/
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "header header"
+        "form__contacto form__contacto"
+        "footer footer";
+    }
+
+    header{
+      width: 100%;
+    }
+
+    header .navbar__list{
+      display: flex;
+      flex-flow: column;
+
+    }
+
+    .form__contacto{
+      grid-area: form__contacto;
+      width: 100%;
+    }
+
+    footer{
+      height: 100%;
+      width: 100%;
+    }
 }
 
 /**ANIMACIONES**/
