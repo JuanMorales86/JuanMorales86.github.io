@@ -13,25 +13,29 @@
   max-width: 100%;
   /*probando se me desacomodan los contenedores cada vez q le pongo contenido*/ }
 
-body {
-  *font-size: 100%; }
-
 /**PAGINA CONTACTO**/
 .son__containerC {
   display: grid;
   row-gap: 2px;
+  height: 100%;
   background-color: #e2e5ec;
   /*color de fondo del body*/
   grid-template-columns: 100%;
   /*originalmente era 50% 50%*/
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "header header" "h1 h1" "form__contacto form__contacto" "footer footer"; }
+  grid-template-rows: 0.5fr 950px 1fr;
+  grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
 
 /**FORMULARIO DE CONTACTO**/
+header {
+  grid-area: header;
+  height: 100%; }
+
 .form__contacto {
   grid-area: form__contacto;
-  padding: 1rem;
-  margin: 1rem; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
 
 .direction {
   display: flex;
@@ -41,7 +45,7 @@ body {
 
 .direction h1 {
   font-size: 2rem;
-  padding: 2rem; }
+  padding-bottom: 40px; }
 
 form {
   width: 30rem;
@@ -102,6 +106,14 @@ form button {
 
 form button:hover {
   cursor: pointer; }
+
+.son__containerC footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  bottom: 0; }
 
 /**FIN PAGINA CONTACTO**/
 /**PAGINA DE SERVICIO TECNICO**/
@@ -318,7 +330,8 @@ form button:hover {
   align-items: center;
   *align-content: space-between;
   padding: 2.5rem 0;
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+  row-gap: 30px; }
 
 .card-ps {
   width: 300px;
@@ -948,8 +961,7 @@ header a {
   font-weight: bold; }
 
 /*FOOTER*/
-footer,
-.son__containerC > footer {
+footer {
   grid-area: footer;
   background-color: #3da9d4;
   display: flex;
@@ -963,11 +975,12 @@ footer,
 footer a {
   color: #fbfbfb;
   font-weight: bold;
-  font-size: 100%; }
+  *font-size: 100%; }
 
 .redes {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  height: 100%; }
 
 .redes button {
   margin: 10px; }
@@ -991,6 +1004,29 @@ footer a {
 
 /**TERMINA MI DESKTOP**/
 /**RESPONSIVE**/
+@media screen and (min-height: 1180px) and (max-width: 820px) {
+  .son__containerC {
+    display: grid;
+    row-gap: 2px;
+    height: 100%;
+    background-color: #e2e5ec;
+    /*color de fondo del body*/
+    grid-template-columns: 100%;
+    /*originalmente era 50% 50%*/
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
+  .son__containerC header {
+    height: 100%; }
+  .son__containerC footer {
+    height: 100%;
+    bottom: 0; }
+  .form__contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; } }
+
+/*TABLETS*/
 @media screen and (max-width: 768px) and (min-width: 600px) {
   /**TABLET**/
   .son__containerC {
@@ -998,29 +1034,64 @@ footer a {
     row-gap: 2px;
     background-color: #e2e5ec;
     /*color de fondo del body*/
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 950px 1fr;
     grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
+  .son__containerC header {
+    grid-area: header;
+    height: 100%; }
+  .son__containerC .form__contacto {
+    grid-area: form__contacto;
+    height: 100%; }
+  .son__containerC footer {
+    grid-area: footer;
+    height: 100%; }
   /**PAGINA DE SERVICIO TECNICO**/
   .son__containerS {
     display: grid;
     row-gap: 2px;
+    width: 100%;
+    height: 100%;
     background-color: #e2e5ec;
     /*color de fondo del body*/
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
     grid-template-areas: "header header" "img-sp img-sp" "titulo-2 titulo-2" "content-se content-se" "category category" "footer footer"; }
-  .content-card {
-    text-align: center; }
-  .title-s h4 {
+  .son__containerS header {
+    grid-area: header;
+    width: 100%; }
+  .img-sp {
+    grid-area: img-sp;
+    width: 100%;
+    object-fit: cover; }
+  .titulo-2 {
+    grid-area: titulo-2;
+    width: 100%; }
+  .content-se {
+    grid-area: content-se;
+    width: 100%;
+    height: 100%; }
+  .son__containerS .content-card {
+    text-align: center;
+    width: 90%;
+    height: 100%; }
+  .son__containerS .title-s h4 {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center; }
+  .son__containerS .description-s {
+    height: 90%; }
+  .category {
+    grid-area: category;
+    width: 100%; }
   .content-se .description-s p {
     font-size: 12px;
     padding-top: 5px; }
+  .son__containerS footer {
+    grid-area: footer;
+    width: 100%; }
   /*PAGINA INDEX*/
   .grid-container {
     background-color: #e2e5ec;
@@ -1318,7 +1389,7 @@ footer a {
     font-size: 100%; } }
 
 /**CELLPHONE**/
-@media screen and (max-width: 600px) and (min-width: 220px) {
+@media screen and (max-width: 600px) {
   /**PAGINA CONTACTO**/
   .son__containerC {
     display: grid;
@@ -1327,12 +1398,17 @@ footer a {
     /*color de fondo del body*/
     grid-template-columns: 100%;
     /*originalmente era 50% 50%*/
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
     grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
+  header {
+    background-color: #3b4041;
+    height: 100%; }
+  header .navbar__item {
+    font-size: 12px;
+    height: 6.3rem;
+    padding-top: 6px; }
   .form__contacto {
-    grid-area: form__contacto;
-    padding: 1rem;
-    margin: 1rem; }
+    grid-area: form__contacto; }
   .direction {
     font-size: 1rem;
     padding: 1rem;
@@ -1344,7 +1420,7 @@ footer a {
     padding: 2rem; }
   form {
     width: 20rem;
-    background-color: #244e73; }
+    background-color: #326da1; }
   .form__contacto label {
     display: flex;
     color: white;
@@ -1384,12 +1460,10 @@ footer a {
     row-gap: 2px;
     background-color: #e2e5ec;
     /*color de fondo del body*/
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto;
     /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
     grid-template-areas: "header header" "img-sp img-sp" "titulo-2 titulo-2" "content-se content-se" "category category" "footer footer"; }
-  header {
-    background-color: #687273; }
   .content-se {
     text-align: center;
     background-color: #3da9d4;
@@ -1463,7 +1537,7 @@ footer a {
     height: auto; }
   footer {
     grid-area: footer;
-    background-color: #687273; }
+    background-color: #3b4041; }
   /**ojo**/
   /**FIN PAGINA SERVICIO TECNICO**/
   /**COMIENZO PAGINA TIENDA**/
@@ -1484,20 +1558,12 @@ footer a {
   /**PAGINA INDEX**/
   .grid-container {
     display: grid;
-    max-width: 100%;
-    *row-gap: 2px;
-    background-color: #e2e5ec;
-    /*color de fondo del body*/
-    grid-template-columns: 100%;
-    /*originalmente era 50% 50%*/
-    grid-template-rows: auto auto auto auto auto auto auto;
-    grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "titulo card-m card-m" "category category" "footer footer"; }
+    max-width: 100%; }
   header {
-    grid-area: header;
-    width: 99%; }
+    width: 100%; }
   .logoNav {
     /*logo de la empresa en la navegacion*/
-    width: 80%;
+    width: 70%;
     border-radius: 8px;
     min-width: 20px;
     overflow: hidden; }
@@ -1513,7 +1579,7 @@ footer a {
     display: flex;
     box-sizing: border-box;
     justify-content: flex-start;
-    width: 99%;
+    width: 100%;
     *height: 100%; }
   .img-pr picture img {
     width: 100%;
@@ -1542,10 +1608,10 @@ footer a {
   .slide-txt {
     grid-area: slide-txt;
     background-color: #606060;
-    width: 99%;
+    width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-content: space-around; }
   .slide-txt div {
@@ -1585,29 +1651,50 @@ footer a {
     margin: 12px 0 12px 0; }
   .category {
     grid-area: category;
-    width: 99%; }
+    width: 100%; }
   .categorias {
     width: 100%; }
   footer {
     grid-area: footer;
-    width: 99%; }
+    width: 100%; }
   /**FIN PAGINA INDEX**/ }
 
-@media all and (max-width: 460px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
   /*PAGINA INDEX*/
   .grid-container {
     grid-area: grid-container;
-    width: 100%;
-    height: auto;
-    *margin-left: 10px;
-    background-color: #244e73; }
+    display: grid;
+    row-gap: 2px;
+    background-color: #e2e5ec;
+    /*color de fondo del body*/
+    grid-template-columns: 50% 50%;
+    /*originalmente lo dividi 50% 50%*/
+    grid-template-rows: 5% auto auto auto auto auto auto;
+    grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "card-m card-m"  "category category" "footer footer";
+    background-color: #8db8dd; }
   header {
+    grid-area: header;
     width: 100%;
-    *padding-right: 50px; }
+    height: 100%;
+    flex-direction: row-reverse; }
+  .navBar {
+    display: block;
+    width: 50%;
+    height: 100%; }
+  .linkColorActivo {
+    color: #4db3d5; }
+  .navbar__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%; }
+  .navLink {
+    padding: 20px 20px; }
+  .navbar__item {
+    *padding: 2px 10px; }
   .navBar ul {
     font-size: 10px; }
-  .logoNav {
-    display: none; }
   .img-pr {
     grid-area: img-pr;
     width: 100%; }
@@ -1623,7 +1710,8 @@ footer a {
   .category {
     grid-area: category; }
   footer {
-    grid-area: footer; }
+    grid-area: footer;
+    text-align: center; }
   /*PAGINA SERVICIO TECNCO*/
   .son__containerS {
     display: grid;
@@ -1631,7 +1719,7 @@ footer a {
     background-color: #e2e5ec;
     /*color de fondo del body*/
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: 9% auto auto auto auto auto;
     /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
     grid-template-areas: "header header" "img-sp img-sp" "titulo-2 titulo-2" "content-se content-se" "category category" "footer footer"; }
   .content-se {
@@ -1650,7 +1738,26 @@ footer a {
   footer {
     width: 100%;
     font-size: 12px; }
-  /*PAGINA CONTACTO*/
+  /*PAGINA PRODUCTOS*/
+  .son__containerP {
+    display: grid;
+    row-gap: 2px;
+    background-color: #e2e5ec;
+    /*color de fondo del body*/
+    grid-template-columns: 100%;
+    /*originalmente era 50% 50%*/
+    grid-template-rows: 5.1% auto auto auto auto auto auto;
+    /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
+    grid-template-areas: "header header" "img-ps img-ps" "titulo-ps titulo-ps" "button-ps button-ps" "content-ps content-ps" "category category" "footer footer"; }
+  /*PAGINA TIENDA*/
+  .son__containerT {
+    display: grid;
+    row-gap: 2px;
+    background-color: #e2e5ec;
+    /*color de fondo del body*/
+    grid-template-columns: 100%;
+    grid-template-rows: 17.8% auto auto auto auto auto;
+    grid-template-areas: "header header" "img-pt imagen-pt" "titulo-pt titulo-pt" "content-pt content-pt" "category category" "footer footer"; }
   /**PAGINA CONTACTO**/
   .son__containerC {
     display: grid;
@@ -1661,13 +1768,10 @@ footer a {
     /*color de fondo del body*/
     grid-template-columns: 100%;
     /*originalmente era 50% 50%*/
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 25.5% auto auto;
     grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
   header {
     width: 100%; }
-  header .navbar__list {
-    display: flex;
-    flex-flow: column; }
   .form__contacto {
     grid-area: form__contacto;
     width: 100%; }
@@ -1675,6 +1779,7 @@ footer a {
     height: 100%;
     width: 100%; } }
 
+/*FIN MEDIA QUERYS*/
 /**ANIMACIONES**/
 header > a:nth-child(1) {
   animation: jackInTheBox;
