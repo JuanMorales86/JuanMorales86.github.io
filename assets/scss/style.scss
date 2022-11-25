@@ -847,7 +847,7 @@ header a {
 /*SECCION PRODUCTOS*/
 .card-m {
   grid-area: card-m;
-  display: flex;
+  display: inline-flex;
   flex-flow: row wrap;
   justify-content: flex-start; /*el valor que queria era flex-start pero no se veia bien*/
   align-items: center;
@@ -859,13 +859,11 @@ header a {
 }
 
 #order-change:hover {
-  flex-wrap: nowrap;
-  margin-left: 215px;
+ margin-right: 200px;
 }
 
 #order-change2:hover {
-  margin-right: 215px;
-  flex-wrap: nowrap;
+  width: 450px;
 }
 
 .titulo {
@@ -882,12 +880,12 @@ header a {
   transform: rotate(0deg);
   /* propiedad | propiedad, propiedad | all | none*/
   transition-duration: 0.8s;
-  transition-timing-function: ease;
+  transition-timing-function: ease-in-out;
   /*defect: ease | ease-in | ease-in-out | ease-out*/
-  transition-delay: linear;
+  transition-delay:linear;
   *transition: width 0.5s 0.1s ease-in; /*este codigo seria una transition completa con todas las propiedades*/
   /*propiedad  duracion  duracion de retraso  timing-function*/
-  font-size: 18px;
+  font-size: 17.7px;
 }
 
 .card-m:hover .titulo {
@@ -918,16 +916,16 @@ header a {
   box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.25); /* offset-x | offset-y | blur-radius | color */
   overflow: hidden; /*el overflow esconde el div details para que funcione el efecto hover*/
   transition: 0.5s ease-in-out;
-  margin-left: 1px; /*este margin le da espacio a las box con el fin de que no penguen entre si*/
-  margin-right: 1px;
+  *margin-left: 10px; /*este margin le da espacio a las box con el fin de que no penguen entre si*/
+  *margin-right: 1px;
   text-align: justify;
 }
 
 /**HOVER**/
 .cards:hover {
-  width: 500px; /*Aqui coloco el valor: 400 para que cuando se expanda tome todo el ancho total y funcione*/
-  *margin-left: 20px; /*(intetno)que corra a la izquierda para que no se vuelva loco*/
-  margin-right: 20px; /*(intetno)que corra a la derecha para que no se vuelva loco*/
+  width: 400px; /*Aqui coloco el valor: 400 para que cuando se expanda tome todo el ancho total y funcione*/
+  *margin-left: 100px; /*(intetno)que corra a la izquierda para que no se vuelva loco*/
+  *margin-right: 1px; /*(intetno)que corra a la derecha para que no se vuelva loco*/
 }
 
 .cards .imgBox {
