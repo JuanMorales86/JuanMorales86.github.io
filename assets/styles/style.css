@@ -75,14 +75,11 @@ form input[type="text"],
 form input[type="email"],
 form input[type="number"] {
   width: 20rem;
-  /*180px*/
   padding: 0.5rem;
   border: 3px solid black;
   border-radius: 3px;
   background-color: #fbfbfb;
-  /*#f6f6f6*/
   margin: 0.5rem;
-  /*arriba y abajo y cero los costados*/
   display: inline-block; }
 
 form textarea[name="query"] {
@@ -127,7 +124,7 @@ form button:hover {
   /*color de fondo del body*/
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "header header" "img-pt imagen-pt" "titulo-pt titulo-pt" "content-pt content-pt" "category category" "footer footer"; }
+  grid-template-areas: "header header" "img-pt img-pt" "titulo-pt titulo-pt" "content-pt content-pt" "category category" "footer footer"; }
 
 header {
   grid-area: header; }
@@ -141,14 +138,14 @@ header {
 
 .img-pt picture {
   width: 100%;
-  *height: 90%;
   object-fit: cover; }
 
 .img-pt picture img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding: 0; }
 
-.titulo-pt {
+.titulo-pt, .titulo-ps {
   grid-area: titulo-pt;
   display: flex;
   justify-content: center;
@@ -157,7 +154,7 @@ header {
   height: 100%;
   padding: 100px 0; }
 
-.titulo-pt h1 {
+.titulo-pt h1, .titulo-ps h1 {
   color: #505456; }
 
 .content-pt {
@@ -432,14 +429,7 @@ header {
   height: 100%; }
 
 .titulo-ps {
-  grid-area: titulo-ps;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  *margin-left: 26.6%;
-  padding: 100px 0; }
+  grid-area: titulo-ps; }
 
 .titulo-ps h1 {
   color: #505456; }
@@ -677,11 +667,11 @@ header a {
 /*SECCION IMAGENES*/
 .img-pr {
   grid-area: img-pr;
-  display: flex;
-  *box-sizing: border-box;
-  justify-content: flex-start;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; }
 
 .img-pr picture {
   width: 100%;
@@ -978,7 +968,8 @@ header a {
   align-items: center;
   padding: 30px 0 30px 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  /**&**/ }
   .footer a {
     color: white;
     font-weight: bold; }
@@ -1245,8 +1236,7 @@ header a {
     *column-gap: 3px;
     height: 100%;
     width: 100%;
-    font-size: 70%;
-    *text-align: center; }
+    font-size: 70%; }
   .titulo {
     grid-area: titulo;
     display: flex;
@@ -1254,8 +1244,7 @@ header a {
     align-content: center;
     flex-wrap: wrap;
     margin: 12px 0 12px 0;
-    *padding-right: 10px;
-    border: #020202 solid 2px; }
+    *padding-right: 15px; }
   .card-m:hover .titulo {
     display: none;
     /**CUANDO coloco el display none no se me activa despues la animacion no se porque ya e probado varias maneras pero sigo sin resolverlo**/ }
@@ -1275,10 +1264,7 @@ header a {
     /* offset-x | offset-y | blur-radius | color */
     overflow: hidden;
     /*el overflow esconde el div details para que funcione el efecto hover*/
-    transition: 0.5s ease-in-out;
-    margin-left: 40px;
-    /*no me funciona tambien el encuadre con margin pero se vuelve menos loco cuando se expande*/
-    *margin-right: 40px; }
+    transition: 0.5s ease-in-out; }
   /**HOVER**/
   .cards:hover {
     width: 400px;
@@ -1298,6 +1284,8 @@ header a {
 }  */
   .cards:hover .imgBox {
     transform: rotate(-35deg); }
+  #order-change:hover {
+    margin-right: 0; }
   .cards .imgBox img {
     width: 100%;
     height: 100%;
@@ -1546,7 +1534,7 @@ header a {
   .details-s {
     color: #020202; }
   /**FIN PAGINA TIENDA**/
-  /**PAGINA INDEX**/
+  /**PAGINA PRINCIPAL INDEX**/
   .grid-container {
     display: grid;
     max-width: 100%; }
@@ -1633,6 +1621,8 @@ header a {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+  #order-change:hover {
+    margin-right: 0; }
   .titulo {
     grid-area: titulo;
     display: flex;
@@ -1659,34 +1649,38 @@ header a {
     row-gap: 2px;
     background-color: #e2e5ec;
     /*color de fondo del body*/
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     /*originalmente lo dividi 50% 50%*/
-    grid-template-rows: 5% auto auto auto auto auto auto;
-    grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "card-m card-m" "category category" "footer footer";
-    background-color: #8db8dd; }
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "card-m card-m" "category category" "footer footer"; }
   header {
     grid-area: header;
     width: 100%;
     height: 100%;
-    flex-direction: row-reverse; }
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center; }
   .navBar {
     display: block;
     width: 50%;
-    height: 100%; }
+    height: 70%; }
   .linkColorActivo {
-    color: #4db3d5; }
+    color: #00d60e; }
   .navbar__list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
     height: 100%; }
-  .navLink {
-    padding: 20px 20px; }
   .navbar__item {
-    *padding: 2px 10px; }
+    border-radius: 5px;
+    *height: 100%; }
+  .navLink {
+    padding: 5px;
+    height: 70%;
+    font-size: 18px; }
   .navBar ul {
-    font-size: 10px; }
+    *font-size: 50px; }
   .img-pr {
     grid-area: img-pr;
     width: 100%; }
@@ -1699,6 +1693,8 @@ header a {
     font-size: 10px; }
   .card-m {
     grid-area: card-m; }
+  #order-change:hover {
+    margin-right: 0; }
   .category {
     grid-area: category; }
   .footer {
@@ -1711,9 +1707,11 @@ header a {
     background-color: #e2e5ec;
     /*color de fondo del body*/
     grid-template-columns: 100%;
-    grid-template-rows: 9% auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
     grid-template-areas: "header header" "img-sp img-sp" "titulo-2 titulo-2" "content-se content-se" "category category" "footer footer"; }
+  .son__containerS header {
+    grid-area: header; }
   .content-se {
     grid-area: content-se;
     width: 100%;
@@ -1738,7 +1736,7 @@ header a {
     /*color de fondo del body*/
     grid-template-columns: 100%;
     /*originalmente era 50% 50%*/
-    grid-template-rows: 5.1% auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
     /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
     grid-template-areas: "header header" "img-ps img-ps" "titulo-ps titulo-ps" "button-ps button-ps" "content-ps content-ps" "category category" "footer footer"; }
   /*PAGINA TIENDA*/
@@ -1748,7 +1746,7 @@ header a {
     background-color: #e2e5ec;
     /*color de fondo del body*/
     grid-template-columns: 100%;
-    grid-template-rows: 17.8% auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: "header header" "img-pt imagen-pt" "titulo-pt titulo-pt" "content-pt content-pt" "category category" "footer footer"; }
   /**PAGINA CONTACTO**/
   .son__containerC {
@@ -1760,7 +1758,7 @@ header a {
     /*color de fondo del body*/
     grid-template-columns: 100%;
     /*originalmente era 50% 50%*/
-    grid-template-rows: 25.5% auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
   header {
     width: 100%; }
@@ -1933,8 +1931,7 @@ header > a:nth-child(1) {
 
 .item-txt,
 .titulo-2,
-.titulo-ps,
-.titulo-pt {
+.titulo-ps, .titulo-pt, .titulo-ps {
   animation: AnimateScale;
   animation-duration: 2s;
   animation-iteration-count: inline;

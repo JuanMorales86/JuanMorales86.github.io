@@ -4,6 +4,7 @@ $color-green:#33d374;
 $vista:max-width 768px;
 
 
+
 //GALLERY
 
 $img-size:200px;
@@ -52,11 +53,21 @@ $gradient-footera:linear-gradient(to right, #845ec2, #7a59ac,
 
 //CONDICIONALES
 
-$vista:mobile;
-@if $vista == tablet {
-    #activo{$color:#142125;}}
-@else if $vista == mobile{
-    $color:#3b4041;}
-@else {
-    $color:#3da9d4;}
+// $vista:mobile;
+// @if $vista == tablet {
+//     #activo{$color:#142125;}}
+// @else if $vista == mobile{
+//     $color:#3b4041;}
+// @else {
+//     $color:#3da9d4;}
 
+$estinputs:(
+ancho:20rem,
+relleno:0.5rem,
+borde:3px solid black,
+radio:3px,
+fondo: $color-textos,
+margen:0.5rem,
+vista:inline-block
+
+);
