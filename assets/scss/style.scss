@@ -5,8 +5,6 @@
 @import "assets/scss/utilities/mixin"; /*Variables.scss*/
 /**REGLAS GENERALES**/
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -84,13 +82,13 @@ form .consult {
 form input[type="text"],
 form input[type="email"],
 form input[type="number"] {
- width: map-get($map: $estinputs, $key: ancho);
- padding: map-get($map: $estinputs, $key: relleno);
- border: map-get($map: $estinputs, $key: borde);
- border-radius: map-get($map: $estinputs, $key:radio);
- background-color: map-get($map: $estinputs, $key:fondo);
- margin: map-get($map: $estinputs, $key:margen);
- display: map-get($map: $estinputs, $key:vista);
+  width: map-get($map: $estinputs, $key: ancho);
+  padding: map-get($map: $estinputs, $key: relleno);
+  border: map-get($map: $estinputs, $key: borde);
+  border-radius: map-get($map: $estinputs, $key: radio);
+  background-color: map-get($map: $estinputs, $key: fondo);
+  margin: map-get($map: $estinputs, $key: margen);
+  display: map-get($map: $estinputs, $key: vista);
 }
 
 form textarea[name="query"] {
@@ -164,14 +162,13 @@ header {
   height: 100%;
 }
 
-
 .img-pt picture {
   width: 100%;
   object-fit: cover;
 }
 
 .img-pt picture img {
-  @include size(100%,100%,0);
+  @include size(100%, 100%, 0);
 }
 
 .titulo-pt {
@@ -179,7 +176,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  @include size(100%,100%,100px 0);
+  @include size(100%, 100%, 100px 0);
 }
 
 .titulo-pt h1 {
@@ -322,7 +319,7 @@ header {
   color: $color-textostitu;
 }
 
-//INICIO BOTONES ACCESOS 
+//INICIO BOTONES ACCESOS
 
 .button-ps {
   grid-area: button-ps;
@@ -366,7 +363,7 @@ header {
   z-index: 1;
   overflow: hidden;
 }
-//FIN BOTONES ACCESOS 
+//FIN BOTONES ACCESOS
 
 /*INICIO CARDS PRODUCTOS*/
 .content-ps {
@@ -385,8 +382,8 @@ header {
 }
 
 .card-ps {
-  width: 200px;//300px
-  height: 200px;//354px
+  width: 200px; //300px
+  height: 200px; //354px
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
   background: #fff;
   transition: all 0.4s;
@@ -400,8 +397,8 @@ header {
 .text-cardps {
   position: absolute;
   letter-spacing: 0.1em;
-  bottom: 13px;//13px
-  left: 8%;//20px
+  bottom: 13px; //13px
+  left: 8%; //20px
   color: black;
   font-size: 0.9em;
   font-weight: 700;
@@ -418,8 +415,8 @@ header {
   font-weight: bold;
   cursor: pointer;
   position: absolute;
-  right: 25%;//100px
-  top: 40%;//150px
+  right: 25%; //100px
+  top: 40%; //150px
   z-index: 1;
   overflow: hidden;
   visibility: hidden;
@@ -453,8 +450,6 @@ header {
 }
 
 /*FIN CARDS PRODUCTOS*/
-
-
 
 .son__containerP footer {
   grid-area: footer;
@@ -558,14 +553,14 @@ header {
 .content-card:hover .img-box {
   transform: scale(1.2);
   *object-fit: cover;
-  image-rendering:crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 .img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  image-rendering:crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 .details-s {
@@ -650,8 +645,6 @@ header {
   grid-area: footer;
 }
 /**FIN PAGINA SERVICIO TECNICO**/
-
-
 
 /*PAGINA PRINCIPAL INDEX*/
 .grid-container {
@@ -776,7 +769,7 @@ header a {
   // justify-content: flex-start;
   // width: 100%;
   // height: 100%;
-  @include flexboxsize(100%,100% ,0 ,flex , flex-start)
+  @include flexboxsize(100%, 100%, 0, flex, flex-start);
 }
 
 .img-pr picture {
@@ -844,7 +837,7 @@ header a {
 
 .item-txt:hover a {
   color: white;
-  animation:alternate-reverse;//OJO
+  animation: alternate-reverse; //OJO
 }
 
 /*FIN SECCION SLIDE TEXTOS*/
@@ -864,7 +857,7 @@ header a {
 }
 
 #order-change:hover {
- *margin-right: 200px;
+  *margin-right: 200px;
 }
 
 #order-change2:hover {
@@ -887,7 +880,7 @@ header a {
   transition-duration: 0.8s;
   transition-timing-function: ease-in-out;
   /*defect: ease | ease-in | ease-in-out | ease-out*/
-  transition-delay:linear;
+  transition-delay: linear;
   *transition: width 0.5s 0.1s ease-in; /*este codigo seria una transition completa con todas las propiedades*/
   /*propiedad  duracion  duracion de retraso  timing-function*/
   font-size: 17.7px;
@@ -901,12 +894,6 @@ header a {
   width: 0;
   margin: 0;
   padding: 0;
-  *max-height: 0;
-  *display: none; /*importante*/
-  *width: 0.2px;
-  *height: 0.2px;
-  *flex-shrink: 9;
-  *display: none;
 }
 
 .cards {
@@ -929,8 +916,7 @@ header a {
 /**HOVER**/
 .cards:hover {
   width: 400px; /*Aqui coloco el valor: 400 para que cuando se expanda tome todo el ancho total y funcione*/
-  *margin-left: 100px; /*(intetno)que corra a la izquierda para que no se vuelva loco*/
-  *margin-right: 1px; /*(intetno)que corra a la derecha para que no se vuelva loco*/
+  left: 400px;
 }
 
 .cards .imgBox {
@@ -1177,7 +1163,7 @@ header a {
 /*TABLETS*/
 @media screen and (max-width: 768px) and (min-width: 600px) {
   /**TABLET**/
-  
+
   //PAGINA CONTACTO
   .son__containerC {
     display: grid;
@@ -1446,7 +1432,7 @@ header a {
 
   /*SECCION PRODUCTOS*/
   .card-m {
-    flex-flow: column; 
+    flex-flow: column;
   }
   #order-change2:hover {
     width: auto;
@@ -1459,29 +1445,29 @@ header a {
   }
 
   .cards {
-    @include cellphonecards(column,100%,340px);
+    @include cellphonecards(column, 100%, 340px);
   }
 
   /**HOVER**/
   .cards:hover {
-    @include cellphonesize(100%,750px)
+    @include cellphonesize(100%, 750px);
   }
 
-  .imgBox:hover{
-    @include cellphonesize(100%,100%)
+  .imgBox:hover {
+    @include cellphonesize(100%, 100%);
   }
 
   .cards .imgBox {
-    min-width: 49%;//280px
-    width: 100%;//280px
+    min-width: 49%; //280px
+    width: 100%; //280px
   }
 
   .cards:hover .imgBox {
-    transform: scale(1.5) rotate(-400deg) rotate(-10deg);//escala vuelta y rotacion
+    transform: scale(1.5) rotate(-400deg) rotate(-10deg); //escala vuelta y rotacion
   }
 
   .cards .imgBox img {
-    width:56%;
+    width: 56%;
   }
 
   .cards .details h4 {
@@ -1548,13 +1534,11 @@ header a {
       "header header"
       "form__contacto form__contacto"
       "footer footer";
-      
   }
 
   header {
     background-color: #3b4041;
     height: 100%;
-    
   }
 
   header .navbar__item {
@@ -1878,78 +1862,78 @@ header a {
   .item-txt:hover a {
     color: rgb(10, 10, 10);
   }
-//INICIO CONTEN-M 600px
-.card-m {
-  flex-flow: column; 
-}
-#order-change2:hover {
-  width: auto;
-  font-size: 0.9em;
-}
+  //INICIO CONTEN-M 600px
+  .card-m {
+    flex-flow: column;
+  }
+  #order-change2:hover {
+    width: auto;
+    font-size: 0.9em;
+  }
 
-.titulo {
-  margin: 12px 0 12px 0;
-  font-size: 2.5em;
-}
+  .titulo {
+    margin: 12px 0 12px 0;
+    font-size: 2.5em;
+  }
 
-.cards {
-  @include cellphonecards(column,100%,340px);
-}
+  .cards {
+    @include cellphonecards(column, 100%, 340px);
+  }
 
-/**HOVER**/
-.cards:hover {
-  @include cellphonesize(100%,750px)
-}
+  /**HOVER**/
+  .cards:hover {
+    @include cellphonesize(100%, 750px);
+  }
 
-.imgBox:hover{
-  @include cellphonesize(100%,100%)
-}
+  .imgBox:hover {
+    @include cellphonesize(100%, 100%);
+  }
 
-.cards .imgBox {
-  min-width: 49%;//280px
-  width: 100%;//280px
-}
+  .cards .imgBox {
+    min-width: 49%; //280px
+    width: 100%; //280px
+  }
 
-.cards:hover .imgBox {
-  transform: scale(1.5) rotate(-400deg) rotate(-10deg);//escala vuelta y rotacion
-}
+  .cards:hover .imgBox {
+    transform: scale(1.5) rotate(-400deg) rotate(-10deg); //escala vuelta y rotacion
+  }
 
-.cards .imgBox img {
-  width:56%;
-}
+  .cards .imgBox img {
+    width: 56%;
+  }
 
-.cards .details h4 {
-  font-size: 2.4em;
-}
+  .cards .details h4 {
+    font-size: 2.4em;
+  }
 
-.cards .details h5 {
-  font-weight: 700;
-  font-size: 1.3em;
-}
+  .cards .details h5 {
+    font-weight: 700;
+    font-size: 1.3em;
+  }
 
-.cards .details .description p {
-  font-weight: 200;
-  font-size: 1.3em;
-}
+  .cards .details .description p {
+    font-weight: 200;
+    font-size: 1.3em;
+  }
 
-.cards .details .model h5 {
-  font-size: 1.8em;
-  font-weight: 700;
-}
+  .cards .details .model h5 {
+    font-size: 1.8em;
+    font-weight: 700;
+  }
 
-.cards .details .model ul {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+  .cards .details .model ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-.cards .details .model ul li {
-  font-size: 1.4em; /*tamano de las letras*/
-}
+  .cards .details .model ul li {
+    font-size: 1.4em; /*tamano de las letras*/
+  }
 
-.cards .details .buy {
-  font-size: 1.9em;
-}
-//FIN CARDS 600PX
+  .cards .details .buy {
+    font-size: 1.9em;
+  }
+  //FIN CARDS 600PX
 
   .category {
     grid-area: category;
@@ -2000,8 +1984,6 @@ header a {
     display: block;
     width: 50%;
     height: 70%;
-    
-    
   }
 
   .linkColorActivo {
@@ -2020,19 +2002,16 @@ header a {
     border-radius: 5px;
     *height: 100%;
   }
-  
+
   .navLink {
     padding: 5px;
     height: 70%;
     font-size: 18px;
-
   }
 
-  
   .navBar ul {
     *font-size: 50px;
   }
-
 
   .img-pr {
     grid-area: img-pr;
@@ -2050,8 +2029,7 @@ header a {
     font-size: 10px;
   }
 
-
-//card-m
+  //card-m
   .titulo {
     font-size: 1.5em;
   }
@@ -2090,7 +2068,7 @@ header a {
     row-gap: 2px;
     background-color: #e2e5ec; /*color de fondo del body*/
     grid-template-columns: 100%;
-    grid-template-rows:auto auto auto auto auto auto; /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
+    grid-template-rows: auto auto auto auto auto auto; /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
     grid-template-areas:
       "header header"
       "img-sp img-sp"
@@ -2100,11 +2078,9 @@ header a {
       "footer footer";
   }
 
-    .son__containerS header {
-      grid-area: header;
-    }
-
-  
+  .son__containerS header {
+    grid-area: header;
+  }
 
   .content-se {
     grid-area: content-se;
@@ -2530,7 +2506,3 @@ header > a:nth-child(1) {
     background-color: $colorRedSocial;
   }
 }
-
-
-
-

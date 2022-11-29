@@ -788,14 +788,7 @@ header a {
   overflow: hidden;
   width: 0;
   margin: 0;
-  padding: 0;
-  *max-height: 0;
-  *display: none;
-  /*importante*/
-  *width: 0.2px;
-  *height: 0.2px;
-  *flex-shrink: 9;
-  *display: none; }
+  padding: 0; }
 
 .cards {
   /*Aqui arreglo lo que esta adentro del contenedor cards*/
@@ -823,10 +816,7 @@ header a {
 .cards:hover {
   width: 400px;
   /*Aqui coloco el valor: 400 para que cuando se expanda tome todo el ancho total y funcione*/
-  *margin-left: 100px;
-  /*(intetno)que corra a la izquierda para que no se vuelva loco*/
-  *margin-right: 1px;
-  /*(intetno)que corra a la derecha para que no se vuelva loco*/ }
+  left: 400px; }
 
 .cards .imgBox {
   /*Estilo para el contenido izquierdo*/
