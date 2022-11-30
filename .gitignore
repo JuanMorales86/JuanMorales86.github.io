@@ -1,6 +1,7 @@
 test/
 node_modules/
 /pages/technicalServices.html
+/pages/menubootstrap.html
 package-lock.json
 css
 
