@@ -136,11 +136,11 @@ header {
   width: 100%;
   height: 100%; }
 
-.img-pt picture {
+.img-pt {
   width: 100%;
   object-fit: cover; }
 
-.img-pt picture img {
+.img-pt img {
   width: 100%;
   height: 100%;
   padding: 0; }
@@ -256,12 +256,12 @@ header {
   width: 100%;
   height: 100%; }
 
-.img-ps picture {
+.img-ps {
   width: 100%;
   *height: 90%;
   object-fit: cover; }
 
-.img-ps picture img {
+.img-ps img {
   width: 100%;
   height: 100%; }
 
@@ -409,12 +409,12 @@ header {
   width: 100%;
   height: 100%; }
 
-.img-sp picture {
+.img-sp {
   width: 100%;
   *height: 90%;
   object-fit: cover; }
 
-.img-sp picture img {
+.img-sp img {
   width: 100%;
   height: 100%; }
 
@@ -675,11 +675,11 @@ header a {
   display: flex;
   justify-content: flex-start; }
 
-.img-pr picture {
+.img-pr {
   width: 100%;
   object-fit: cover; }
 
-.img-pr picture img {
+.img-pr img {
   width: 100%;
   height: 100%; }
 
@@ -1574,7 +1574,7 @@ header a {
     background-color: #3b4041; }
   /**FIN PAGINA INDEX**/ }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 300px) and (max-width: 480px) {
   /*PAGINA INDEX*/
   .grid-container {
     grid-area: grid-container;
@@ -1598,7 +1598,7 @@ header a {
     width: 50%;
     height: 70%; }
   .linkColorActivo {
-    color: #00d60e; }
+    color: #1194e0; }
   .navbar__list {
     display: flex;
     flex-direction: column;
@@ -1646,7 +1646,7 @@ header a {
     row-gap: 2px;
     background-color: #e2e5ec;
     /*color de fondo del body*/
-    grid-template-columns: 100%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto auto auto auto auto auto;
     /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
     grid-template-areas: "header header" "img-sp img-sp" "titulo-2 titulo-2" "content-se content-se" "category category" "footer footer"; }
