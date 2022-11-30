@@ -731,7 +731,7 @@ header a {
   background-color: #3da9d4;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 30px; }
+  font-size: 25px; }
 
 .item-txt:hover a {
   color: white;
@@ -750,7 +750,9 @@ header a {
   row-gap: 5px;
   font-size: 70%;
   *padding: 90px 0;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
 
 #order-change:hover {
   *margin-right: 200px; }
@@ -816,7 +818,8 @@ header a {
 .cards:hover {
   width: 400px;
   /*Aqui coloco el valor: 400 para que cuando se expanda tome todo el ancho total y funcione*/
-  left: 400px; }
+  left: 500px;
+  *margin-left: 200px; }
 
 .cards .imgBox {
   /*Estilo para el contenido izquierdo*/
