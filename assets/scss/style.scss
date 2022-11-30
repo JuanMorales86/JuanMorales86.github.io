@@ -2114,7 +2114,6 @@ header a {
   }
 
   /*PAGINA PRODUCTOS*/
-
   .son__containerP {
     display: grid;
     row-gap: 2px;
@@ -2145,6 +2144,11 @@ header a {
       "content-pt content-pt"
       "category category"
       "footer footer";
+  }
+  .content-pt {
+    height: 400px;
+    border: 10px solid black;
+    border-radius: 17px;
   }
 
   /**PAGINA CONTACTO**/

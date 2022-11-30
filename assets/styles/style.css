@@ -1688,6 +1688,10 @@ header a {
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: "header header" "img-pt imagen-pt" "titulo-pt titulo-pt" "content-pt content-pt" "category category" "footer footer"; }
+  .content-pt {
+    height: 400px;
+    border: 10px solid black;
+    border-radius: 17px; }
   /**PAGINA CONTACTO**/
   .son__containerC {
     display: grid;
