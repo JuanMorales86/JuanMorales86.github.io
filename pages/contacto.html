@@ -16,6 +16,11 @@
     <!--Google Font-->
     <link rel="stylesheet" href="../assets/styles/style.css">
     <!--Mi CSS-->
+     <!--Bootstrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"><!--Bootstrap Icons-->
+     <!--Bootstrap-->
     <title>Contacto Genius Bar</title>
 
 
@@ -26,30 +31,46 @@
     <div class="son__containerC">
         <!--TORSO-->
         <header>
-            <a href="../index.html"><img src="../assets/images/genius bar tecnologia 130px.png" class="logoNav"
-                    alt="imagen principal productos nuevos"></a>
-
-            <nav class="navBar">
-                <!--inicio menu navegacion-->
-                <ul class="navbar__list">
-                    <!--barra de navegacion principal-->
-                    <li class="navbar__item"><a class="navLink linkColorActivo" href="../index.html">INICIO</a></li>
-                    <li class="navbar__item"><a class="navLink" href="./servicioTecnico.html">Servicio Tecnico</a>
-                        <ul class="submenus">
-                            <!--submenu del primer navbar__link-->
-                            <li class="submenus__item"><a href="./servicioTecnico.html">Cambios de Modulos</a></li>
-                            <li class="submenus__item"><a href="./servicioTecnico.html">Cambios de Baterias</a></li>
-                            <li class="submenus__item"><a href="./servicioTecnico.html">Cambios de Pines de Carga</a>
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid fs-5">
+                    <!--icono-->
+        
+                    <a class="navbar-brand justify-content-md-around align-items-center" href="../index.html">
+                        <img class="logoNav" src="../assets/images/genius bar tecnologia 130px.png" alt="imagen logo de la empresa">
+                        <span class="text-white fw-bold ">GENIUS BAR</span>
+                    </a>
+        
+                    <!--boton-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <!-- elementos del menu colapsado -->
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="navbar-nav md-auto ">
+                            <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
+                            <li class="nav-item dropdown px-2"><!--minimenu con el drop-->
+                                <a class="nav-link dropdown-toggle text text-light" href="./servicioTecnico.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Servicio Tecnico</a>
+                            <ul class="dropdown-menu bg-black p-1" id="menu-drop">
+                                <li><a class="dropdown-item text text-light" href="./servicioTecnico.html">Cambios de Modulos</a></li>
+                                <li><a class="dropdown-item text text-light" href="./servicioTecnico.html">Cambios de Baterias</a></li>
+                                <li><a class="dropdown-item text text-light text-wrap" href="./servicioTecnico.html">Cambios de Pines de Carga</a></li>
+                                <li><a class="dropdown-item text text-light" href="./servicioTecnico.html">Cambios de Parlantes</a></li>
+                                <li><a class="dropdown-item text text-light" href="./servicioTecnico.html">Cambios de Antenas</a></li>
+                                <li><a class="dropdown-item text text-light text-wrap" href="./servicioTecnico.html">Reparaciones de Placas</a></li>
+                            </ul>
                             </li>
-                            <li class="submenus__item"><a href="./servicioTecnico.html">Cambios de Parlantes</a></li>
-                            <li class="submenus__item"><a href="./servicioTecnico.html">Cambios de Antenas</a></li>
-                            <li class="submenus__item"><a href="./servicioTecnico.html">Reparaciones de Placas</a></li>
+                            <li class="nav-item"><a class="nav-link text text-light" href="./productos.html">Productos</a></li>
+                        
+                            <li class="nav-item"><a class="nav-link text text-light" href="./tienda.html">Tienda</a></li>
+                            <li class="nav-item"><a class="nav-link text text-light" href="./contacto.html">Contacto</a></li>
                         </ul>
-                    </li>
-                    <li class="navbar__item"><a class="navLink" href="./productos.html">Productos</a></li>
-                    <li class="navbar__item"><a class="navLink" href="./tienda.html">Tienda</a></li>
-                    <li class="navbar__item"><a class="navLink" href="./contacto.html">Contacto</a></li>
-                </ul>
+                        <hr class="text-white-80"><!--linea abajo cuando se colapsa el menu completo-->
+         
+                    </div>
+                </div>
             </nav>
         </header>
 
@@ -59,25 +80,25 @@
 
                 <h1>Preguntas y Consultas</h1>
 
-                <form action>
+                <form action="https://formsubmit.co/tecnorosativentas@gmail.com" method="POST">
                     <div>
                         <label for="name">Nombre</label>
-                        <input type="text" id="name">
+                        <input type="text" id="name" name="name">
                     </div>
                     <div>
                         <label for="apellido">Apellido</label>
-                        <input type="text" id="apellido">
+                        <input type="text" id="apellido" name="lastname">
                     </div>
                     <div>
                         <!--Bootstrap-->
 
                         <label for="email">Email</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" name="email">
 
                     </div>
                     <div>
                         <label for="phone">Telefono</label>
-                        <input class="mianimacion" type="number" id="phone">
+                        <input class="mianimacion" name="phone" type="number" id="phone">
                     </div>
                     <div class="consult-direction">
                         <label class="consult" for="query">Consultas</label>
@@ -85,16 +106,17 @@
 
 
                         <button type="submit">Enviar</button>
+                        <input type="hidden" name="_next" value="https://serviciotecnicogeniusbar.000webhostapp.com/pages/contacto.html"><!--para que se devuelva una vez pulsado el boton enviar a la pagina de contacto-->
                     </div>
                 </form>
             </section>
         </div>
 
-        <footer class="footer">
+        <footer class="footer fs-6">
             <a
                 href="mailto:juanjosemorales1986@gmail.com?Subject=Consultas%20Preguntas%20Ordenes">Correo:juanjosemorales1986@gmail.com</a>
             <!--un mailto a mi correo con el subjet que escribe automatico el asunto-->
-            <h5>Copyright © 2022-2022 juanMG. Todos los derechos reservados.</h5>
+            <h5 class="fs-6">Copyright © 2022-2022 juanMG. Todos los derechos reservados.</h5>
             <div class="footer__redes">
                 <button class="btn--facebook "><a href="https://www.facebook.com/Barradeatomo"><img src="../assets/icons/facebook.png" alt="facebook icon"></a></button>
                 <button class="btn--instagram"><a href="https://www.instagram.com/geniusbartechnology/"><img src="../assets/icons/instagram.png" alt="facebook icon"></a></button>
@@ -102,6 +124,9 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -15,6 +15,21 @@
   max-width: 100%; /*probando se me desacomodan los contenedores cada vez q le pongo contenido*/
 }
 
+body{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.navbar-brand .logoNav{
+  width:30%;
+}
+.dropdown-item:hover{
+  background-color: #1194e0 !important;}
+
+.navbar-nav li:hover{
+  background-color: #3b4041;
+  transition: all .6s ease-out;
+}
 /**PAGINA CONTACTO**/
 .son__containerC {
   display: grid;
@@ -674,10 +689,6 @@ header {
   align-items: center;
 }
 
-header a {
-  display: flex;
-  justify-content: center;
-}
 
 .logoNav {
   /*logo de la empresa en la navegacion*/
@@ -814,6 +825,7 @@ header a {
   justify-content: center;
   align-items: center;
   align-content: center;
+  
 }
 
 .slide-txt div {
@@ -825,6 +837,7 @@ header a {
   color: black;
   font-weight: bold; /**negrita**/
   padding: 15px; /*separa dentro en los anchors*/
+ text-decoration: none;
 }
 
 .item-txt:hover a {
@@ -851,7 +864,7 @@ header a {
   align-items: center;
   column-gap: 2px;
   row-gap: 5px;
-  font-size: 70%;
+  font-size: 50%;
   *padding: 90px 0;
   overflow: hidden;
   height: 100%;
@@ -864,6 +877,7 @@ header a {
 
 #order-change2:hover {
   width: 450px;
+  height: auto;
 }
 
 .titulo {
@@ -1029,13 +1043,19 @@ header a {
 
 .cards .details .buy .btn {
   background: white;
-  padding: 0.5em 0.8em;
-  text-transform: uppercase;
+  *padding: 0.5em 0.8em;
+  *text-transform: uppercase;
+  
 }
 
 .cards .details .buy .btn a {
   text-decoration: none;
   color: $backc-cardsdetailindex; /**si cambia el fondo cambia este fondo a**/
+}
+
+.cards .details .buy .btn{
+  width: 50%;
+  height: 100%;
 }
 
 .category {
