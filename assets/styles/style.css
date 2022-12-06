@@ -1049,7 +1049,7 @@ header {
     grid-template-columns: 100%;
     /*originalmente era 50% 50%*/
     grid-template-rows: 1fr 8fr 1fr;
-    grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
+    grid-template-areas: "header header" "img-ct img-ct" "form__contacto form__contacto" "footer footer"; }
   .son__containerC header {
     height: 100%; }
   .son__containerC footer {
@@ -1068,11 +1068,13 @@ header {
     display: grid;
     row-gap: 2px;
     grid-template-columns: 100%;
-    grid-template-rows: 0.5fr 950px 1fr;
-    grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header header" "img-ct img-ct" "form__contacto form__contacto" "footer footer"; }
   .son__containerC header {
     grid-area: header;
     height: 100%; }
+  .img-ct {
+    grid-area: img-ct; }
   .son__containerC .form__contacto {
     grid-area: form__contacto;
     height: 100%; }
@@ -1330,8 +1332,8 @@ header {
     /*color de fondo del body*/
     grid-template-columns: 100%;
     /*originalmente era 50% 50%*/
-    grid-template-rows: 0.1fr 1fr 0.1fr;
-    grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header header" "img-ct img-ct" "form__contacto form__contacto" "footer footer"; }
   header {
     background-color: #3b4041;
     height: 100%; }
@@ -1746,8 +1748,8 @@ header {
     /*color de fondo del body*/
     grid-template-columns: 100%;
     /*originalmente era 50% 50%*/
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "header header" "form__contacto form__contacto" "footer footer"; }
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header header" "img-ct img-ct" "form__contacto form__contacto" "footer footer"; }
   header {
     width: 100%; }
   .form__contacto {

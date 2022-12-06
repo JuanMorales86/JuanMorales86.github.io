@@ -1,6 +1,6 @@
 test/
 node_modules/
-imagenes originales/
+imagenesoriginales/
 /pages/technicalServices.html
 /pages/menubootstrap.html
 package-lock.json
