@@ -5,8 +5,6 @@
   "main": "index.html",
   "directories": {
     "test": "test"
-
-
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -32,5 +30,8 @@
   "devDependencies": {
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.10.2"
   }
 }
