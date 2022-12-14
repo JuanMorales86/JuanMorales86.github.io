@@ -28,6 +28,349 @@ body {
   border-radius: 6px;
   transition: all .6s ease-out; }
 
+/*PAGINA PRINCIPAL INDEX*/
+.grid-container {
+  display: grid;
+  row-gap: 2px;
+  background-color: #e2e5ec;
+  /*color de fondo del body*/
+  grid-template-columns: 100%;
+  /*originalmente lo dividi 50% 50%*/
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "card-m card-m"  "category category" "footer footer"; }
+
+/*MENU INDEX CON EL LOGO*/
+header {
+  /*logotienda + navegacion*/
+  grid-area: header;
+  background-color: #3da9d4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /*o space-between como originalmente lo tenia*/
+  align-items: center; }
+
+.logoNav {
+  /*logo de la empresa en la navegacion*/
+  width: 60%;
+  border-radius: 8px; }
+
+/*NAV MENU*/
+.navbar__list {
+  /*ul*/
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  font-weight: bold;
+  align-items: center;
+  font-size: 18px; }
+
+.navbar__item {
+  /*ul>li*/
+  /*El estilo de la lista de navegacion en este caso raiz(serviciot,produc,tienda,etc)*/
+  display: inline-block;
+  position: relative;
+  /*para que se centre con el submenu*/
+  list-style-type: none;
+  /*para quitarle los puntos a la lista*/ }
+
+.navLink {
+  /*ul>li.a*/
+  /*Estilo de los links a en este caso los raiz (serviciot,produc,tienda,etc)*/
+  color: white;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  /*acomdo el alto a los anchors de lalista raiz*/
+  padding: 35px 15px 35px 15px;
+  /*acomodo del borde a dentro*/
+  /*acomodo los anchors entre ellos le da espacios */
+  text-decoration: none; }
+
+.submenus {
+  /*ul>li>ul*/
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /*sombra para la caja*/
+  min-width: 100%;
+  /*ancho minimo caja submenu*/
+  overflow: auto;
+  *font-size: small;
+  /*tamano de texto anchor*/
+  z-index: 1;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+.submenus__item {
+  /*ul>li>ul>li*/
+  list-style-type: none;
+  text-align: center; }
+
+.submenus__item > a {
+  /*ul>li>ul>li.a*/
+  color: black;
+  text-decoration: none;
+  padding: 5px 0;
+  display: block; }
+
+.navbar__item:hover > ul {
+  /*ul:hover*/
+  display: block;
+  /*valor en el cual aparezca y coloque el submenu en bloque*/ }
+
+.submenus__item:hover {
+  background-color: #687273; }
+
+.navbar__item:hover {
+  /*ul>li>a*/
+  /*este hover en el navlink le agrega un fondo de  color al pasar el mouse sobre el menu raiz*/
+  background-color: #687273;
+  /*color al anchor*/
+  /* width: 100%; */ }
+
+.linkColorActivo {
+  /*esta clase cambia el color de los link de navbar__item a los que accesa para que sepa donde esta posicionado el cliente*/
+  color: #244e73; }
+
+/**TERMINA MI MENU CON EL LOGO**/
+/*SECCION IMAGENES*/
+.img-pr {
+  grid-area: img-pr;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; }
+
+.img-pr {
+  width: 100%;
+  object-fit: cover; }
+
+.img-pr img {
+  width: 100%;
+  height: 100%; }
+
+/*IMAGENES BANNERS*/
+.img-bnr {
+  grid-area: img-bnr;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0 10px 0; }
+
+.p-bnr {
+  width: 100%;
+  height: 100%;
+  /*HICE CAMBIO CONFIG EL DESKTOP OJO*/
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  gap: 20px; }
+
+.p-bnr img {
+  border: 5px solid #3da9d4;
+  width: 380px;
+  height: 300px; }
+
+/*SECCION TEXTOS SLIDES*/
+.slide-txt {
+  grid-area: slide-txt;
+  background-color: #cad1d1;
+  /*#cad1d1*/
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+.slide-txt div {
+  font-size: 15px;
+  text-align: justify;
+  padding: 30px 30px; }
+
+.item-txt a {
+  color: black;
+  font-weight: bold;
+  /**negrita**/
+  padding: 15px;
+  /*separa dentro en los anchors*/
+  text-decoration: none; }
+
+.item-txt:hover a {
+  /*hover para los textos*/
+  background-color: #3da9d4;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 25px; }
+
+.item-txt:hover a {
+  color: white;
+  animation: alternate-reverse; }
+
+/*FIN SECCION SLIDE TEXTOS*/
+/*SECCION PRODUCTOS*/
+.card-m {
+  background: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
+
+.container-m {
+  width: 100%;
+  padding: 10px 40px; }
+
+.container-m .swiper {
+  width: 100%;
+  height: 100%; }
+
+.container-m .swiper-slide {
+  position: relative;
+  text-align: start;
+  font-size: 19px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25); }
+
+.container-m .swiper-slide img {
+  display: block;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: 0.5 ease-in-out;
+  min-width: 200px;
+  overflow: hidden;
+  transform-origin: center; }
+
+.container-m .swiper-slide img:hover {
+  transform: scale(1.08);
+  border-radius: 15px;
+  overflow: hidden; }
+
+.container-m .card-description {
+  padding: 1rem; }
+
+.container-m .card-description .card-title, .container-m .card-description .card-text {
+  margin-bottom: 0.5rem; }
+
+.container-m .card-description .card-title h4 {
+  /* offset-x | offset-y | blur-radius | color */
+  text-shadow: 1px 1px 1px #4c4b4b;
+  color: black;
+  font-weight: bold; }
+
+.container-m .card-description .card-title h6 {
+  /* offset-x | offset-y | blur-radius | color */
+  text-shadow: 0px 0px 2px black;
+  color: #059ce2;
+  font-weight: bold;
+  font-size: 1.2rem; }
+
+.container-m .card-description .card-text {
+  text-align: justify; }
+
+.container-m .card-description .card-link {
+  text-align: center; }
+
+.container-m .card-description .card-link a {
+  text-decoration: none;
+  color: #1d6ce2; }
+
+.swiper-button-next {
+  right: 1px !important; }
+
+.swiper-button-prev {
+  left: 1px !important; }
+
+/*FIN SECCION SLIDER PRODUCTOS*/
+.category {
+  grid-area: category;
+  border-top: #020202 solid 4px;
+  border-bottom: #020202 solid 4px; }
+
+.categorias p {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 30px;
+  filter: drop-shadow(2px 2px 3px black); }
+
+.categorias ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  background-color: #3da9d4;
+  padding: 10px 0 10px 0; }
+
+.categorias li {
+  padding: 10px; }
+
+.categorias ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold; }
+
+#color-a:hover {
+  /*hover para los textos*/
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 25px; }
+
+#color-a:hover {
+  color: white;
+  animation: alternate-reverse; }
+
+/*FOOTER*/
+.footer {
+  grid-area: footer;
+  background-color: #3da9d4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 30px 0;
+  width: 100%;
+  height: 100%;
+  /**&**/ }
+  .footer a {
+    color: white;
+    font-weight: bold; }
+  .footer h5 {
+    color: white; }
+  .footer__redes {
+    display: flex;
+    flex-direction: row;
+    height: 100%; }
+    .footer__redes button {
+      margin: 10px; }
+    .footer__redes .btn--facebook {
+      width: 40px;
+      height: 38px; }
+    .footer__redes .btn--facebook img {
+      width: 36px;
+      height: 35px; }
+    .footer__redes .btn--instagram {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px; }
+    .footer__redes .btn--instagram img {
+      width: 35px;
+      height: 36px; }
+
+/*FIN PAGINA PRINCIPAL INDEX*/
+/**TERMINA MI DESKTOP**/
 /**PAGINA CONTACTO**/
 .son__containerC {
   display: grid;
@@ -588,455 +931,6 @@ header {
   grid-area: footer; }
 
 /**FIN PAGINA SERVICIO TECNICO**/
-/*PAGINA PRINCIPAL INDEX*/
-.grid-container {
-  display: grid;
-  row-gap: 2px;
-  background-color: #e2e5ec;
-  /*color de fondo del body*/
-  grid-template-columns: 100%;
-  /*originalmente lo dividi 50% 50%*/
-  grid-template-rows: auto auto auto auto auto auto auto;
-  grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "card-m card-m"  "category category" "footer footer"; }
-
-/*MENU INDEX CON EL LOGO*/
-header {
-  /*logotienda + navegacion*/
-  grid-area: header;
-  background-color: #3da9d4;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  /*o space-between como originalmente lo tenia*/
-  align-items: center; }
-
-.logoNav {
-  /*logo de la empresa en la navegacion*/
-  width: 60%;
-  border-radius: 8px; }
-
-/*NAV MENU*/
-.navbar__list {
-  /*ul*/
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: nowrap;
-  font-weight: bold;
-  align-items: center;
-  font-size: 18px; }
-
-.navbar__item {
-  /*ul>li*/
-  /*El estilo de la lista de navegacion en este caso raiz(serviciot,produc,tienda,etc)*/
-  display: inline-block;
-  position: relative;
-  /*para que se centre con el submenu*/
-  list-style-type: none;
-  /*para quitarle los puntos a la lista*/ }
-
-.navLink {
-  /*ul>li.a*/
-  /*Estilo de los links a en este caso los raiz (serviciot,produc,tienda,etc)*/
-  color: white;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  /*acomdo el alto a los anchors de lalista raiz*/
-  padding: 35px 15px 35px 15px;
-  /*acomodo del borde a dentro*/
-  /*acomodo los anchors entre ellos le da espacios */
-  text-decoration: none; }
-
-.submenus {
-  /*ul>li>ul*/
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  /*sombra para la caja*/
-  min-width: 100%;
-  /*ancho minimo caja submenu*/
-  overflow: auto;
-  *font-size: small;
-  /*tamano de texto anchor*/
-  z-index: 1;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px; }
-
-.submenus__item {
-  /*ul>li>ul>li*/
-  list-style-type: none;
-  text-align: center; }
-
-.submenus__item > a {
-  /*ul>li>ul>li.a*/
-  color: black;
-  text-decoration: none;
-  padding: 5px 0;
-  display: block; }
-
-.navbar__item:hover > ul {
-  /*ul:hover*/
-  display: block;
-  /*valor en el cual aparezca y coloque el submenu en bloque*/ }
-
-.submenus__item:hover {
-  background-color: #687273; }
-
-.navbar__item:hover {
-  /*ul>li>a*/
-  /*este hover en el navlink le agrega un fondo de  color al pasar el mouse sobre el menu raiz*/
-  background-color: #687273;
-  /*color al anchor*/
-  /* width: 100%; */ }
-
-.linkColorActivo {
-  /*esta clase cambia el color de los link de navbar__item a los que accesa para que sepa donde esta posicionado el cliente*/
-  color: #244e73; }
-
-/**TERMINA MI MENU CON EL LOGO**/
-/*SECCION IMAGENES*/
-.img-pr {
-  grid-area: img-pr;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  display: flex;
-  justify-content: flex-start; }
-
-.img-pr {
-  width: 100%;
-  object-fit: cover; }
-
-.img-pr img {
-  width: 100%;
-  height: 100%; }
-
-/*IMAGENES BANNERS*/
-.img-bnr {
-  grid-area: img-bnr;
-  width: 100%;
-  height: 100%;
-  padding: 10px 0 10px 0;
-  display: flex;
-  text-align: center; }
-
-.p-bnr {
-  width: 100%;
-  height: 100%;
-  /*HICE CAMBIO CONFIG EL DESKTOP OJO*/
-  column-gap: 5px; }
-
-.p-bnr img {
-  border: 5px solid #3da9d4;
-  width: 400px;
-  height: 300px; }
-
-/*SECCION TEXTOS SLIDES*/
-.slide-txt {
-  grid-area: slide-txt;
-  background-color: #cad1d1;
-  /*#cad1d1*/
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center; }
-
-.slide-txt div {
-  font-size: 15px;
-  text-align: justify;
-  padding: 30px 30px; }
-
-.item-txt a {
-  color: black;
-  font-weight: bold;
-  /**negrita**/
-  padding: 15px;
-  /*separa dentro en los anchors*/
-  text-decoration: none; }
-
-.item-txt:hover a {
-  /*hover para los textos*/
-  background-color: #3da9d4;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 25px; }
-
-.item-txt:hover a {
-  color: white;
-  animation: alternate-reverse; }
-
-/*FIN SECCION SLIDE TEXTOS*/
-/*SECCION PRODUCTOS*/
-.card-m {
-  grid-area: card-m;
-  display: inline-flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  /*el valor que queria era flex-start pero no se veia bien*/
-  align-items: center;
-  column-gap: 2px;
-  row-gap: 5px;
-  font-size: 50%;
-  *padding: 90px 0;
-  overflow: hidden;
-  height: 100%;
-  width: 100%; }
-
-#order-change:hover {
-  *margin-right: 200px; }
-
-#order-change2:hover {
-  width: 450px;
-  height: auto; }
-
-.titulo {
-  /*contiene un h1*/
-  grid-area: titulo;
-  visibility: visible;
-  box-sizing: border-box;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0 30px 0 25px;
-  overflow: hidden;
-  transition-property: clip-path, transform, max-height, overflow, display;
-  clip-path: circle(150% at top right);
-  transform: rotate(0deg);
-  /* propiedad | propiedad, propiedad | all | none*/
-  transition-duration: 0.8s;
-  transition-timing-function: ease-in-out;
-  /*defect: ease | ease-in | ease-in-out | ease-out*/
-  transition-delay: linear;
-  *transition: width 0.5s 0.1s ease-in;
-  /*este codigo seria una transition completa con todas las propiedades*/
-  /*propiedad  duracion  duracion de retraso  timing-function*/
-  font-size: 17.7px; }
-
-.card-m:hover .titulo {
-  clip-path: circle(10% at top right);
-  transform: rotate(-90deg);
-  visibility: collapse;
-  /*or collapse*/
-  overflow: hidden;
-  width: 0;
-  margin: 0;
-  padding: 0; }
-
-.cards {
-  /*Aqui arreglo lo que esta adentro del contenedor cards*/
-  display: flex;
-  /*Para que se haga flexible con las descripciones*/
-  *justify-content: center;
-  /*Aqui le quito el justify para que no tome ninguna posicion y funcione el .cards:hover*/
-  align-items: center;
-  width: 200px;
-  /*Al principio era de 400 para acomodar todo despues lo baje a 200 para que funcone el .cards:hover*/
-  height: 280px;
-  border: 4px solid black;
-  background-color: #e2e5ec;
-  box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.25);
-  /* offset-x | offset-y | blur-radius | color */
-  overflow: hidden;
-  /*el overflow esconde el div details para que funcione el efecto hover*/
-  transition: 0.5s ease-in-out;
-  *margin-left: 10px;
-  /*este margin le da espacio a las box con el fin de que no penguen entre si*/
-  *margin-right: 1px;
-  text-align: justify; }
-
-/**HOVER**/
-.cards:hover {
-  width: 400px;
-  /*Aqui coloco el valor: 400 para que cuando se expanda tome todo el ancho total y funcione*/
-  left: 500px;
-  *margin-left: 200px; }
-
-.cards .imgBox {
-  /*Estilo para el contenido izquierdo*/
-  position: relative;
-  min-width: 200px;
-  width: 200px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s; }
-
-.cards:hover .imgBox {
-  transform: rotate(-35deg); }
-
-.cards .imgBox img {
-  width: 100%;
-  height: 92%;
-  object-fit: cover; }
-
-.cards .details {
-  /*Estilo para el contenido derecho*/
-  position: relative;
-  min-width: 200px;
-  background-color: #4ba9e9;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  color: white; }
-
-/*BEFORE*/
-.cards .details::before {
-  /*estilo flechita blanca desde el contenedor imgBox al div details*/
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 10px solid transparent;
-  border-top: 10px solid transparent;
-  border-left: 10px solid #e2e5ec; }
-
-.details {
-  display: flex; }
-
-.title small {
-  display: block;
-  font-weight: 300;
-  font-size: 0.9em; }
-
-.cards .details h4 {
-  font-size: 1.8em; }
-
-.description {
-  font-size: 1.5em; }
-
-.description p {
-  padding: 2px 0 0 0;
-  font-size: 0.8em;
-  font-weight: 400; }
-
-.cards .details .model ul {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding-top: 3px; }
-
-.cards .details .model ul li {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8em;
-  /*tamano de las letras*/
-  border: solid 2px white;
-  padding: 0.5em;
-  /*distancia del contenedor a item*/ }
-
-.cards .details .model ul li:hover {
-  background-color: #fff;
-  color: #4ba9e9; }
-
-.cards .details .buy {
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline; }
-
-.cards .details .buy .price {
-  font-size: 1.4em; }
-
-.cards .details .buy .btn {
-  background: white;
-  *padding: 0.5em 0.8em;
-  *text-transform: uppercase; }
-
-.cards .details .buy .btn a {
-  text-decoration: none;
-  color: #4ba9e9;
-  /**si cambia el fondo cambia este fondo a**/ }
-
-.cards .details .buy .btn {
-  width: 50%;
-  height: 100%; }
-
-.category {
-  grid-area: category;
-  border-top: #020202 solid 4px;
-  border-bottom: #020202 solid 4px; }
-
-.categorias p {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 15px;
-  font-size: 30px;
-  filter: drop-shadow(2px 2px 3px black); }
-
-.categorias ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  list-style: none;
-  background-color: #3da9d4;
-  padding: 10px 0 10px 0; }
-
-.categorias li {
-  padding: 10px; }
-
-.categorias ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  font-weight: bold; }
-
-#color-a:hover {
-  /*hover para los textos*/
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 25px; }
-
-#color-a:hover {
-  color: white;
-  animation: alternate-reverse; }
-
-/*FOOTER*/
-.footer {
-  grid-area: footer;
-  background-color: #3da9d4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0 30px 0;
-  width: 100%;
-  height: 100%;
-  /**&**/ }
-  .footer a {
-    color: white;
-    font-weight: bold; }
-  .footer h5 {
-    color: white; }
-  .footer__redes {
-    display: flex;
-    flex-direction: row;
-    height: 100%; }
-    .footer__redes button {
-      margin: 10px; }
-    .footer__redes .btn--facebook {
-      width: 40px;
-      height: 38px; }
-    .footer__redes .btn--facebook img {
-      width: 36px;
-      height: 35px; }
-    .footer__redes .btn--instagram {
-      width: 40px;
-      height: 40px;
-      border-radius: 11px; }
-    .footer__redes .btn--instagram img {
-      width: 35px;
-      height: 36px; }
-
-/*FIN PAGINA PRINCIPAL INDEX*/
-/**TERMINA MI DESKTOP**/
 /*INICIO MEDIA QUERYS*/
 /**RESPONSIVE**/
 @media screen and (min-height: 1180px) and (max-width: 820px) {
@@ -1140,60 +1034,12 @@ header {
     width: 100%;
     height: 100%;
     /* padding: 10px 0 10px 0; */ }
+  header .active {
+    color: blue !important; }
   .logoNav {
     /*logo de la empresa en la navegacion*/
     width: 50%;
     border-radius: 8px; }
-  .navbar__list {
-    /*ul*/
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    font-weight: bold;
-    align-items: center;
-    font-size: 14px; }
-  .navbar__item {
-    /*ul>li*/
-    /*El estilo de la lista de navegacion en este caso raiz(serviciot,produc,tienda,etc)*/
-    display: inline-block;
-    position: relative;
-    /*para que se centre con el submenu*/
-    list-style-type: none;
-    /*para quitarle los puntos a la lista*/ }
-  .navLink {
-    /*ul>li.a*/
-    /*Estilo de los links a en este caso los raiz (serviciot,produc,tienda,etc)*/
-    color: white;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    /*acomdo el alto a los anchors de lalista raiz*/
-    padding: 35px 15px 35px 15px;
-    /*acomodo del borde a dentro*/
-    /*acomodo los anchors entre ellos le da espacios */ }
-  .submenus {
-    /*ul>li>ul*/
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    /*sombra para la caja*/
-    min-width: 100%;
-    /*ancho minimo caja submenu*/
-    overflow: auto;
-    *font-size: small;
-    /*tamano de texto anchor*/
-    z-index: 1; }
-  .submenus__item {
-    /*ul>li>ul>li*/
-    list-style-type: none;
-    text-align: center; }
-  .submenus__item > a {
-    /*ul>li>ul>li.a*/
-    color: black;
-    text-decoration: none;
-    padding: 5px 0px;
-    display: block; }
   .navbar__item:hover > ul {
     /*ul:hover*/
     display: block;
@@ -1977,7 +1823,7 @@ header > a:nth-child(1) {
   animation-iteration-count: infinite;
   animation-delay: 2s; }
 
-.card-m {
+.card-m .card-description h6 {
   animation: AnimateColorText;
   animation-duration: 19s;
   animation-iteration-count: infinite; }

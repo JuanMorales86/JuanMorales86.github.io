@@ -3,7 +3,15 @@ $color-blue:#4285f4;
 $color-green:#33d374;
 $vista:max-width 768px;
 
-
+//BOOTSTRAP BREAKPOINTS CONFIGURATION
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 830px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
 //GALLERY
 
