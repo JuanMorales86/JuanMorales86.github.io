@@ -3,6 +3,9 @@ node_modules/
 imagenes_originales/
 /pages/technicalServices.html
 /pages/menubootstrap.html
+/pages/pruebas.html
+/pages/styleprueba.css
+/assets/js/pruebasjs.js
 package-lock.json
 css
 

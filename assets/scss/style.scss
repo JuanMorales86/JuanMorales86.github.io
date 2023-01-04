@@ -152,18 +152,127 @@ header {
   // justify-content: flex-start;
   // width: 100%;
   // height: 100%;
-  @include flexboxsize(100%, 100%, 0, flex, flex-start);
+  // @include flexboxsize(100%, 100%, 0, flex, center);
+  background: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  *min-height: 100vh;
 }
 
-.img-pr{
+.swiper-sec {
   width: 100%;
+  max-width: 1600px;
+}
+
+/* .swiper-sec .swiper-slide{
+  width: 250px;
+} */
+
+.swiper-sec img {
+  display: block;
+  width: 100%;
+  height: 255px;
   object-fit: cover;
+  /* object-position: top; */
 }
 
-.img-pr img {
-  width: 100%;
-  height: 100%;
+@media (min-width: 1024px) {
+  .swiper-sec img {
+      height: 450px;
+  }
 }
+
+@media (max-width: 1024px) {
+  .swiper-sec .swiper-button-next,
+  .swiper-sec .swiper-button-prev {
+      margin-top: auto
+  }
+  .swiper-sec img {
+      height: 450px;
+  }
+}
+
+.swiper-sec .swiper-pagination {
+  position: relative;
+}
+
+.swiper-sec .swiper-button-next,
+.swiper-sec .swiper-button-prev {
+  /* position: absolute; */
+  /* para pornerle un background y hacer el tamano */
+  --swiper-navigation-size: 20px;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  margin-top: -30px;
+
+  opacity: 0;/*para ocultar las flechas y en el hover aparezcan*/
+  transition: opacity 0.3s;
+}
+
+/*seteo predeterminado css swiper-pagination*/
+.swiper-sec .swiper-pagination{
+  /* --swiper-pagination-color:var(--swiper-theme-color); */
+  --swiper-pagination-color:white;
+  --swiper-pagination-bullet-size:6px;/*tamano de los circulitos*/
+  /* --swiper-pagination-bullet-width:8px;
+  --swiper-pagination-bullet-height:8px; */
+  --swiper-pagination-bullet-inactive-color:#000;
+  --swiper-pagination-bullet-inactive-opacity:0.25;
+  --swiper-pagination-bullet-opacity:1;
+  --swiper-pagination-bullet-horizontal-gap:4px;
+  /* --swiper-pagination-bullet-vertical-gap:6px; */
+}
+
+.swiper-sec .swiper-pagination-bullet{
+  box-shadow: inset 0 0 0 1px white;
+}
+
+.swiper-sec .swiper-pagination-bullet-active{
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+
+/* para hacer el borde redondeado y pegarlo a la esquina */
+.swiper-sec .swiper-button-prev{
+  border-radius: 0 65px 65px 0;
+  left: -10px;
+  
+}
+
+.swiper-sec .swiper-button-next{
+  border-radius: 65px 0 0 65px;
+  right: -10px;
+}
+
+.swiper-sec:hover .swiper-button-prev,
+.swiper-sec:hover .swiper-button-next{
+  opacity:1;
+}
+
+
+.swiper-sec .swiper-scrollbar {
+  position: relative;
+}
+
+
+// .img-pr{
+//   width: 100%;
+//   object-fit: cover;
+// }
+
+// .img-pr img {
+//   width: 100%;
+//   height: 100%;
+// }
 
 /*IMAGENES BANNERS*/
 .img-bnr {
@@ -845,7 +954,7 @@ header {
 .text-cardps {
   position: absolute;
   letter-spacing: 0.1em;
-  bottom: 13px; //13px
+  bottom: 1px; //13px
   left: 8%; //20px
   color: black;
   font-size: 0.9em;
@@ -882,7 +991,7 @@ header {
 }
 
 .card-ps:hover .card-itemps {
-  transform: translateY(-50px);
+  transform: translateY(-60px);
   *visibility: visible;
 }
 

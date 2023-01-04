@@ -32,6 +32,7 @@
     "nodemon": "^2.0.20"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.10.2"
+    "bootstrap-icons": "^1.10.2",
+    "swiper": "^8.4.5"
   }
 }
