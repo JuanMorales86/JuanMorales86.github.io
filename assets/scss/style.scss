@@ -1205,6 +1205,8 @@ header {
   transition: 0.5s;
   width: 120px;
   height: 35px;
+  border-radius: 5px;
+  
 }
 
 .btn-s a {
@@ -1213,6 +1215,7 @@ header {
   align-items: center;
   text-decoration: none;
   color: #0a0a0a;
+  font-weight: bold;
 }
 
 .btn-s:hover {
