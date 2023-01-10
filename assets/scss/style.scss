@@ -12,7 +12,7 @@
   box-sizing: border-box;
   text-decoration: none;
   *list-style-type: none;
-  max-width: 100%; /*probando se me desacomodan los contenedores cada vez q le pongo contenido*/
+  *max-width: 100%; /*probando se me desacomodan los contenedores cada vez q le pongo contenido*/
 }
 
 
@@ -21,8 +21,37 @@ body{
   list-style-type: none;
 }
 
+.productox1{
+  width: 100%;
+  height: 100%;
+}
+
+.productomues{
+  padding: 20px 0;
+}
+
+.productomues img{
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.productomini{
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  column-gap: 5px;
+  padding: 20px 0;
+}
+
+.productomini img{
+  width: 250px;
+  height: 250px;
+}
+
 .navbar-brand .logoNav{
   width:30%;
+  
 }
 .dropdown-item:hover{
   background-color: #1194e0 !important;}
