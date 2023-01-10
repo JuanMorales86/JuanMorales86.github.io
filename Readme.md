@@ -9,7 +9,7 @@
 
 - 💬 Ask me about **Html5, Css3, Visual Basic, Sql**
 
-- 📫 How to reach me **juanjosemoraes1986@gmail.com**
+- 📫 How to reach me **juanjosemoraes1986@gmail.com, www.linkedin.com/in/juanmorales86**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
