@@ -1,0 +1,943 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/**REGLAS GENERALES DE CSS EN HTML**//*gitignore*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif, Poppins;
+  box-sizing: border-box;
+  text-decoration: none;
+  max-width: 1499px;
+  /*probando se me desacomodan los contenedores cada vez q le pongo contenido*/ }
+
+body {
+  *font-size: 100%; }
+
+.grid-container {
+  display: grid;
+  row-gap: 2px;
+  background-color: #e2e5ec;
+  /*color de fondo del body*/
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto 200px 2fr auto;
+  grid-template-areas: "header header" "img-pr img-pr" "img-bnr img-bnr" "slide-txt slide-txt" "card-m card-m" "footer footer"; }
+
+/**CSS PAGINA CONTACTO**/
+.son__containerC {
+  display: grid;
+  row-gap: 2px;
+  background-color: #e2e5ec;
+  /*color de fondo del body*/
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header"
+ "h1 h1"
+ "form__contacto form__contacto"
+ "footer footer"; }
+
+/**FORMULARIO DE CONTACTO**/
+.form__contacto {
+  grid-area: form__contacto;
+  padding: 1rem;
+  margin: 1rem; }
+
+.direction {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center; }
+
+.direction h1 {
+  font-size: 2rem;
+  padding: 2rem; }
+
+form {
+  width: 30rem;
+  /*300px*/
+  padding: 1rem;
+  /*16px*/
+  border-radius: 10px;
+  *margin: 10% 10% 10% 10%;
+  /*el margen automatico da el mismo margen de todos los lados*/
+  *margin: auto;
+  background-color: white;
+  /*color de fondo*/ }
+
+form label {
+  display: inline-block;
+  width: 6rem;
+  height: 1rem;
+  font-weight: bold;
+  text-align: center; }
+
+form .consult {
+  width: 27rem;
+  text-align: center;
+  margin-top: 0.5rem; }
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  width: 20rem;
+  /*180px*/
+  padding: 0.5rem;
+  border: 3px solid black;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 0.5rem;
+  /*arriba y abajo y cero los costados*/
+  display: inline-block; }
+
+form textarea[name="query"] {
+  width: 26rem;
+  border: 3px solid black;
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  margin: 1rem;
+  *display: flex; }
+
+form button {
+  /*estilo del botton dentro del form*/
+  width: 15rem;
+  padding: 0.8rem;
+  margin: 0.5rem 6.4rem;
+  background-color: #3da9d4;
+  border-radius: 5px;
+  *display: block;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem; }
+
+form button:hover {
+  cursor: pointer; }
+
+/**CIERRA CSS PAGINA CONTACTO**/
+/**PAGINA DE SERVICIO TECNICO**/
+.son__containerS {
+  display: grid;
+  row-gap: 2px;
+  background-color: #e2e5ec;
+  /*color de fondo del body*/
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto 690px auto;
+  /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
+  grid-template-areas: "header header"
+ "main main"
+ "footer footer"; }
+
+/**PAGINA DE PRODUCTOS**/
+.son__containerP {
+  display: grid;
+  row-gap: 2px;
+  background-color: #e2e5ec;
+  /*color de fondo del body*/
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto 690px auto;
+  /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
+  grid-template-areas: "header header"
+ "main main"
+ "footer footer"; }
+
+/**PAGINA DE TIENDA**/
+.son__containerT {
+  display: grid;
+  row-gap: 2px;
+  background-color: #e2e5ec;
+  /*color de fondo del body*/
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto 690px auto;
+  /*no lo se todavia pero por alguna razon el height de lo que esta dentro del main si lo coloco en AUTO y s eme descuadra*/
+  grid-template-areas: "header header"
+ "h1 main main"
+ "footer footer"; }
+
+/*COMIENZA MI MENU CON EL LOGO*/
+header {
+  /*logotienda + navegacion*/
+  grid-area: header;
+  background-color: #3da9d4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /*o space-between como originalmente lo tenia*/
+  align-items: center;
+  /* padding: 10px 0 10px 0; */ }
+
+header a {
+  display: flex;
+  justify-content: center; }
+
+.logoNav {
+  /*logo de la empresa en la navegacion*/
+  width: 50%;
+  border-radius: 8px;
+  /* margin-left: 20px;  */
+  /* margin-left: auto;que se posiciones a la derecha automatico*/
+  /* display: block;que no rompa la linea */ }
+
+/*NAV MENU*/
+.navbar__list {
+  /*ul*/
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  font-weight: bold;
+  align-items: center;
+  font-size: 18px;
+  /*probando*/
+  /* border: 5px solid;
+    height: 100px;
+    align-items: center; */ }
+
+.navbar__item {
+  /*ul>li*/
+  /*El estilo de la lista de navegacion en este caso raiz(serviciot,produc,tienda,etc)*/
+  display: inline-block;
+  position: relative;
+  /*para que se centre con el submenu*/
+  list-style-type: none;
+  /*para quitarle los puntos a la lista*/ }
+
+.navLink {
+  /*ul>li.a*/
+  /*Estilo de los links a en este caso los raiz (serviciot,produc,tienda,etc)*/
+  color: white;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  /*acomdo el alto a los anchors de lalista raiz*/
+  padding: 35px 15px 35px 15px;
+  /*acomodo del borde a dentro*/
+  /*acomodo los anchors entre ellos le da espacios */ }
+
+.submenus {
+  /*ul>li>ul*/
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /*sombra para la caja*/
+  min-width: 100%;
+  /*ancho minimo caja submenu*/
+  overflow: auto;
+  *font-size: small;
+  /*tamano de texto anchor*/
+  /* padding: 1px 1px; */
+  /* margin-top: 2%; */
+  z-index: 1; }
+
+.submenus__item {
+  /*ul>li>ul>li*/
+  list-style-type: none;
+  text-align: center; }
+
+.submenus__item > a {
+  /*ul>li>ul>li.a*/
+  color: black;
+  text-decoration: none;
+  padding: 5px 0px;
+  display: block; }
+
+.navbar__item:hover > ul {
+  /*ul:hover*/
+  display: block;
+  /*valor en el cual aparezca y coloque el submenu en bloque*/ }
+
+.submenus__item:hover {
+  background-color: #687273; }
+
+.navLink:hover {
+  /*ul>li>a*/
+  /*este hover en el navlink le agrega un fondo de  color al pasar el mouse sobre el menu raiz*/
+  background-color: #687273;
+  /*color al anchor*/
+  /* width: 100%; */ }
+
+.linkColorActivo {
+  /*esta clase cambia el color de los link de navbar__item a los que accesa para que sepa donde esta posicionado el cliente*/
+  color: #244e73; }
+
+/**TERMINA MI MENU CON EL LOGO**/
+/*SECCION IMAGENES*/
+.img-pr {
+  grid-area: img-pr;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  height: 98%; }
+
+.img-pr picture img {
+  width: 100%;
+  height: 100%; }
+
+.img-bnr {
+  grid-area: img-bnr;
+  width: 100%;
+  height: 100%; }
+
+.p-bnr {
+  width: 100%;
+  height: 100%;
+  /*HICE CAMBIO CONFIG EL DESKTOP OJO*/
+  padding: 5px 0 5px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  column-gap: 5px; }
+
+.img-bnr picture img {
+  border: 3px solid #3da9d4;
+  width: 350px;
+  height: 300px; }
+
+/*SECCION TEXTOS SLIDES*/
+.slide-txt {
+  grid-area: slide-txt;
+  background-color: #cad1d1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center; }
+
+.slide-txt div {
+  font-size: 15px;
+  text-align: justify;
+  padding: 10px; }
+
+.item-txt a {
+  color: black;
+  font-weight: bold;
+  /**negrita**/
+  padding: 4px;
+  /*separa dentro en los anchors*/ }
+
+.item-txt:hover {
+  /*hover para los textos*/
+  background-color: #3da9d4;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 20px; }
+
+.item-txt:hover a {
+  color: white; }
+
+/*SECCION PRODUCTOS*/
+.card-m {
+  grid-area: card-m;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  /*el valor que queria era flex-start pero no se veia bien*/
+  align-items: center;
+  padding: 5px 4px 5px 5px;
+  column-gap: 2px;
+  row-gap: 5px;
+  font-size: 70%; }
+
+.titulo {
+  /*contiene un h1*/
+  grid-area: titulo;
+  display: flex;
+  *border: #244e73 solid 2px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  *padding-right: 20px;
+  margin: auto;
+  *width: auto;
+  overflow: hidden;
+  transition-property: clip-path, transform, max-height, overflow, display;
+  clip-path: circle(150% at top right);
+  transform: rotate(0deg);
+  /* propiedad | propiedad, propiedad | all | none*/
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+  /*defect: ease | ease-in | ease-in-out | ease-out*/
+  transition-delay: linear;
+  *transition: width 0.5s 0.1s ease-in;
+  /*propiedad  duracion  duracion de retraso  timing-function*/
+  font-size: 18px; }
+
+.card-m:hover .titulo {
+  clip-path: circle(10% at top right);
+  transform: rotate(-90deg);
+  max-height: 0;
+  overflow: hidden;
+  *display: none;
+  /*importante*/
+  *width: 0.2px;
+  *height: 0.2px;
+  *flex-shrink: 9;
+  *display: none; }
+
+.cards {
+  /*Aqui arreglo lo que esta adentro del contenedor cards*/
+  display: flex;
+  /*Para que se haga flexible con las descripciones*/
+  *justify-content: center;
+  /*Aqui le quito el justify para que no tome ninguna posicion y funcione el .cards:hover*/
+  align-items: center;
+  width: 200px;
+  /*Al principio era de 400 para acomodar todo despues lo baje a 200 para que funcone el .cards:hover*/
+  height: 280px;
+  border: 4px solid black;
+  background-color: #e2e5ec;
+  box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.25);
+  /* offset-x | offset-y | blur-radius | color */
+  overflow: hidden;
+  /*el overflow esconde el div details para que funcione el efecto hover*/
+  transition: 0.5s ease-in-out;
+  margin-left: 40px;
+  *margin-right: 10px; }
+
+/**HOVER**/
+.cards:hover {
+  width: 400px;
+  /*Aqui coloco el valor: 400 para que cuando se expanda tome todo el ancho total y funcione*/ }
+
+.cards .imgBox {
+  /*Estilo para el contenido izquierdo*/
+  position: relative;
+  min-width: 200px;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s; }
+
+.cards:hover .imgBox {
+  transform: rotate(-35deg); }
+
+.cards .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.cards .details {
+  /*Estilo para el contenido derecho*/
+  position: relative;
+  min-width: 200px;
+  background-color: #4ba9e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  color: white; }
+
+/*BEFORE*/
+.cards .details::before {
+  /*estilo flechita blanca desde el contenedor imgBox al div details*/
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid #e2e5ec; }
+
+.cards .details .title small {
+  font-weight: 200;
+  font-size: 0.9em; }
+
+.cards .details h4 {
+  font-size: 1.4em; }
+
+.cards .details .description p {
+  padding: 2px 0 0 0;
+  font-size: 0.8em;
+  font-weight: 200; }
+
+.cards .details .model ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 3px; }
+
+.cards .details .model ul li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  /*tamano de las letras*/
+  border: solid 2px white;
+  padding: 0.5em;
+  /*distancia del contenedor a item*/ }
+
+.cards .details .model ul li:hover {
+  background-color: #fff;
+  color: #4ba9e9; }
+
+.cards .details .buy {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline; }
+
+.cards .details .buy .price {
+  font-size: 1.4em; }
+
+.cards .details .buy .btn {
+  background: white;
+  padding: 0.5em 0.8em;
+  text-transform: uppercase; }
+
+.cards .details .buy .btn a {
+  text-decoration: none;
+  color: #4ba9e9; }
+
+/*FOOTER*/
+footer,
+.son__containerC > footer {
+  grid-area: footer;
+  background-color: #3da9d4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 30px 0; }
+
+footer a {
+  color: #fbfbfb;
+  font-weight: bold;
+  font-size: 100%; }
+
+/**TERMINA MI DESKTOP**/
+/**RESPONSIVE**/
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  /**TABLET**/
+  .son__containerC {
+    display: grid;
+    row-gap: 2px;
+    background-color: #e2e5ec;
+    /*color de fondo del body*/
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 600px auto;
+    grid-template-areas: "header header"
+ "form__contacto form__contacto"
+ "footer footer"; }
+  .grid-container {
+    background-color: #e2e5ec;
+    /*color de fondo del body*/
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto 200px auto auto;
+    grid-template-areas: "header header"
+ "img-pr img-pr"
+ "img-bnr img-bnr"
+ "slide-txt slide-txt"
+ "titulo card-m card-m"
+ "footer footer";
+    *font-size: 100%;
+    *width: 100%; }
+  /*header, footer{
+*grid-column: 1 / span 2;}/*otra forma de decirle en que columna y hasta donde se va a expandir*/
+  /*MENU + LOGOTIENDA*/
+  header {
+    /*Este header contiene el logotienda y el menu de navegacion*/
+    grid-area: header;
+    background-color: #3da9d4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*o space-between como originalmente lo tenia*/
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* padding: 10px 0 10px 0; */ }
+  .logoNav {
+    /*logo de la empresa en la navegacion*/
+    width: 50%;
+    border-radius: 8px;
+    /* margin-left: auto;que se posiciones a la derecha automatico*/
+    /* display: block;que no rompa la linea */ }
+  .navbar__list {
+    /*ul*/
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    font-weight: bold;
+    align-items: center;
+    font-size: 15px; }
+  .navbar__item {
+    /*ul>li*/
+    /*El estilo de la lista de navegacion en este caso raiz(serviciot,produc,tienda,etc)*/
+    display: inline-block;
+    position: relative;
+    /*para que se centre con el submenu*/
+    list-style-type: none;
+    /*para quitarle los puntos a la lista*/ }
+  .navLink {
+    /*ul>li.a*/
+    /*Estilo de los links a en este caso los raiz (serviciot,produc,tienda,etc)*/
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    /*acomdo el alto a los anchors de lalista raiz*/
+    padding: 35px 15px 35px 15px;
+    /*acomodo del borde a dentro*/
+    /*acomodo los anchors entre ellos le da espacios */ }
+  .submenus {
+    /*ul>li>ul*/
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /*sombra para la caja*/
+    min-width: 100%;
+    /*ancho minimo caja submenu*/
+    overflow: auto;
+    *font-size: small;
+    /*tamano de texto anchor*/
+    z-index: 1; }
+  .submenus__item {
+    /*ul>li>ul>li*/
+    list-style-type: none;
+    text-align: center; }
+  .submenus__item > a {
+    /*ul>li>ul>li.a*/
+    color: black;
+    text-decoration: none;
+    padding: 5px 0px;
+    display: block; }
+  .navbar__item:hover > ul {
+    /*ul:hover*/
+    display: block;
+    /*valor en el cual aparezca y coloque el submenu en bloque*/ }
+  .submenus__item:hover {
+    background-color: #687273; }
+  .navLink:hover {
+    /*ul>li>a*/
+    /*este hover en el navlink le agrega un fondo de  color al pasar el mouse sobre el menu raiz*/
+    background-color: #687273;
+    /*color al anchor*/
+    /* width: 100%; */ }
+  .linkColorActivo {
+    /*esta clase cambia el color de los link de navbar__item a los que accesa para que sepa donde esta posicionado el cliente*/
+    color: #244e73; }
+  /*SECCION IMAGENES*/
+  .img-pr {
+    grid-area: img-pr; }
+  .img-pr picture img {
+    width: 100%;
+    height: 100%; }
+  .img-bnr {
+    grid-area: img-bnr; }
+  .p-bnr {
+    width: 100%;
+    /*para que no se salga del grid contaner que es el q lo mantiene adentro de la pagina*/
+    height: 100%;
+    /*para que no se salga del grid contaner que es el q lo mantiene adentro de la pagina*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around; }
+  .img-bnr picture img {
+    border: 3px solid #3da9d4;
+    width: 200px;
+    height: 200px; }
+  /*SECCION TEXTOS SLIDES*/
+  .slide-txt {
+    grid-area: slide-txt;
+    background-color: #cad1d1;
+    /* border: 1.5px solid; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 5px; */
+    /* height: max-content; */ }
+  .slide-txt div {
+    font-size: 15px;
+    text-align: justify;
+    padding: 10px;
+    /*distancia entre anchors*/ }
+  .item-txt a {
+    color: black;
+    font-weight: bold;
+    /**negrita**/
+    padding: 4px;
+    /*separa dentro en los anchors*/ }
+  .item-txt:hover {
+    /*hover para los textos*/
+    background-color: #3da9d4;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px; }
+  .item-txt:hover a {
+    color: white; }
+  /*SECCION PRODUCTOS*/
+  .card-m {
+    grid-area: card-m;
+    display: flex;
+    flex-flow: row wrap;
+    /*lo cambie a wrap esta nowwrap*/
+    justify-content: center;
+    /*el valor que queria era flex-start pero no se veia bien y predeterminado es centrado*/
+    align-items: center;
+    *align-content: center;
+    padding: 5px 5px 5px 5px;
+    *min-width: 100vh;
+    /*el original*/
+    row-gap: 5px;
+    column-gap: 3px;
+    height: 100%;
+    width: 100%;
+    font-size: 70%; }
+  .titulo {
+    grid-area: titulo; }
+  .card-m:hover .titulo {
+    display: none;
+    /**CUANDO coloco el display none no se me activa despues la animacion no se porque ya e probado varias maneras pero sigo sin resolverlo**/ }
+  .cards {
+    /*Aqui arreglo lo que esta adentro del contenedor cards*/
+    display: flex;
+    /*Para que se haga flexible con las descripciones*/
+    *justify-content: center;
+    /*Aqui le quito el justify para que no tome ninguna posicion y funcione el .cards:hover*/
+    align-items: center;
+    width: 200px;
+    /*Al principio era de 400 para acomodar todo despues lo baje a 200 para que funcone el .cards:hover*/
+    height: 280px;
+    border: 4px solid black;
+    background-color: #e2e5ec;
+    box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.25);
+    /* offset-x | offset-y | blur-radius | color */
+    overflow: hidden;
+    /*el overflow esconde el div details para que funcione el efecto hover*/
+    transition: 0.5s ease-in-out;
+    margin-left: 40px;
+    /*no me funciona tambien el encuadre con margin pero se vuelve menos loco cuando se expande*/
+    *margin-right: 40px; }
+  /**HOVER**/
+  .cards:hover {
+    width: 400px;
+    /*Aqui coloco el valor: 400 para que cuando se expanda tome todo el ancho total y funcione*/ }
+  .cards .imgBox {
+    position: relative;
+    min-width: 200px;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s; }
+  /* .imgBox img{ 
+    width:100%;
+    height: 100%;
+}  */
+  .cards:hover .imgBox {
+    transform: rotate(-35deg); }
+  .cards .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .cards .details {
+    position: relative;
+    min-width: 200px;
+    background-color: #4ba9e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    color: white; }
+  /*BEFORE*/
+  .cards .details::before {
+    /*estilo flechita blanca desde el contenedor imgBox al div details*/
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #e2e5ec; }
+  .cards .details .title small {
+    font-weight: 200;
+    font-size: 0.9em; }
+  .cards .details h4 {
+    font-size: 1.4em; }
+  .cards .details .description p {
+    font-size: 0.8em;
+    font-weight: 200; }
+  .cards .details .model ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 3px; }
+  .cards .details .model ul li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    /*tamano de las letras*/
+    border: solid 2px white;
+    padding: 0.5em;
+    /*distancia del contenedor a item*/ }
+  .cards .details .model ul li:hover {
+    background-color: #fff;
+    color: #4ba9e9; }
+  .cards .details .buy {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline; }
+  .cards .details .buy .price {
+    font-size: 1.4em; }
+  .cards .details .buy .btn {
+    background: white;
+    padding: 0.5em 0.8em;
+    text-transform: uppercase; }
+  .cards .details .buy .btn a {
+    text-decoration: none;
+    color: #4ba9e9; }
+  /*FOOTER*/
+  footer {
+    grid-area: footer;
+    background-color: #3da9d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 30px 0; }
+  footer a {
+    color: #fbfbfb;
+    font-weight: bold;
+    font-size: 100%; } }
+
+/**CELLPHONE**/
+@media screen and (max-width: 600px) {
+  .son__containerC {
+    display: grid;
+    row-gap: 2px;
+    background-color: #e2e5ec;
+    /*color de fondo del body*/
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 550px auto;
+    grid-template-areas: "header header"
+ "form__contacto form__contacto"
+ "footer footer"; }
+  .form__contacto {
+    grid-area: form__contacto;
+    width: 100%;
+    height: 100%;
+    background-color: #244e73; }
+  .grid-container {
+    display: grid;
+    *row-gap: 2px;
+    background-color: #e2e5ec;
+    /*color de fondo del body*/
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto 200px auto auto;
+    grid-template-areas: "header header"
+ "img-pr img-pr"
+ "img-bnr img-bnr"
+ "slide-txt slide-txt"
+ "titulo card-m card-m"
+ "footer footer"; }
+  .navbar__list {
+    justify-content: flex-end;
+    font-size: 14px; }
+  .submenus {
+    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2); }
+  .submenus__item > a {
+    padding: 4px 2px; }
+  .img-pr {
+    grid-area: img-pr;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    *width: 100%;
+    *height: 100%; }
+  .img-pr picture img {
+    width: 100%;
+    height: 200px;
+    /* height: 270px; */
+    *object-fit: fill; }
+  .img-bnr {
+    grid-area: img-bnr; }
+  .p-bnr {
+    *width: 100%;
+    /*para que no se salga del grid contaner que es el q lo mantiene adentro de la pagina*/
+    *height: 100%;
+    /*para que no se salga del grid contaner que es el q lo mantiene adentro de la pagina*/
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+    row-gap: 5px; }
+  .img-bnr picture img {
+    border: 3px solid #3da9d4;
+    width: 70%;
+    height: 300px;
+    /* width: 50%;
+        height: 300px; */
+    object-fit: fill; }
+  .slide-txt {
+    grid-area: slide-txt;
+    background-color: #606060;
+    width: 100%;
+    height: 100%; }
+  .slide-txt div {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px; }
+  .item-txt a {
+    color: white;
+    *font-weight: bold;
+    /**negrita**/
+    padding: 7px;
+    /*separa dentro en los anchors*/ }
+  .item-txt:hover {
+    /*hover para los textos*/
+    background-color: #3da9d4;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px; }
+  .item-txt:hover a {
+    color: #0a0a0a; }
+  .card-m {
+    grid-area: card-m;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 70%; }
+  .cards .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .titulo {
+    grid-area: titulo;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    *padding-right: 20px;
+    margin: 12px 0 12px 0; } }
+
+/**ANIMACIONES**/
+/* @keyframes heartBeat{
+    0%{transform: scale(5);}
+    10%{color: #4ba9e9;}
+    20%{color: #bbdaef;}
+    30%{color: #cad1d1;}
+    40%{transform: rotate(-10deg);}
+    100%{color: rgb(18, 20, 20);}
+} */
+.direction h1 {
+  animation: fadeIn;
+  animation-duration: 2s;
+  *animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  *transform: rotate(5deg); }
+
+.query:focus {
+  background-color: #bbdaef; }
+
+/**FIN ANIMACIONES**/

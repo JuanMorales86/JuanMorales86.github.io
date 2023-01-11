@@ -1,0 +1,20 @@
+test/
+node_modules/
+imagenes_originales/
+/pages/technicalServices.html
+/pages/menubootstrap.html
+/pages/pruebas.html
+/pages/styleprueba.css
+/assets/js/pruebasjs.js
+package-lock.json
+css
+
+
+
+
+
+
+#ignora los archivos json excepto
+
+#excepto este archivo que se incluye para revision
+
