@@ -1,0 +1,47 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;/*importante si no se descuadra*/
+}
+
+body{
+    background-color:blanchedalmond;
+    width: min(100% - 30px - 400px);
+    margin-inline:auto;
+    text-align: center;
+  
+}
+
+#contenedor{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(116, 169, 216);
+    border-radius: 5px;
+    display: block;
+    flex-flow: column wrap;
+   
+}
+
+#formTienda{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-flow: column wrap;
+    padding: 30px;
+    gap: 10px;
+    font-size:1em;
+    font-weight: bold;
+}
+
+#submitB{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 125px;
+    height: 100%;
+    border-radius: 5px;
+}

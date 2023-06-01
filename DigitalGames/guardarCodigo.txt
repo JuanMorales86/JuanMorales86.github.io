@@ -1,0 +1,580 @@
+// const input1 = document.getElementById("plataforma")
+// inputLimited(input1)//para limitar el input "plataforma"
+
+// const errmsg = document.getElementById("erromsg")
+// inputLimited(errmsg)
+
+function inputLimited(nodo){//PARA COMPARAR LETRAS EN UN INPUT
+  const input = nodo
+
+  // input.addEventListener('keydown', (event) => {//un keydown para comparar lo que trae isletter y que no deje colocar numeros o otras cosas
+  //   if (!isLetter(event.key)) {
+  //     event.preventDefault();
+  //   }
+  // });
+
+  // input.addEventListener('keydown', (event) => {
+  //   const key = event.key;
+  //   const isFirstLetter = event.target.selectionStart === 0;
+  //   const currentWord = event.target.value.slice(0, event.target.selectionStart);
+    
+  //   if (isFirstLetter && !isAllowedWord(currentWord + key)) {
+  //     event.preventDefault();
+  //   }
+  // });
+
+  input.addEventListener('input', () => {//el listener para las letras y el error
+    const limit = /^[a-zA-Z]+$/;
+    if(!limit.test(input.value)){
+      input.style.borderColor = 'red';
+    } else {
+      input.style.borderColor = '';
+    }
+  })
+  // function isLetter(key) {//para obtener el código Unicode de la primera letra en la cadena key y luego verifica si ese código está dentro del rango de códigos 
+  //   const charCode = key.charCodeAt(0);
+  //   return (charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122);
+  // }
+
+  // function isAllowedWord(key) {
+  //   const allowedWords = ["xbox", "ps4", "wii", "nintendo", "ps5"];
+  //   return allowedWords.includes(key.toLowerCase());
+  // }
+}
+
+------------------------------------------------------------------------------------
+
+
+
+<!-- <iframe src="https://drive.google.com/file/d/1eHA1hD6DXBOsJwRGDKfOVfh6voPnymjn/preview" width="100%" height="100%" title="videos por mes" allow="autoplay" frameborder="0"></iframe> -->
+
+
+-----------------------------------------------------------------------------
+
+if (dinamicProducts.length === 0) {//por si no encuentra el titulo
+                Swal.fire({
+                    position: "center",
+                    icon: "warning",
+                    title: "El titulo no se encuentra en nuestra base de datos",
+                    showConfirmButton: false,
+                    timer: 2000,
+                });
+                document.querySelector("#gameLocate").value = ""
+                return;
+            }
+
+------------------------------------------------------------------------------
+//Escucha para el contenedorNav del navbar en el click del boton BUSQUEDA
+const containerNav = document.getElementById("containerNav")
+let dinamicProducts = []
+
+containerNav.addEventListener("click", (e) =>{
+    e.preventDefault()
+    if(e.target.classList.contains("button-searches")){
+
+        const gameLocate = document.querySelector('#gameLocate').value;
+        console.log("------------------")//prueba
+
+        if(gameLocate === ""){
+            armGamesComandControl.upGameProduct()
+            dinamicProducts = armGamesComandControl.gamesProductCollection
+            console.log(dinamicProducts)//prueba
+            document.querySelector("#gameLocate").style.border = "4px solid red";
+            document.querySelector("#gameLocate").placeholder ="Ingresa un Titulo"
+        }else{
+            armGamesComandControl.upGameProduct()
+            dinamicProducts =  armGamesComandControl.gamesProductCollection.filter(games => games.titulo.toUpperCase().includes(gameLocate.toUpperCase()))
+            //console.log(dinamicProducts)//prueba
+
+            document.querySelector("#gameLocate").style.border = "4px solid green";
+            document.querySelector("#gameLocate").placeholder = "Buscar juegos...";
+        }
+            
+            console.log(dinamicProducts)//prueba
+            if (dinamicProducts.length === 0) {//por si no encuentra el titulo
+                Swal.fire({
+                    position: "center",
+                    icon: "warning",
+                    title: "El titulo no se encuentra en nuestra base de datos",
+                    showConfirmButton: false,
+                    timer: 2000,
+                });
+                document.querySelector("#gameLocate").value = ""
+                return;
+            }
+            armGamesComandControl.clenContainerGames()
+            armGamesComandControl.gamesProductCollection = dinamicProducts//aqui llamo al array principal y lo igualo al array que me devuelve el filter
+            console.log(armGamesComandControl.gamesProductCollection)
+            armGamesComandControl.renderCardGames(armGamesComandControl.gamesProductCollection)//mando el array nuevo al prerender
+            armGamesComandControl.render()
+            armGamesComandControl.addgameDom(armCartComandControl)
+            document.querySelector("#gameLocate").value = ""//para borrar el input
+        }
+        })
+
+------------------------------------------------------------------------------
+Codigo async  function Mixarrays esto va duera de las clases son funciones asincornas
+
+async function upGames() {
+  let gamesProductCollectionInicial;
+  try {
+    const response = await fetch("./assets/js/apiGames.json");
+    gamesProductCollectionInicial = await response.json();
+    //console.log(gamesProductCollection)
+  } catch (err) {
+    console.log(err); //para leer si hay un error y que es
+  }
+return gamesProductCollectionInicial;
+}
+
+async function MixArrays(){
+  let array1
+  let array2
+  array1 = await upGames();
+  //console.log(array1)
+  
+  let obtenerListaJSON = localStorage.getItem("gamesProductCollection");
+  if (obtenerListaJSON) {
+  array2 = JSON.parse(obtenerListaJSON);
+  //console.log(array2)
+  }
+  const arrayResult = array1.concat(array2)
+  console.log(arrayResult)//funciona'
+
+  return arrayResult
+}
+console.log(MixArrays())
+
+
+---------------------------------------------------------------------
+
+
+Codigo del containerCart en js appDigital en el metodo render dle carrito
+lo sustituyo por un map y join hce basicament elo mismo que el forEach
+
+  this.gamesCart.forEach( games => { 
+      containerCart.innerHTML += `
+      <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="${games.urlimage}" class="img-fluid w-100 h-100" alt="${games.titulo}">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Titulo: ${games.titulo}</h5>
+            <p class="card-text">Unidad: X1</p> 
+            <button type="button" id="delete${games.id}" class="btn"><i class="fa-sharp fa-solid fa-trash"></i>
+            </button>
+            <p class="card-text">Precio: ${games.precio}</p>
+          </div>
+        </div>
+      </div>
+      
+      `;
+    })
+
+
+
+----------------------------------------------------------------
+este codigo funciona dentro del render de cart
+es un metodo per sin el metodo todavia esta direction
+    //This method takes in a containerCart argument that represents the container element in the DOM where the game cart is being rendered. It loops through each game in the gamesCart array, finds the corresponding delete button based on the game's id, and adds a click event listener to that button. The event listener calls the delete method to remove the game from the gamesCart array, updates the local storage, and re-renders the game cart in the DOM.
+
+    this.gamesCart.deletecartgames()
+    //!Borrar dentro del cart
+    // this.gamesCart.forEach((games) => {
+    //   const containerGameDelete = document.getElementById(`delete${games.id}`);//obtengo el nodo
+    //   containerGameDelete.addEventListener("click", () => {//poner al nodo el evento click
+
+    //     //Se borra el games de gamesCart
+    //     this.delete(games);
+
+    //     //Se actualiza el localstorage de gamesCart con el item o sin item si quedan
+    //     localStorage.setItem("gamesCart", JSON.stringify(this.gamesCart));
+
+    //     //Se actualiza el Dom
+    //     this.render(containerCart); //muestro de nuevo el nuevo array en el modal
+
+    //     //Agrego unos alert
+    //     Toastify({
+    //       //Libreria
+    //       text: "Producto Eliminado del carrito",
+    //       duration: 3000,
+    //       destination: "https://github.com/apvarun/toastify-js",
+    //       newWindow: true,
+    //       close: true,
+    //       gravity: "top", // `top` or `bottom`
+    //       position: "left", // `left`, `center` or `right`
+    //       stopOnFocus: true, // Prevents dismissing of toast on hover
+    //       style: {
+    //         background: "linear-gradient(to right, #00b09b, #96c93d)",
+    //       },
+    //       onClick: function () {}, // Callback after click
+    //     }).showToast();
+    //   });
+    // });
+
+
+-----------------------------------------------------------------------------
+let subtract = 0;
+
+        for(let i = 0; i < arr1.lenght + arr2.lenght; i++){
+        if(i < arr1.lenght){
+            subtract = subtract - arr1[i]
+        }else subtract = subtract - arr2[i - arr1.lenght]
+        }
+        return subtract;
+
+
+--------------------------------------------------------
+funcion case del juego Frio
+function settlementsA(position){
+    const post = []
+    
+    switch(position){
+        case 1:
+    
+        post =[foodconsumption=20,woodconsumption=15,yescaconsumption=10,waterconsumption=20, enduranceconsumption=100]
+                post.forEach( items => {
+                    items.foodconsumption
+                    items.woodconsumption
+                    items.yescaconsumption
+                    items.waterconsumption
+                    items.enduranceconsumption
+                    console.log(items)
+                })  
+                 
+                 
+        break
+        case 2:
+        post = [foodconsumption = 30,
+            woodconsumption = 15,
+            yescaconsumption = 10,
+            waterconsumption = 50,
+            enduranceconsumption = 100]
+            for(const recovery in post){//CICLO FOR IN
+                let slot2 = recovery;
+                let slot3 = post[recovery]
+                adquire.push(slot3)   
+            }   
+            break
+            case 3:
+        post = [foodconsumption = 40,
+            woodconsumption = 25,
+            yescaconsumption = 20,
+            waterconsumption = 50,
+            enduranceconsumption = 100]
+            for(const recovery in post){//CICLO FOR IN
+                let slot2 = recovery;
+                let slot3 = post[recovery]
+                adquire.push(slot3)   
+            }   
+            break
+            case 4:
+        post = [foodconsumption = 50,
+            woodconsumption = 35,
+            yescaconsumption = 30,
+            waterconsumption = 50,
+            enduranceconsumption = 100]
+            for(const recovery in post){//CICLO FOR IN
+                let slot2 = recovery;
+                let slot3 = post[recovery]
+                adquire.push(slot3)   
+            }   
+            break
+    }return post;}
+-------------------------------------------------------------------------------------------------
+    function journeyManagement2(inputArray){aqui comienza
+        const resultArray = [];
+        
+        for (let i = 0; i < inputArray.length; i++) {
+          Jugador1.food -= inputArray[i][0];
+          Jugador1.wood -= inputArray[i][1];
+          Jugador1.yesca -= inputArray[i][2];
+          Jugador1.water -= inputArray[i][3];
+          Jugador1.endurance -= inputArray[i][4];
+      
+          const updatedValues = [Jugador1.food, Jugador1.wood, Jugador1.yesca, Jugador1.water, Jugador1.endurance];
+          console.log(`En el asentamiento ${i + 1} Tu arribo consumio en el trayecto ${updatedValues}`);
+
+          resultArray.push(updatedValues);
+          
+        }}
+
+
+
+function getTotalRemainingValues(resultArray) {esta funcion de vuelve el total del final de un array
+  const totalValues = [0, 0, 0, 0, 0];
+  
+  for (let i = 0; i < resultArray.length; i++) {
+    for (let j = 0; j < 5; j++) {
+      totalValues[j] += resultArray[i][j];
+    }
+  }
+
+  return totalValues;
+}
+
+const journeyArray = [[100,40,20,50,60],[150,80,40,100,120],[250,210,160,200,300],[200,160,80,150,200]];
+
+const result = journeyManagement2(journeyArray);
+console.log(result);
+
+const totalRemainingValues = getTotalRemainingValues(result);
+console.log(`Player 1 was left with: 
+  Food: ${totalRemainingValues[0]} 
+  Wood: ${totalRemainingValues[1]} 
+  Yesca: ${totalRemainingValues[2]} 
+  Water: ${totalRemainingValues[3]} 
+  Endurance: ${totalRemainingValues[4]}`
+);
+
+----------------------------------------------------------------------------------
+otros codigos del mismo tipo para restar arrays
+//1)
+    // function journeyManagement2(inputArray){//sirvio asi
+    //     const resultArray = [];
+    //     const jugador1Array = [Jugador1.food,Jugador1.wood,Jugador1.yesca,Jugador1.water,Jugador1.endurance]
+    //     console.log(jugador1Array)
+
+    //     for (let i = 0; i < inputArray.length; i++){
+    //         resultArray.push(inputArray[i] - jugador1Array[i])
+    //     }
+
+    //     return resultArray
+    // }
+//2)
+    // function journeyManagement2(journeyArray){//sirvio asi
+    //     const jugador1Array = [Jugador1.food,Jugador1.wood,Jugador1.yesca,Jugador1.water,Jugador1.endurance]
+    //     console.log(jugador1Array)
+
+    //     for (let i = 0; i < journeyArray.length; i++){
+    //        const [food, wood, yesca, water, endurance] = journeyArray[i]
+    //        Jugador1.food -= food;
+    //        Jugador1.wood -= wood;
+    //        Jugador1.yesca -= yesca;
+    //        Jugador1.water -= water;
+    //        Jugador1.endurance -= endurance;
+    //     }
+
+    //     return jugador1Array
+    // }
+    ----------------------------------------------------------------------------------------------------
+    SCSS parte del codigo del css
+    
+    @media (min-width:768px){//Navbar begins mediaquery
+    // .navbar-center{
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // }
+
+    .navbar{
+        background-color: #ADC5CF !important;
+        font-family: 'SF Pro Display', sans-serif;
+        font-size: 1.3em;
+        font-style:normal;
+        font-weight: bold;
+
+        .navbar-nav .nav-item{
+            display: flex;
+            flex-flow: row wrap;
+            
+           
+        }
+        
+}
+    .nav-item{
+        padding: 25px;
+    }
+
+    .nav-item:hover a{
+        color: blue;
+    }
+
+
+
+.grid-container{//mobile
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    text-align: center;
+    grid-template-areas: 'header'
+    'main'
+    'footer'
+    ;
+margin: 1px 0;
+padding-block: 0rem;//shorthand property that combines the padding-block-start and padding-block-end (Borde superior y unferior o top and bottom)
+margin-inline: auto;
+width: min(99%);//controller for ancho del contenedor completo
+max-width: 70rem;
+background-color: #304f5e;
+
+.card{
+    width: 20rem;
+    
+    
+}
+
+.card-body{
+    background-color: #64798C;
+    color: white;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.card-img-top{//imagen
+    
+    height: 200px;
+    border-top: solid 5px #ff0058;
+    border-bottom: solid 3px #ff0058;
+    place-items: center;
+    
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card-text{
+    text-align: justify;
+}
+
+}//grid-container ends
+
+}//End navbar 768
+
+    // grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+   
+    // grid-auto-flow: column;//los acomoda 
+
+    // @media(min-width: 50em){//con media querys 50em es igual a 800px
+    //     .grid-container-m{
+            
+           
+    //     }
+    //     }
+
+    
+    
+
+
+//CARDS
+.flip-card{
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.title{
+    font-size: 1.5em;
+    font-weight: 900;//bold
+    text-align: center;
+    margin: 0;
+    
+}
+
+.title-front{
+    position: absolute;
+    left: 25px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 800;
+    
+}
+
+.descrip{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color:white;
+    text-align: center;
+    text-decoration:solid;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 40px;
+    
+}
+
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotatey(180deg);
+}
+
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);//borde sombra
+    display: flex;//direccionar las card adentro
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;//anchura del card
+    height: 100%;//altura del card
+    -webkit-backface-visibility: hidden;//efecto escondido partes de la card
+    backface-visibility: hidden;
+    border: 2px solid;
+    border-radius: 1rem;
+    border-image: linear-gradient(315deg,#03a9f4,#ff0058);
+}
+
+.flip-card-front{
+    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+    rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+ color: coral;
+}
+
+.flip-card-front>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.flip-card-back{
+    background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+    bisque 40%, rgb(255, 185, 160) 78%);
+ color: white;
+ transform: rotateY(180deg);
+}
+//FIN CARDS
+
+
+
+form{
+   display: flex;
+   flex-flow:row wrap;
+   justify-content: center;
+   width: 100vw;
+   height: 100%;
+   margin-top: 100px;
+}
+
+.button{
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    border: 2px solid #4caf50;
+    font-size: 1rem;
+    transition: 0.4s;
+    width: 9rem;}
+
+    .button:hover{
+        font-size: 2rem;
+        width: 18rem;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+    }
+
+
+
